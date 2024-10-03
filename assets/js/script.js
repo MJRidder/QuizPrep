@@ -1,1 +1,3 @@
-console.log("Let's Go!");
+function StartQuiz {
+    
+}
