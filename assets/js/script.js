@@ -3,7 +3,7 @@ const questionArea = document.getElementById('question-area');
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
-const shuffleQuestions, currentQuestionIndex 
+let shuffleQuestions, currentQuestionIndex 
 
 startButton.addEventListener('click', StartQuiz);
 
@@ -18,11 +18,21 @@ function StartQuiz() {
 }
 
 function NextQuestion() {
-    showQuestion(shufflecQuestions[currentQuestionIndex])
+    showQuestion(shuffleQuestions[currentQuestionIndex])
 }
 
 function showQuestion(question) {
-    questionElement.innerText = question.questions
+    questionElement.innerText = question.question
+    question.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add ('btn');
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', SelectAnswer);
+        answerButtonsElement.appendChild(button)
+    })
 }
 
 function SelectAnswer() {
@@ -31,7 +41,7 @@ function SelectAnswer() {
 
 const questions = [
     {
-        question: 'What is twee plus twee',
+        question: 'What is twee plus twee?',
         answers: [
             {text: 'vier', correct:true},
             {text: 'acht', correct:false},
