@@ -1,10 +1,11 @@
-const startButton = document.getElementById('start-btn');
-const nextButton = document.getElementById('next-btn');
-const questionArea = document.getElementById('question-area');
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
+let startButton = document.getElementById('start-btn');
+let nextButton = document.getElementById('next-btn');
+let questionArea = document.getElementById('question-area');
+let questionElement = document.getElementById('question')
+let answerButtonsElement = document.getElementById('answer-buttons')
+let quizPage = document.getElementById('quiz-page')
 
-let shuffleQuestions, currentQuestionIndex 
+let Questionlist, currentQuestionIndex 
 
 startButton.addEventListener('click', StartQuiz);
 nextButton.addEventListener('click', () => {
@@ -16,7 +17,7 @@ nextButton.addEventListener('click', () => {
 function StartQuiz() {
     console.log("Starting the quiz");
     startButton.classList.add('hide');
-    shuffleQuestions = questions.sort(() => Math.random() - .5);
+    Questionlist = questions.sort(() => .5);
     currentQuestionIndex = 0;
     questionArea.classList.remove('hide');
     NextQuestion()
@@ -24,13 +25,13 @@ function StartQuiz() {
 
 function NextQuestion() {
     resetState()
-    showQuestion(shuffleQuestions[currentQuestionIndex])
+    showQuestion(Questionlist[currentQuestionIndex])
 }
 
 function showQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
-        const button = document.createElement('button');
+        let button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add ('btn');
         if (answer.correct) {
@@ -41,8 +42,9 @@ function showQuestion(question) {
     })
 }
 
+
 function resetState() {
-    clearStatusClass(document.body)
+    clearStatusClass(quizPage)
     nextButton.classList.add('hide')
     while(answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -50,13 +52,19 @@ function resetState() {
 }
 
 function SelectAnswer(event) {
-    const selectedButton = event.target;
-    const correct = selectedButton.dataset.correct;
-    setStatusClass(document.body, correct)
+    let selectedButton = event.target;
+    let correct = selectedButton.dataset.correct;
+    setStatusClass(quizPage, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (shuffleQuestions.length > currentQuestionIndex + 1) {
+    if (correct) {
+        console.log("Correct!")
+    } else {
+        console.log("wrong")
+    }
+    
+    if (Questionlist.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
         startButton.innerText = 'Restart'
@@ -78,7 +86,12 @@ function clearStatusClass(element) {
         element.classList.remove('wrong')
 } 
 
-const questions = [
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = ++oldScore
+}
+
+let questions = [
     {
         question: 'What is twee plus twee?',
         answers: [
@@ -112,7 +125,7 @@ const questions = [
 
     },
     {
-        question: 'What is vijf plus vijf?',
+        question: 'What is een plus een?',
         answers: [
             {text: 'vier', correct:true},
             {text: 'acht', correct:false},

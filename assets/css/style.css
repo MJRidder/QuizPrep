@@ -36,7 +36,7 @@ header {
     align-items: center;
 }
 
-.quiz-area {
+#quiz-area {
     display: flex;
     background-color: lightblue;
     width: 800px;
@@ -48,11 +48,11 @@ header {
     align-items: center;
 }
 
-#guiz-page.correct {
+.guiz-page.correct {
     color: green;
 }
 
-#guiz-page.wrong {
+.guiz-page.wrong {
     color: red;
 }
 
