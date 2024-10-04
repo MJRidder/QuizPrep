@@ -9,11 +9,38 @@
     font-family: Lato;
 }
 
+
 /* Global styles */
-body {
+
+/* Quiz page */
+
+.quiz-area {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    max-width: 80%;
     background-color: lightblue;
-    font-family: lato;
+    border-radius: 5px;
+
 }
+
+
+/* 
+#quiz-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100 vhs;
+}
+*/
+
+
+
+
+
+
+
 
 /* to be removed */
 .test-p {
