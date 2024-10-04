@@ -7,6 +7,10 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffleQuestions, currentQuestionIndex 
 
 startButton.addEventListener('click', StartQuiz);
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    NextQuestion()
+})
 
 
 function StartQuiz() {
@@ -51,6 +55,12 @@ function SelectAnswer(event) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+    if (shuffleQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide')
+    } else {
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide')
+    }
 }
 
 function setStatusClass(element, correct) {
@@ -63,16 +73,45 @@ function setStatusClass(element, correct) {
 }
 
 function clearStatusClass(element) {
-    if (correct) {
         element.classList.remove('correct')
-    } else {
         element.classList.remove('wrong')
-    }
 } 
 
 const questions = [
     {
         question: 'What is twee plus twee?',
+        answers: [
+            {text: 'vier', correct:true},
+            {text: 'acht', correct:false},
+        ]
+
+    },
+    {
+        question: 'What is drie plus drie?',
+        answers: [
+            {text: 'vier', correct:true},
+            {text: 'acht', correct:false},
+        ]
+
+    },
+    {
+        question: 'What is vier plus vier?',
+        answers: [
+            {text: 'vier', correct:true},
+            {text: 'acht', correct:false},
+        ]
+
+    },
+    {
+        question: 'What is vijf plus vijf?',
+        answers: [
+            {text: 'vier', correct:true},
+            {text: 'acht', correct:false},
+        ]
+
+    },
+    {
+        question: 'What is vijf plus vijf?',
         answers: [
             {text: 'vier', correct:true},
             {text: 'acht', correct:false},
