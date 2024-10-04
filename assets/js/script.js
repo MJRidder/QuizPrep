@@ -58,18 +58,22 @@ function SelectAnswer(event) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (correct) {
-        console.log("Correct!")
-    } else {
-        console.log("wrong")
-    }
-    
+
     if (Questionlist.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
     }
+
+    if (correct) {
+        console.log("Correct!")
+        incrementScore();
+    } else {
+        console.log("wrong")
+        incrementWrongAnswer();
+    }
+
 }
 
 function setStatusClass(element, correct) {
@@ -89,6 +93,11 @@ function clearStatusClass(element) {
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++oldScore
+}
+
+function incrementWrongAnswer() {
+    let oldScore = parseInt(document.getElementById('incorrect').innerText);
+    document.getElementById('incorrect').innerText = ++oldScore
 }
 
 let questions = [
