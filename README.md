@@ -129,3 +129,12 @@ Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` f
 ---
 
 Happy coding!
+
+==============================
+==============================
+Start README file
+==============================
+==============================
+
+SOURCES
+- https://teamtreehouse.com/community/is-it-a-good-practice-to-use-boxsizing-all-the-time
