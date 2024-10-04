@@ -1,4 +1,5 @@
-const startButton = document.getElementById("start-btn");
+const startButton = document.getElementById('start-btn');
+const nextButton = document.getElementById('next-btn');
 const questionArea = document.getElementById('question-area');
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -9,7 +10,7 @@ startButton.addEventListener('click', StartQuiz);
 
 
 function StartQuiz() {
-    console.log('started');
+    console.log("Starting the quiz");
     startButton.classList.add('hide');
     shuffleQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
@@ -18,6 +19,7 @@ function StartQuiz() {
 }
 
 function NextQuestion() {
+    resetState()
     showQuestion(shuffleQuestions[currentQuestionIndex])
 }
 
@@ -35,9 +37,38 @@ function showQuestion(question) {
     })
 }
 
-function SelectAnswer() {
-
+function resetState() {
+    nextButton.classList.add('hide')
+    while(answerButtonsElement.firstChild) {
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+    }
 }
+
+function SelectAnswer(event) {
+    const selectedButton = event.target;
+    const correct = selectedButton.dataset.correct;
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+}
+
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
+}
+
+function clearStatusClass(element) {
+    if (correct) {
+        element.classList.remove('correct')
+    } else {
+        element.classList.remove('wrong')
+    }
+} 
 
 const questions = [
     {

@@ -48,6 +48,14 @@ header {
     align-items: center;
 }
 
+#guiz-page.correct {
+    color: green;
+}
+
+#guiz-page.wrong {
+    color: red;
+}
+
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
