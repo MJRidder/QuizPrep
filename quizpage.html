@@ -17,7 +17,7 @@
     <title>Quiz Prep</title>
 </head>
 
-<body id="quiz-page">
+<body>
     <!-- Header -->
     <header>
         <a href="index.html"></a>
@@ -38,19 +38,23 @@
         </nav>
     </header>
 
-    <div class="quiz-area"></div>
-        <div id="question-area" class="hide"></div>
-            <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid"></div>
-            <button class="btn">Answer 1</button>
-            <button class="btn">Answer 2</button>
-            <button class="btn">Answer 3</button>
-            <button class="btn">Answer 4</button>
+    <div id="quiz-page">
+        <div class="quiz-area">
+            <div id="question-area" class="hide">
+                <div id="question">Question</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+            </div>
 
-        <div class="nav-btn"></div>
-        <button id="start-btn" class="start-btn btn">Start</button>
-        <button id="next-btn" class="next-btn btn">Next</button>
-
+            <div class="nav-btn"></div>
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn">Next</button>
+        </div>
+    </div>
     <script src="assets/js/script.js"></script>
 </body>
 
