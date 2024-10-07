@@ -12,10 +12,32 @@
 
 /* Global styles */
 
-/* Quiz page */
+body {
+    min-height: 100vh;
+    display: flex;
+}
 
+header {
+    display: flex;
+    position: fixed;
+    background-color: beige;
+    color: rgb(49, 43, 43);
+    z-index: 99;
+    width: auto;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    justify-content: baseline;
+}   
 
+nav {
+    top: 100%;
+}
 
+main {
+    margin-top: 35px;
+}
+
+/*
 header {
     background-color:beige;
     padding: 0 1rem;
@@ -24,8 +46,52 @@ header {
     box-shadow: 0 2px 2px #3a3a3a;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
 }
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    top: 100%;
+    padding: 0 2px;
+    background: inherit;
+    display: none;
+}
+
+#menu {
+    letter-spacing: 2px;
+    font-size: 110%;
+}
+
+#menu>li {
+    margin-bottom: 1em;
+}
+
+
+nav>ul {
+    list-style-type: none;
+}
+
+
+#nav-mobile-toggle:checked~nav {
+    display: block;
+}
+
+#nav-mobile-toggle {
+    display: none;
+}
+
+.nav-mobile-toggle-label {
+    font-size: 2rem;
+}
+
+.active {
+    border-bottom: 1px, solid;
+}
+*/
+/* Quiz page(s) layout */
 
 #quiz-page {
     display: flex;

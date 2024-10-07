@@ -37,30 +37,31 @@
             </ul>
         </nav>
     </header>
-
-    <div id="quiz-page">
-        <div id="quiz-area">
-            <div id="question-area" class="hide">
-                <div id="question">Question</div>
-                <div id="answer-buttons" class="btn-grid">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
+    <main>
+        <div id="quiz-page">
+            <div id="quiz-area">
+                <div id="question-area" class="hide">
+                    <div id="question">Question</div>
+                    <div id="answer-buttons" class="btn-grid">
+                        <button class="btn">Answer 1</button>
+                        <button class="btn">Answer 2</button>
+                        <button class="btn">Answer 3</button>
+                        <button class="btn">Answer 4</button>
+                    </div>
                 </div>
+
+                <div class="nav-btn"></div>
+                <button id="start-btn" class="start-btn btn">Start</button>
+                <button id="next-btn" class="next-btn btn">Next</button>
             </div>
-
-            <div class="nav-btn"></div>
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn">Next</button>
+            <div class="score-area">
+                <p class="scores">Correct Answer<span id="score">0</span></p>
+                <p class="scores">Wrong Answer<span id="incorrect">0</span></p>
+            </div>
         </div>
-        <div class="score-area">
-            <p class="scores">Correct Answer<span id="score">0</span></p>
-            <p class="scores">Wrong Answer<span id="incorrect">0</span></p>
-        </div>
-    </div>
-
+    </main>
     <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
