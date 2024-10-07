@@ -28,7 +28,7 @@
             <ul id="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
-                
+
                 <!-- to be removed at the end (should be not linkeable) -->
                 <li><a href="quizprep-1.html">Quizprep 1</a></li>
                 <li><a href="quizprep-2.html">Quizprep 2</a></li>
@@ -39,15 +39,57 @@
         <h1 id="logo">Quizprep</h1>
         </a>
     </header>
-    <main>
-        <p class="test-p"> This page will entail:
-            <li>A way to contact the team</li>
-            <li>Hero image</li>
-            <li>Suggestiong box</li>
-            <li>colorful background</li>
-        </p>
+    <main class="none-quiz-main">
+        <p class="none-quizpage-intros">We value your feedback! We aim to ensure that we help as many people with their
+            quiz preparations and we need you to help us do that. Please keep in touch via quizprep@gmail.com or use the
+            contact webform.</p>
+
+        <section id="contact">
+            <form method="GET" action="thankyou.html" id="contact-form">
+                <h2>Get in Touch!</h2>
+
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" class="text-input" name="first-name" required>
+                <br>
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" class="text-input" name="last-name" required>
+                <br>
+                <label for="email-address">Email address</label>
+                <input type="text" id="email-address" class="text-input" name="email-address" required>
+                <br>
+                <label for="phone">Phone number</label>
+                <input type="text" id="phone" class="text-input" name="phone-number">
+                <br>
+                <br>
+                <p>What is your request about?</p>
+                <br>
+                <div class="radio-buttons">
+                    <div>
+                        <input type="radio" id="quiz-feedback" value="quiz-feedback" required>
+                        <label for="quiz-feedback">Quiz-feedback</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="quiz-questions-suggestions" value="quiz-questions-suggestions" required>
+                        <label for="quiz-questions-suggestions">Quiz question suggestions</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="general" value="general-contact" required>
+                        <label for="general">General contact</label>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <label for="free-text">Please add your request below</label>
+                    <br>
+                    <textarea name="free-text" id="free-text" rows="4" cols="30"
+                        placeholder="Please provide context on your request." required></textarea>
+                </div>
+                <button type="submit" class="get-in-touch-button">Send request</button>
+            </form>
+        </section>
+
     </main>
-        <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 

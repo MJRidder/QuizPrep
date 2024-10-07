@@ -138,7 +138,8 @@ Start README file
 
 OPEN QUESTIONS
 - Quiz: - how to avoid the counting to be unlimited? and/or only have one point per question.
-- Quiz - How to fix the start/Next, scoring and question fields always in the same place?
+- Quiz - How to fix the start/Next, scoring and question fields always in the same place? Keeping the same spacing.
+- NAV - why does my "home" link not work when clicking on QUIZPREP?
 
 
 SOURCES

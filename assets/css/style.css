@@ -15,6 +15,7 @@
 body {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -96,11 +97,11 @@ main {
 
 /* Homepage layout */
 
-.homepage-main {
+.none-quiz-main {
     margin-top: 50px;
 }
 
-.homepage-intro {
+.none-quizpage-intros {
     padding-bottom: 2rem;
     padding-top: 2rem;
 }
@@ -133,6 +134,8 @@ main {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    list-style-type: none;
+    border-radius: 5px 0 5px 0;
   }
   
   /* Links inside the dropdown */
@@ -238,6 +241,7 @@ main {
         align-items: center;
         border-radius: 5px;
         padding: 1rem;
+        text-align: center;
 }
 
 
@@ -297,6 +301,27 @@ main {
     justify-content: center;
     align-items: end;
 }
+
+/* Footer layout */
+footer {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    border-top: 1px solid rgba(60, 60, 60, 0.6);
+    color: #282828;
+    background-color: #d4d4d4;
+    top: 100%;
+}
+
+#social-networks {
+    text-align: center;
+    padding: 15px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    text-decoration: none;
+}
+
 
 .hide {
     display: none;
