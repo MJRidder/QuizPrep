@@ -58,6 +58,10 @@ header>h1 {
     border-bottom: 1px solid;
 }
 
+.hidden-heading {
+    display: none;
+}
+
 /* Navigation & toggles */
 
 nav {
@@ -93,7 +97,8 @@ main {
 
 /* Homepage layout */
 .homepage-intro {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .homepage-dropdown {
@@ -143,9 +148,53 @@ main {
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+/* Advertised quiz */
+
+.homepage-adv-quiz {
+    height: 200px;
+    width: 100%;
+    background: url("../Images/witcher-quiz/witcher-hero-image.jpg"), no-repeat center center/cover;
+    border-radius: 5px;
+}
+
+/* How to QUIZPREP - NEEDS UPDATING $$ */
+.homepage-how-to-quizprep {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* Home page other quizes - NEEDS UPDATING = IMPROVED IMAGING AND TEXT $$ */
+
+.homepage-rest-quiz-1 {
+    height: 100px;
+    width: 100px;
+    background: url("../Images/witcher-quiz/witcher-sad.webp"), no-repeat center center/cover;
+    border-radius: 5px;
+}
+
+.homepage-rest-quiz-2 {
+    height: 100px;
+    width: 100px;
+    background: url("../Images/witcher-quiz/witcher-front-image.jpg"), no-repeat center center/cover;
+    border-radius: 5px;
+}
+
+.homepage-rest-quiz-3 {
+    height: 100px;
+    width: 100px;
+    background: url("../Images/witcher-quiz/witcher-sad.webp"), no-repeat center center/cover;
+    border-radius: 5px;
+}
+
+.rest-quiz-table {
+    border-spacing: 1rem;
+}
+
+
 /* Quiz page(s) layout */
 
-#quiz-page {
+.quizprep-1 {
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -154,11 +203,13 @@ main {
     align-items: center;
 }
 
-#quiz-area {
+#quiz-page {
     display: flex;
     background-color: lightblue;
-    width: 800px;
-    max-width: 80%;
+    height: 1200px;
+    max-height: 80%;
+    width: 500px;
+    max-width: 94%;
     border-radius: 5px;
     padding: 1rem;
     box-shadow: 0 0 10px 2px;
@@ -173,6 +224,7 @@ main {
 .guiz-page.wrong {
     color: red;
 }
+
 
 .btn-grid {
     display: grid;
@@ -201,6 +253,14 @@ main {
 }
 
 .nav-btn {
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-area {
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
