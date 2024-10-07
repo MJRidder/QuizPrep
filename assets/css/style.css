@@ -23,41 +23,21 @@ header {
     background-color: beige;
     color: rgb(49, 43, 43);
     z-index: 99;
-    width: auto;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
-    justify-content: baseline;
-}   
-
-nav {
-    top: 100%;
-}
-
-main {
-    margin-top: 35px;
-}
-
-/*
-header {
-    background-color:beige;
-    padding: 0 1rem;
-    z-index: 99;
-    width: 100%;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: flex;
     justify-content: space-between;
-}
+    align-items: baseline;
+}   
 
 header a {
     text-decoration: none;
     color: inherit;
+    
 }
 
-nav {
-    top: 100%;
-    padding: 0 2px;
-    background: inherit;
-    display: none;
+header>h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 #menu {
@@ -66,14 +46,25 @@ nav {
 }
 
 #menu>li {
-    margin-bottom: 1em;
-}
-
-
-nav>ul {
+    margin-bottom: .5em;
     list-style-type: none;
 }
 
+.active {
+    border-bottom: 1px solid;
+}
+
+/* Navigation & toggles */
+
+nav {
+    position: absolute;
+    background-color: beige;
+    top: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    width: 100%;
+    list-style-type: none;
+    display: none;
+}
 
 #nav-mobile-toggle:checked~nav {
     display: block;
@@ -87,10 +78,10 @@ nav>ul {
     font-size: 2rem;
 }
 
-.active {
-    border-bottom: 1px, solid;
+main {
+    margin-top: 35px;
 }
-*/
+
 /* Quiz page(s) layout */
 
 #quiz-page {
@@ -157,6 +148,40 @@ nav>ul {
 .hide {
     display: none;
 }
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+/* Header */
+nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+}
+
+#menu {
+    display: flex;
+}
+
+#menu>li {
+    padding-left: 1rem;
+}
+
+.nav-mobile-toggle-label {
+    display: none;
+}
+
+}
+
+/* Media query: tablets and larger (992px and up) */
+@media screen and (min-width: 992px) {}
+
+/* Media query: laptops and screens (1200px and up) */
+@media screen and (min-width: 1200px) {}
+
+
+
 
 
 /* to be removed */
