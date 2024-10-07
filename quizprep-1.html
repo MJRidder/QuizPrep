@@ -43,7 +43,9 @@
         <div id="quiz-page">
             <div id="quiz-area">
                 <div id="question-area" class="hide">
-                    <div id="question">Question</div>
+                    <section id="question-field">
+                        <div id="question">Question</div>
+                    </section>
                     <div id="answer-buttons" class="btn-grid">
                         <button class="btn">Answer 1</button>
                         <button class="btn">Answer 2</button>
@@ -57,8 +59,8 @@
                 <button id="next-btn" class="next-btn btn">Next</button>
 
                 <div class="score-area">
-                    <p class="scores">Correct Answer <span id="score">0</span></p>
-                    <p class="scores">Wrong Answer <span id="incorrect">0</span></p>
+                    <p class="scores" id="correct-answer">Correct Answer <span id="score">0</span></p>
+                    <p class="scores" id="wrong-answer">Wrong Answer <span id="incorrect">0</span></p>
                 </div>
             </div>
 

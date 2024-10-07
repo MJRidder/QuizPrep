@@ -90,12 +90,16 @@ nav {
 
 /* main body area */
 main {
-    margin-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 /* Homepage layout */
+
+.homepage-main {
+    margin-top: 50px;
+}
+
 .homepage-intro {
     padding-bottom: 2rem;
     padding-top: 2rem;
@@ -206,13 +210,48 @@ main {
 #quiz-page {
     display: flex;
     background-color: lightblue;
-    height: 1200px;
-    max-height: 80%;
+    height: 800px;
+    max-height: 90%;
     width: 500px;
     max-width: 94%;
     border-radius: 5px;
     padding: 1rem;
     box-shadow: 0 0 10px 2px;
+    justify-content: center;
+}
+
+#question-field {
+    background-color: #3e8e41;
+    height: 600px;
+    max-height: 80%;
+    width: 340px;
+    max-width: 94%;
+    align-items: start;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#question {
+        background-color: white;
+        color: #3a3a3a;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 1rem;
+}
+
+
+.scores {
+    padding-right: 2rem;
+}
+
+.answer-buttons {
+    align-items: last baseline;
+}
+
+.score-area {
+    padding-top: 10px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -256,14 +295,7 @@ main {
     top: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.score-area {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: end;
 }
 
 .hide {
