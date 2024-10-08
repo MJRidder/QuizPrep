@@ -139,6 +139,10 @@ Start README file
 OPEN QUESTIONS
 - Quiz: - how to avoid the counting to be unlimited? and/or only have one point per question.
 - Quiz - How to fix the start/Next, scoring and question fields always in the same place? Keeping the same spacing.
+- Quiz - how to get the scores "fixed" at the bottom of the container?
+- Quiz - create button to go back to home page
+- Quiz - best way to optimise for mobile
+- Quiz - in JS, for quiz 1/2/3, best to copy/paste JS or work with if/else statements?
 
 
 SOURCES

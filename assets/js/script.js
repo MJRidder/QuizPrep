@@ -1,33 +1,44 @@
 let startButton = document.getElementById('start-btn');
 let nextButton = document.getElementById('next-btn');
+let homeButton = document.getElementById('home-btn');
 let questionArea = document.getElementById('question-area');
-let questionElement = document.getElementById('question')
-let answerButtonsElement = document.getElementById('answer-buttons')
-let quizPage = document.getElementById('quiz-page')
+let questionElement = document.getElementById('question');
+let answerButtonsElement = document.getElementById('answer-buttons');
+let quizPage = document.getElementById('quiz-page');
 
-let Questionlist, currentQuestionIndex 
+let questionlist, currentQuestionIndex 
 
-startButton.addEventListener('click', StartQuiz);
+startButton.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
-    NextQuestion()
+    nextQuestion()
 })
 
 
-function StartQuiz() {
+/**
+ * 
+ */
+function startQuiz() {
     console.log("Starting the quiz");
+    homeButton.classList.add('hide');
     startButton.classList.add('hide');
-    Questionlist = questions.sort(() => .5);
+    questionlist = questions.sort(() => .5);
     currentQuestionIndex = 0;
     questionArea.classList.remove('hide');
-    NextQuestion()
+    nextQuestion()
 }
 
-function NextQuestion() {
+/**
+ * 
+ */
+function nextQuestion() {
     resetState()
-    showQuestion(Questionlist[currentQuestionIndex])
+    showQuestion(questionlist[currentQuestionIndex])
 }
 
+/**
+ * 
+ */
 function showQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
@@ -37,12 +48,14 @@ function showQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct
         }
-        button.addEventListener('click', SelectAnswer);
+        button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button)
     })
 }
 
-
+/**
+ * 
+ */
 function resetState() {
     clearStatusClass(quizPage)
     nextButton.classList.add('hide')
@@ -51,7 +64,10 @@ function resetState() {
     }
 }
 
-function SelectAnswer(event) {
+/**
+ * 
+ */
+function selectAnswer(event) {
     let selectedButton = event.target;
     let correct = selectedButton.dataset.correct;
     setStatusClass(quizPage, correct)
@@ -59,11 +75,12 @@ function SelectAnswer(event) {
         setStatusClass(button, button.dataset.correct)
     })
 
-    if (Questionlist.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide')
+    if (questionlist.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide');
     } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
+        startButton.innerText = 'Restart';
+        startButton.classList.remove('hide');
+        homeButton.classList.remove('hide');
     }
 
     if (correct) {
@@ -76,6 +93,9 @@ function SelectAnswer(event) {
 
 }
 
+/**
+ * 
+ */
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -85,59 +105,81 @@ function setStatusClass(element, correct) {
     }
 }
 
+/**
+ * 
+ */
 function clearStatusClass(element) {
         element.classList.remove('correct')
         element.classList.remove('wrong')
 } 
 
+/**
+ * 
+ */
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++oldScore
 }
 
+/**
+ * 
+ */
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++oldScore
 }
 
+/**
+ * 
+ */
 let questions = [
     {
-        question: 'What is twee plus twee?',
+        question: 'What is the name of the author of the book series?',
         answers: [
-            {text: 'vier', correct:true},
-            {text: 'acht', correct:false},
+            {text: 'Charles Dickens', correct:false},
+            {text: 'Shakespeare', correct:false},
+            {text: 'F. Scott Fitzgerald', correct:false},
+            {text: 'Andrej Sapkowski', correct:true}
         ]
 
     },
     {
-        question: 'What is drie plus drie?',
+        question: 'Where was the series filmed?',
         answers: [
-            {text: 'vier', correct:true},
-            {text: 'acht', correct:false},
+            {text: 'East Africa', correct:false},
+            {text: 'Asia', correct:false},
+            {text: 'Africa', correct:false},
+            {text: 'Eastern Europe', correct:true}
         ]
 
     },
     {
-        question: 'What is vier plus vier?',
+        question: 'What is the role of Jodhi May in "The Witcher"?',
         answers: [
-            {text: 'vier', correct:true},
-            {text: 'acht', correct:false},
+            {text: 'Queen Calanthe', correct:true},
+            {text: 'Tissaia', correct:false},
+            {text: 'Ciri', correct:false},
+            {text: 'Yennefer', correct:false}
         ]
 
     },
     {
-        question: 'What is vijf plus vijf?',
+        question: 'Who is Gerald of Rivia?',
         answers: [
-            {text: 'vier', correct:true},
-            {text: 'acht', correct:false},
+            {text: 'A witch', correct:false},
+            {text: 'A monster Hunter', correct:true},
+            {text: 'A Vampire', correct:false},
+            {text: 'A Monster', correct:false}
         ]
 
     },
     {
-        question: 'What is een plus een?',
+        question: 'Who portrayed the role of Geralt of Rivia?',
         answers: [
-            {text: 'vier', correct:true},
-            {text: 'acht', correct:false},
+            {text: 'Brad Pitt', correct:false},
+            {text: 'Henry Cavill', correct:true},
+            {text: 'Johnny Depp', correct:false},
+            {text: 'Chris Hemsworth', correct:false}
         ]
 
     },
