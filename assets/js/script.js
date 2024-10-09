@@ -8,12 +8,29 @@ let quizPage = document.getElementById('quiz-page');
 
 let questionlist, currentQuestionIndex 
 
+document.addEventListener("DOMContentLoaded", function() {
+let quizlinks = document.querySelectorAll('.dropdown-link');
+console.log("those are quiz links",quizlinks)
+for (let quizlink of quizlinks) {
+    quizlink.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log("Clicked link: ", this);
+        let quizCategory = this.getAttribute('data-type');
+        console.log("category  ",quizCategory);
+        if (quizCategory === "witcher") {
+            alert("You clicked the Witcher Quiz");
+        } else {
+            alert(`You clicked ${quizCategory}`);
+        }
+    });
+}
+})
+
 startButton.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
 })
-
 
 /**
  * 
@@ -22,7 +39,7 @@ function startQuiz() {
     console.log("Starting the quiz");
     homeButton.classList.add('hide');
     startButton.classList.add('hide');
-    questionlist = questions.sort(() => .5);
+    questionlist = questionsWitcher.sort(() => .5);
     currentQuestionIndex = 0;
     questionArea.classList.remove('hide');
     nextQuestion()
@@ -132,7 +149,111 @@ function incrementWrongAnswer() {
 /**
  * 
  */
-let questions = [
+let questionsWitcher = [
+    {
+        question: 'What is the name of the author of the book series?',
+        answers: [
+            {text: 'Charles Dickens', correct:false},
+            {text: 'Shakespeare', correct:false},
+            {text: 'F. Scott Fitzgerald', correct:false},
+            {text: 'Andrej Sapkowski', correct:true}
+        ]
+
+    },
+    {
+        question: 'Where was the series filmed?',
+        answers: [
+            {text: 'East Africa', correct:false},
+            {text: 'Asia', correct:false},
+            {text: 'Africa', correct:false},
+            {text: 'Eastern Europe', correct:true}
+        ]
+
+    },
+    {
+        question: 'What is the role of Jodhi May in "The Witcher"?',
+        answers: [
+            {text: 'Queen Calanthe', correct:true},
+            {text: 'Tissaia', correct:false},
+            {text: 'Ciri', correct:false},
+            {text: 'Yennefer', correct:false}
+        ]
+
+    },
+    {
+        question: 'Who is Gerald of Rivia?',
+        answers: [
+            {text: 'A witch', correct:false},
+            {text: 'A monster Hunter', correct:true},
+            {text: 'A Vampire', correct:false},
+            {text: 'A Monster', correct:false}
+        ]
+
+    },
+    {
+        question: 'Who portrayed the role of Geralt of Rivia?',
+        answers: [
+            {text: 'Brad Pitt', correct:false},
+            {text: 'Henry Cavill', correct:true},
+            {text: 'Johnny Depp', correct:false},
+            {text: 'Chris Hemsworth', correct:false}
+        ]
+
+    },
+]
+let questionsLotr = [
+    {
+        question: 'What is the name of the author of the book series?',
+        answers: [
+            {text: 'Charles Dickens', correct:false},
+            {text: 'Shakespeare', correct:false},
+            {text: 'F. Scott Fitzgerald', correct:false},
+            {text: 'Andrej Sapkowski', correct:true}
+        ]
+
+    },
+    {
+        question: 'Where was the series filmed?',
+        answers: [
+            {text: 'East Africa', correct:false},
+            {text: 'Asia', correct:false},
+            {text: 'Africa', correct:false},
+            {text: 'Eastern Europe', correct:true}
+        ]
+
+    },
+    {
+        question: 'What is the role of Jodhi May in "The Witcher"?',
+        answers: [
+            {text: 'Queen Calanthe', correct:true},
+            {text: 'Tissaia', correct:false},
+            {text: 'Ciri', correct:false},
+            {text: 'Yennefer', correct:false}
+        ]
+
+    },
+    {
+        question: 'Who is Gerald of Rivia?',
+        answers: [
+            {text: 'A witch', correct:false},
+            {text: 'A monster Hunter', correct:true},
+            {text: 'A Vampire', correct:false},
+            {text: 'A Monster', correct:false}
+        ]
+
+    },
+    {
+        question: 'Who portrayed the role of Geralt of Rivia?',
+        answers: [
+            {text: 'Brad Pitt', correct:false},
+            {text: 'Henry Cavill', correct:true},
+            {text: 'Johnny Depp', correct:false},
+            {text: 'Chris Hemsworth', correct:false}
+        ]
+
+    },
+]
+let questionsGot = [
     {
         question: 'What is the name of the author of the book series?',
         answers: [
