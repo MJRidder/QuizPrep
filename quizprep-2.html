@@ -30,20 +30,22 @@
                 <li><a href="contact.html">Contact</a></li>
 
                 <!-- to be removed at the end (should be not linkeable) -->
-                <li><a href="quizprep-1.html">Quizprep 1</a></li>
-                <li><a href="quizprep-2.html" class="active">Quizprep 2</a></li>
-                <li><a href="quizprep-3.html">Quizprep 3</a></li>
+                <li><a href="quizprep-1.html">The Witcher Quiz</a></li>
+                <li><a href="quizprep-2.html" class="active">The Lord of the Rings Quiz</a></li>
+                <li><a href="quizprep-3.html">The Game of Thrones Quiz</a></li>
             </ul>
         </nav>
         <a href="index.html">
         <h1 id="logo">Quizprep</h1>
         </a>
     </header>
-    <main>
+    <main class="quizprep-1">
         <div id="quiz-page">
             <div id="quiz-area">
                 <div id="question-area" class="hide">
-                    <div id="question">Question</div>
+                    <section id="question-field">
+                        <div id="question">Question</div>
+                    </section>
                     <div id="answer-buttons" class="btn-grid">
                         <button class="btn">Answer 1</button>
                         <button class="btn">Answer 2</button>
@@ -53,13 +55,17 @@
                 </div>
 
                 <div class="nav-btn"></div>
-                <button id="start-btn" class="start-btn btn">Start</button>
-                <button id="next-btn" class="next-btn btn">Next</button>
+                <button id="start-btn-lotr" class="start-btn btn">Start</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+                <a href="index.html"><button id="home-btn" class="home-btn btn">Home</button></a>
+
+
+                <div class="score-area">
+                    <p class="scores" id="correct-answer">Correct Answer <span id="score">0</span></p>
+                    <p class="scores" id="wrong-answer">Wrong Answer <span id="incorrect">0</span></p>
+                </div>
             </div>
-            <div class="score-area">
-                <p class="scores">Correct Answer<span id="score">0</span></p>
-                <p class="scores">Wrong Answer<span id="incorrect">0</span></p>
-            </div>
+
         </div>
     </main>
     <script src="assets/js/script.js"></script>

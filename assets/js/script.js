@@ -1,4 +1,5 @@
 let startButton = document.getElementById('start-btn');
+let startButton2 = document.getElementById('start-btn-lotr');
 let nextButton = document.getElementById('next-btn');
 let homeButton = document.getElementById('home-btn');
 let questionArea = document.getElementById('question-area');
@@ -8,17 +9,35 @@ let quizPage = document.getElementById('quiz-page');
 
 let questionlist, currentQuestionIndex 
 
+if (startButton) {
+    startButton.addEventListener('click', startQuiz);
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    nextQuestion()
+})
+}
+
+if (startButton2) {
+    startButton2.addEventListener('click', startQuizLotr);
+    nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    nextQuestion()
+})
+}
+
 document.addEventListener("DOMContentLoaded", function() {
 let quizlinks = document.querySelectorAll('.dropdown-link');
 console.log("those are quiz links",quizlinks)
+
 for (let quizlink of quizlinks) {
-    quizlink.addEventListener('click', function(event) {
-        event.preventDefault();
+    quizlink.addEventListener('click', function() {
         console.log("Clicked link: ", this);
         let quizCategory = this.getAttribute('data-type');
-        console.log("category  ",quizCategory);
+        console.log("category",quizCategory);
         if (quizCategory === "witcher") {
             alert("You clicked the Witcher Quiz");
+            element.classList.add('correct');
+
         } else {
             alert(`You clicked ${quizCategory}`);
         }
@@ -26,20 +45,31 @@ for (let quizlink of quizlinks) {
 }
 })
 
-startButton.addEventListener('click', startQuiz);
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    nextQuestion()
-})
+
 
 /**
  * 
  */
 function startQuiz() {
-    console.log("Starting the quiz");
+    let quizCategory = "Witcher"
+    console.log(`Starting the ${quizCategory} Quiz`);
     homeButton.classList.add('hide');
     startButton.classList.add('hide');
-    questionlist = questionsWitcher.sort(() => .5);
+    questionlist = questions.sort(() => .5);
+    currentQuestionIndex = 0;
+    questionArea.classList.remove('hide');
+    nextQuestion()
+}
+
+/**
+ * 
+ */
+function startQuizLotr() {
+    let quizCategory = "Lotr"
+    console.log(`Starting the ${quizCategory} Quiz`);
+    homeButton.classList.add('hide');
+    startButton2.classList.add('hide');
+    questionlist = questionsLotr.sort(() => .5);
     currentQuestionIndex = 0;
     questionArea.classList.remove('hide');
     nextQuestion()
@@ -94,9 +124,13 @@ function selectAnswer(event) {
 
     if (questionlist.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
-    } else {
+    } else if (startButton) {
         startButton.innerText = 'Restart';
         startButton.classList.remove('hide');
+        homeButton.classList.remove('hide');
+    } else if (startButton2) {
+        startButton2.innerText = 'Restart';
+        startButton2.classList.remove('hide');
         homeButton.classList.remove('hide');
     }
 
@@ -149,7 +183,7 @@ function incrementWrongAnswer() {
 /**
  * 
  */
-let questionsWitcher = [
+let questions = [
     {
         question: 'What is the name of the author of the book series?',
         answers: [
@@ -203,22 +237,22 @@ let questionsWitcher = [
 ]
 let questionsLotr = [
     {
-        question: 'What is the name of the author of the book series?',
+        question: 'Who was the Ring bearer?',
         answers: [
-            {text: 'Charles Dickens', correct:false},
-            {text: 'Shakespeare', correct:false},
-            {text: 'F. Scott Fitzgerald', correct:false},
-            {text: 'Andrej Sapkowski', correct:true}
+            {text: 'Sam', correct:false},
+            {text: 'Merry', correct:false},
+            {text: 'Pippin', correct:false},
+            {text: 'Frodo', correct:true}
         ]
 
     },
     {
-        question: 'Where was the series filmed?',
+        question: 'Who threw the ring into mount doom?',
         answers: [
-            {text: 'East Africa', correct:false},
-            {text: 'Asia', correct:false},
-            {text: 'Africa', correct:false},
-            {text: 'Eastern Europe', correct:true}
+            {text: 'Frodo', correct:false},
+            {text: 'Sam', correct:false},
+            {text: 'Gollum', correct:true},
+            {text: 'Aragorn', correct:false}
         ]
 
     },
