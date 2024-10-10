@@ -148,6 +148,7 @@ To DO:
 
 SOURCES
 - https://teamtreehouse.com/community/is-it-a-good-practice-to-use-boxsizing-all-the-time
+- https://www.shecodes.io/
 
 
 IMAGES

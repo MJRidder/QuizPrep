@@ -1,24 +1,34 @@
 let startButton = document.getElementById('start-btn');
 let startButton2 = document.getElementById('start-btn-lotr');
+let startButton3 = document.getElementById('start-btn-got');
 let nextButton = document.getElementById('next-btn');
 let homeButton = document.getElementById('home-btn');
 let questionArea = document.getElementById('question-area');
 let questionElement = document.getElementById('question');
 let answerButtonsElement = document.getElementById('answer-buttons');
 let quizPage = document.getElementById('quiz-page');
+let questionImage = document.getElementById('witcher-image')
 
 let questionlist, currentQuestionIndex 
-
 if (startButton) {
     startButton.addEventListener('click', startQuiz);
-nextButton.addEventListener('click', () => {
+    nextButton.addEventListener('click', () => {
     currentQuestionIndex++
+    questionImage.setAttribute("src", 'https://cdn.images.express.co.uk/img/dynamic/20/590x/1173455_1.jpg')
     nextQuestion()
 })
 }
 
 if (startButton2) {
     startButton2.addEventListener('click', startQuizLotr);
+    nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    nextQuestion()
+})
+}
+
+if (startButton3) {
+    startButton3.addEventListener('click', startQuizGot);
     nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
@@ -55,7 +65,7 @@ function startQuiz() {
     console.log(`Starting the ${quizCategory} Quiz`);
     homeButton.classList.add('hide');
     startButton.classList.add('hide');
-    questionlist = questions.sort(() => .5);
+    questionlist = questionsWitcher.sort(() => .5);
     currentQuestionIndex = 0;
     questionArea.classList.remove('hide');
     nextQuestion()
@@ -67,9 +77,24 @@ function startQuiz() {
 function startQuizLotr() {
     let quizCategory = "Lotr"
     console.log(`Starting the ${quizCategory} Quiz`);
+    console.log(questionImage)
     homeButton.classList.add('hide');
     startButton2.classList.add('hide');
     questionlist = questionsLotr.sort(() => .5);
+    currentQuestionIndex = 0;
+    questionArea.classList.remove('hide');
+    nextQuestion()
+}
+
+/**
+ * 
+ */
+function startQuizGot() {
+    let quizCategory = "Got"
+    console.log(`Starting the ${quizCategory} Quiz`);
+    homeButton.classList.add('hide');
+    startButton3.classList.add('hide');
+    questionlist = questionsGot.sort(() => .5);
     currentQuestionIndex = 0;
     questionArea.classList.remove('hide');
     nextQuestion()
@@ -88,7 +113,7 @@ function nextQuestion() {
  */
 function showQuestion(question) {
     questionElement.innerText = question.question
-    question.answers.forEach(answer => {
+        question.answers.forEach(answer => {
         let button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add ('btn');
@@ -97,6 +122,7 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button)
+        console.log (question)
     })
 }
 
@@ -131,6 +157,10 @@ function selectAnswer(event) {
     } else if (startButton2) {
         startButton2.innerText = 'Restart';
         startButton2.classList.remove('hide');
+        homeButton.classList.remove('hide');
+    } else if (startButton3) {
+        startButton3.innerText = 'Restart';
+        startButton3.classList.remove('hide');
         homeButton.classList.remove('hide');
     }
 
@@ -183,9 +213,10 @@ function incrementWrongAnswer() {
 /**
  * 
  */
-let questions = [
+let questionsWitcher = [
     {
         question: 'What is the name of the author of the book series?',
+        img: 'https://cdn.images.express.co.uk/img/dynamic/20/590x/1173455_1.jpg',
         answers: [
             {text: 'Charles Dickens', correct:false},
             {text: 'Shakespeare', correct:false},
@@ -289,12 +320,12 @@ let questionsLotr = [
 ]
 let questionsGot = [
     {
-        question: 'What is the name of the author of the book series?',
+        question: 'Who is the dragon queen?',
         answers: [
-            {text: 'Charles Dickens', correct:false},
-            {text: 'Shakespeare', correct:false},
-            {text: 'F. Scott Fitzgerald', correct:false},
-            {text: 'Andrej Sapkowski', correct:true}
+            {text: 'Daenerys Targaryen', correct:true},
+            {text: 'Yara Greyjoy', correct:false},
+            {text: 'Sansa Stark', correct:false},
+            {text: 'Cersei Lannister', correct:false}
         ]
 
     },
