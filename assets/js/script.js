@@ -7,14 +7,15 @@ let questionArea = document.getElementById('question-area');
 let questionElement = document.getElementById('question');
 let answerButtonsElement = document.getElementById('answer-buttons');
 let quizPage = document.getElementById('quiz-page');
-let questionImage = document.getElementById('witcher-image')
+let QWitchImage = document.getElementById('witcher-image')
+let QLotrImage = document.getElementById('lotr-image')
+let QGotImage = document.getElementById('got-image')
 
 let questionlist, currentQuestionIndex 
 if (startButton) {
     startButton.addEventListener('click', startQuiz);
     nextButton.addEventListener('click', () => {
     currentQuestionIndex++
-    questionImage.setAttribute("src", 'https://cdn.images.express.co.uk/img/dynamic/20/590x/1173455_1.jpg')
     nextQuestion()
 })
 }
@@ -77,7 +78,7 @@ function startQuiz() {
 function startQuizLotr() {
     let quizCategory = "Lotr"
     console.log(`Starting the ${quizCategory} Quiz`);
-    console.log(questionImage)
+    console.log(QWitchImage)
     homeButton.classList.add('hide');
     startButton2.classList.add('hide');
     questionlist = questionsLotr.sort(() => .5);
@@ -112,7 +113,7 @@ function nextQuestion() {
  * 
  */
 function showQuestion(question) {
-    questionElement.innerText = question.question
+    questionElement.innerText = question.question;
         question.answers.forEach(answer => {
         let button = document.createElement('button');
         button.innerText = answer.text;
@@ -124,6 +125,9 @@ function showQuestion(question) {
         answerButtonsElement.appendChild(button)
         console.log (question)
     })
+    QWitchImage.src = question.img;
+    QLotrImage.src = question.img;
+    QGotImage.src = question.img;
 }
 
 /**
@@ -216,7 +220,7 @@ function incrementWrongAnswer() {
 let questionsWitcher = [
     {
         question: 'What is the name of the author of the book series?',
-        img: 'https://cdn.images.express.co.uk/img/dynamic/20/590x/1173455_1.jpg',
+        img: './assets/Images/witcher-quiz/witcher-mobile-cropped.jpg',
         answers: [
             {text: 'Charles Dickens', correct:false},
             {text: 'Shakespeare', correct:false},
@@ -227,6 +231,7 @@ let questionsWitcher = [
     },
     {
         question: 'Where was the series filmed?',
+        img: './assets/Images/witcher-quiz/witcher-mobile-cropped2.jpg',
         answers: [
             {text: 'East Africa', correct:false},
             {text: 'Asia', correct:false},
@@ -237,6 +242,7 @@ let questionsWitcher = [
     },
     {
         question: 'What is the role of Jodhi May in "The Witcher"?',
+        img: './assets/Images/witcher-quiz/witcher-front-image.jpg',
         answers: [
             {text: 'Queen Calanthe', correct:true},
             {text: 'Tissaia', correct:false},
@@ -247,6 +253,7 @@ let questionsWitcher = [
     },
     {
         question: 'Who is Gerald of Rivia?',
+        img: './assets/Images/witcher-quiz/witcher-mobile.webp',
         answers: [
             {text: 'A witch', correct:false},
             {text: 'A monster Hunter', correct:true},
@@ -257,6 +264,7 @@ let questionsWitcher = [
     },
     {
         question: 'Who portrayed the role of Geralt of Rivia?',
+        img: './assets/Images/witcher-quiz/witcher-sad.webp',
         answers: [
             {text: 'Brad Pitt', correct:false},
             {text: 'Henry Cavill', correct:true},
@@ -269,6 +277,7 @@ let questionsWitcher = [
 let questionsLotr = [
     {
         question: 'Who was the Ring bearer?',
+        img: './assets/Images/lotr-hero.jpg',
         answers: [
             {text: 'Sam', correct:false},
             {text: 'Merry', correct:false},
@@ -279,6 +288,7 @@ let questionsLotr = [
     },
     {
         question: 'Who threw the ring into mount doom?',
+        img: './assets/Images/lotr-hero.jpg',
         answers: [
             {text: 'Frodo', correct:false},
             {text: 'Sam', correct:false},
@@ -289,6 +299,7 @@ let questionsLotr = [
     },
     {
         question: 'What is the role of Jodhi May in "The Witcher"?',
+        img: './assets/Images/lotr-hero.jpg',
         answers: [
             {text: 'Queen Calanthe', correct:true},
             {text: 'Tissaia', correct:false},
@@ -299,6 +310,7 @@ let questionsLotr = [
     },
     {
         question: 'Who is Gerald of Rivia?',
+        img: './assets/Images/lotr-hero.jpg',
         answers: [
             {text: 'A witch', correct:false},
             {text: 'A monster Hunter', correct:true},
@@ -309,6 +321,7 @@ let questionsLotr = [
     },
     {
         question: 'Who portrayed the role of Geralt of Rivia?',
+        img: './assets/Images/lotr-hero.jpg',
         answers: [
             {text: 'Brad Pitt', correct:false},
             {text: 'Henry Cavill', correct:true},
@@ -321,6 +334,7 @@ let questionsLotr = [
 let questionsGot = [
     {
         question: 'Who is the dragon queen?',
+        img: './assets/Images/got-hero.avif',
         answers: [
             {text: 'Daenerys Targaryen', correct:true},
             {text: 'Yara Greyjoy', correct:false},
@@ -331,6 +345,7 @@ let questionsGot = [
     },
     {
         question: 'Where was the series filmed?',
+        img: './assets/Images/got-hero.avif',
         answers: [
             {text: 'East Africa', correct:false},
             {text: 'Asia', correct:false},
@@ -341,6 +356,7 @@ let questionsGot = [
     },
     {
         question: 'What is the role of Jodhi May in "The Witcher"?',
+        img: './assets/Images/got-hero.avif',
         answers: [
             {text: 'Queen Calanthe', correct:true},
             {text: 'Tissaia', correct:false},
@@ -351,6 +367,7 @@ let questionsGot = [
     },
     {
         question: 'Who is Gerald of Rivia?',
+        img: './assets/Images/got-hero.avif',
         answers: [
             {text: 'A witch', correct:false},
             {text: 'A monster Hunter', correct:true},
@@ -361,6 +378,7 @@ let questionsGot = [
     },
     {
         question: 'Who portrayed the role of Geralt of Rivia?',
+        img: './assets/Images/got-hero.avif',
         answers: [
             {text: 'Brad Pitt', correct:false},
             {text: 'Henry Cavill', correct:true},
