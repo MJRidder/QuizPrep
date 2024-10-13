@@ -1,4 +1,4 @@
-let startButton = document.getElementById('start-btn');
+let startButton = document.getElementById('start-btn-witcher');
 let startButton2 = document.getElementById('start-btn-lotr');
 let startButton3 = document.getElementById('start-btn-got');
 let nextButton = document.getElementById('next-btn');
@@ -12,8 +12,14 @@ let QLotrImage = document.getElementById('lotr-image')
 let QGotImage = document.getElementById('got-image')
 
 let questionlist, currentQuestionIndex 
+
+/**
+ * Utilising the different start buttons based on the start 
+ * button ID's added in HTML. this triggers the start of
+ * the correct quiz.
+ */
 if (startButton) {
-    startButton.addEventListener('click', startQuiz);
+    startButton.addEventListener('click', startQuizWitcher);
     nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
@@ -59,9 +65,11 @@ for (let quizlink of quizlinks) {
 
 
 /**
- * 
+ * The Witcher start game loop. Hides the home and start button 
+ * and starts the next question list. As an addition it also
+ * logs to console which game is started.
  */
-function startQuiz() {
+function startQuizWitcher() {
     let quizCategory = "Witcher"
     console.log(`Starting the ${quizCategory} Quiz`);
     homeButton.classList.add('hide');
@@ -73,7 +81,9 @@ function startQuiz() {
 }
 
 /**
- * 
+ * The Lord of the Rings start game loop. Hides the home 
+ * and start button and starts the next question list. As 
+ * an addition it also logs to console which game is started.
  */
 function startQuizLotr() {
     let quizCategory = "Lotr"
@@ -88,7 +98,9 @@ function startQuizLotr() {
 }
 
 /**
- * 
+ * The Game of Thrones start game loop. Hides the home 
+ * and start button and starts the next question list. As 
+ * an addition it also logs to console which game is started.
  */
 function startQuizGot() {
     let quizCategory = "Got"
@@ -102,7 +114,8 @@ function startQuizGot() {
 }
 
 /**
- * 
+ * Function to call the next question and reset the state
+ * of the page to ensure previous answers are cleared.
  */
 function nextQuestion() {
     resetState()
@@ -110,7 +123,13 @@ function nextQuestion() {
 }
 
 /**
- * 
+ * Main function that calls the (next) question from the let Question
+ * object and showcases it in the question field. It also creates the
+ * buttons that are shown and populates these with the answer options.
+ * When the correct answer is selected, a 'correct' class is added to 
+ * the button which in turn is used for color coding in CSS.
+ * Additionally tracks if the right answer is given and it shows the 
+ * image added for a specific questions.
  */
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -125,13 +144,16 @@ function showQuestion(question) {
         answerButtonsElement.appendChild(button)
         console.log (question)
     })
+
     QWitchImage.src = question.img;
     QLotrImage.src = question.img;
     QGotImage.src = question.img;
 }
 
 /**
- * 
+ * Clears elements back to a default state and removes the next button.
+ * Deleting previous answers (clearing for new answers/question to be 
+ * added.)
  */
 function resetState() {
     clearStatusClass(quizPage)
@@ -142,7 +164,13 @@ function resetState() {
 }
 
 /**
- * 
+ * Reads the button that is selected. Checks the answer with the question
+ * object to see if the given answer matches with dataset correct (=true). 
+ * Adding the correct status. Additionally it uses the current question 
+ * list to loop to the next question depending on which quiz has started. 
+ * At the end of each quiz if no questions are available anymore, the 
+ * Restart and Home buttons are made visible. In the console it also 
+ * confirms if a question is answered correct or wrong.
  */
 function selectAnswer(event) {
     let selectedButton = event.target;
@@ -179,7 +207,9 @@ function selectAnswer(event) {
 }
 
 /**
- * 
+ * clears the previous statuss (wrong/correct) where needed. Checks
+ * what the new status of each answers is to define the new status 
+ * of correct or wrong.
  */
 function setStatusClass(element, correct) {
     clearStatusClass(element)
@@ -191,7 +221,7 @@ function setStatusClass(element, correct) {
 }
 
 /**
- * 
+ * function that removes existing classes correct/wrong.
  */
 function clearStatusClass(element) {
         element.classList.remove('correct')
@@ -199,7 +229,8 @@ function clearStatusClass(element) {
 } 
 
 /**
- * 
+ * src: Lovemath - counts the provided answer if correct and adds it 
+ * to the the correct score counter.
  */
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
@@ -207,16 +238,15 @@ function incrementScore() {
 }
 
 /**
- * 
+ * src: Lovemath - counts the provided answer if wrong and adds it 
+ * to the the incorrect score counter.
  */
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++oldScore
 }
 
-/**
- * 
- */
+
 let questionsWitcher = [
     {
         question: 'What is the name of the author of the book series?',
