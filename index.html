@@ -30,9 +30,9 @@
                 <li><a href="contact.html">Contact</a></li>
 
                 <!-- to be removed at the end (should be not linkeable) -->
-                <li><a href="quizprep-1.html">The Witcher Quiz</a></li>
-                <li><a href="quizprep-2.html">Lord of the Rings</a></li>
-                <li><a href="quizprep-3.html">Game of Thrones</a></li>
+                <li><a href="quizprep-1.html" value="The Witcher Quiz">1</a></li>
+                <li><a href="quizprep-2.html" value="Lord of the Rings">2</a></li>
+                <li><a href="quizprep-3.html" value="Game of Thrones">3</a></li>
             </ul>
         </nav>
         <a href="index.html">
@@ -43,15 +43,19 @@
         <div class="none-quizpage-intros">
             <p>Welcome to QUIZPREP! A community lead page that helps you prepare for your upcoming Quiznights!</p>
         </div>
+        </label>
 
-        <nav id="quizlist">
-            <p>This is where the list should go</p>
-            <ul class="quiz-dropdown">
-                <li><a href="quizprep-1.html" class="dropdown-link" onclick="addClassToElementOnNextPage()" data-type="witcher">The Witcher Quiz</a></li>
-                <li><a href="quizprep-2.html" class="dropdown-link" onclick="addClassToElementOnNextPage()" data-type="lotr">Lord of the Rings</a></li>
-                <li><a href="quizprep-3.html" class="dropdown-link" onclick="addClassToElementOnNextPage()" data-type="got">Game of Thrones</a></li>
-            </ul>
-        </nav>
+        <div class="quizlist">
+            <button class="quiz-dropdown">Quiz list</button>
+            <div class="dropdown-link">
+                <a href="quizprep-1.html" class="dropdown-link" onclick="addClassToElementOnNextPage()"
+                    data-type="witcher">The Witcher Quiz</a>
+              <a href="quizprep-2.html" class="dropdown-link" onclick="addClassToElementOnNextPage()"
+                        data-type="lotr">Lord of the Rings</a>
+              <a href="quizprep-3.html" class="dropdown-link" onclick="addClassToElementOnNextPage()"
+                        data-type="got">Game of Thrones</a>
+            </div>
+          </div>
 
         <section class="homepage-adv-quiz">
             <a href="quizprep-1.html" title="Witcher knowledge quiz" data-type="witcher">
