@@ -14,17 +14,39 @@ To DO:
 - Quiz - clean up the score after pressing "Restart"
 
 # Quizprep - about the page
-
+Welcome to Quizprep. A page that test your knowledge on three of the most sought after fantasy TV shows and movies. In the long term this could be a community let page where quizzes on all types of subjects can be shared and played, but to start the focus lies on the Witcher series, the Lord of the Rings movies (The early 2000 ones still win it for me!) and the Game of Thrones series (might skip the final episodes). The website allows you to play all three and tracks your score as you do it, hopefully helping you learn a few interesting facts on the shows. It also has a contact page through which feedback can be shared, bugs can be reported and new quiz ideas can be shared.
 
 ## Business goals
+- get users excited about quizzes
+- become a collective of quizzes on a large number of topics
+- be easy to use and easy to come back to
+- mobile focused design for a quick and on the go quiz action
+- help users prepare for quiznight (etc.) or use Quizprep for this
+- (long term) create a community that is excited about sharing an playing quizzes
+- (optional) to make Quizprep profitable, the side bars on each side of the screen could contain advertisements (on mobile this could be added at the bottom of the page or in between quizzes)
 
 ## User goals
+- enjoy a fun quiz (or two)
+- quick, easy pass time activity
+- learn something new about your favourite shows (lon gterm: a variety of topics)
+- (long term) be an active member of this quiz community
+- (long term) play new quizzes every week
 
 # UX experience
+As one of the main uses of Quizprep is aimed as quick and easy 'quizzing', the user experience of the pages is focused on the mobile device. Quizprep can absolutely be played on larger devices (and is adapted for it) but the clean layout, purposefully limited details and options, make that a user can get to their favourite quiz experience as soon as with a single click. The layout is adapted for each quiz to also 'set the right scene' when starting a quiz.
 
+The homepage consists of:
+- a brief introduction
+- a clear button that lists all available quizzes, an 'advertised' quiz (could be a new, updated or in the long term a sponsored quiz)
+- a short description of what Quizprep is
+- and a few suggested quizzes
 
 # User stories
+In the short term the main user story would be someone looking to play a quiz on their favourite movie/series and finds this on one of the search engines. This could be through the home page or even directly on the quiz itself.
 
+Main use for Quizprep would be for quick quiz fun. It is not expected that users will spend more then 5-10 minutes on the page depending on if they have found already the quiz they want to play. Target group would be anyone with 5 minutes to spare, when and wherever they are. The enjoyment comes from the quick excitement around the quiz topic and eventually the knowledge that Quizprep would be able to provide these quick spells of entertainment in the future through the multitude of quizzes that would be added.
+
+In the long term, a quiz community could be created. Which would get the users coming back on a regular basis. To either play new quizzes or be a part of the quiz creator group. Creating/Suggesting quizzes that get the most users.
 
 # Mobile users
 
