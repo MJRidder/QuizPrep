@@ -6,12 +6,14 @@ Start README file
 
 OPEN QUESTIONS
 - Quiz - how to avoid the counting to be unlimited? and/or only have one point per question.
-- Quiz - How to fix the start/Next, scoring and question fields always in the same place? Keeping the same spacing.
 - Quiz - best way to optimise for mobile
-- Quiz - in JS, for quiz 1/2/3, best to copy/paste JS or work with if/else statements?
+- Footer - footer remains a struggle, does not remain at the bottom
 
 To DO:
 - Quiz - clean up the score after pressing "Restart"
+- Keywords - add unique keywords for each page (relevant to the quiz)
+- Images - add the right images and sizes to the different screen sizes
+- Samsung 8 - update pages for smallest devices
 
 # Quizprep - about the page
 Welcome to Quizprep. A page that test your knowledge on three of the most sought after fantasy TV shows and movies. In the long term this could be a community let page where quizzes on all types of subjects can be shared and played, but to start the focus lies on the Witcher series, the Lord of the Rings movies (The early 2000 ones still win it for me!) and the Game of Thrones series (might skip the final episodes). The website allows you to play all three and tracks your score as you do it, hopefully helping you learn a few interesting facts on the shows. It also has a contact page through which feedback can be shared, bugs can be reported and new quiz ideas can be shared.
@@ -41,6 +43,10 @@ The homepage consists of:
 - a short description of what Quizprep is
 - and a few suggested quizzes
 
+The quizpages themselves 'set the scene' through the use of images on the show in the background. Unique and relevant pictures are added for each question and a users knows instantly when their answer is correct or not through an added colorcoding on the border of the quiz area. Correct and incorrect answers are also counted which provides the user a final result at the end of the quiz, stating how many questions were answered correctly and how many were answered incorrectly.
+
+A simple contact page is also available to provide feedback and/or to connect with the creators of Quizprep.
+
 # User stories
 In the short term the main user story would be someone looking to play a quiz on their favourite movie/series and finds this on one of the search engines. This could be through the home page or even directly on the quiz itself.
 
@@ -49,14 +55,61 @@ Main use for Quizprep would be for quick quiz fun. It is not expected that users
 In the long term, a quiz community could be created. Which would get the users coming back on a regular basis. To either play new quizzes or be a part of the quiz creator group. Creating/Suggesting quizzes that get the most users.
 
 # Mobile users
+Quizprep was created with a 'mobile first' mindset, before reviewing the websites funcitionality for tablets/desktops. Expecting the main userbase to arrive on the page through their mobile devices. The layout therefor is simple but efficient and pages were created mostly with the 'Samsung Galaxy S20 Ultra' as the main device. From there it has been adapted for larger screens and tested through a Macbook with a 16 inch screen.
 
+Reasoning is two fold:
+A - Mobile as a device is used in a much higher frequency then tablets or desktops/laptops
+B - Quizprep aimes for quick and often 'on the go' users. Expected therefor is as well that specifically the Quizprep userbase would mostly visit through their mobile device
+
+[screenshots]
 
 # Wireframes
+For my wireframes I used the Balsamiq app. First writing out the concept of Quizprep (what is it and what could it be in the future?). After which I wrote out the steps that needed to be taken to successfully create the website, followed by several page designs for the homepage and the quizpages (trying to find specifically the best/fun usage on a mobile device). As research shows that 85% (or some say more) of people is right handed, the current design was chosen to tailor to the masses (e.g. the 'Next' button is on the right of the page).
 
+[screenshot]
+
+When the base was set, I wrote out which steps the quizzes would need to take in Javascript (before attempting to code). Trying to find the logic behind the tool and what it would need to do/track, before even showing the first question.
+
+[screenshot]
+
+There are evidently a few differences between my original wireframe and the end result (e.g. having a slider present on the screen, showcasing the users overall score). This in favour of my current Javascript knowledge. However this does allow for future adaptations to include some of these features
+
+[screenshot]
 
 # Features
 
+## NAV bar
+The navigation bar is adaptable for smaller and larger screens. Making use of the "hamburger" menu for mobile and adding the homepage/contact links written out at the top of the page for larger devices. It still allows space for more menu options. Currently the different quizzes are also added for easy navigation while working on the site. However with the 'hidden class' added, they are only visible when desired, not for the users.
+
+[screenshot for mobile and larger screen]
+
+## Quizlist
+
+## 'Advertised' Quiz
+
+## Quiz suggestions
+
+## Contact and Feedback page
+
+## Visuals/Images adapted to the relevant quiz
+
+## (Re)Start button 
+
+## Next button
+
+## Correct/Incorrect visualisation
+
+## Score tracking
+
+## Home button
+
+## Simple consistent layout
+
+## Footer with links to socials
+
 ## Future features
+
+### 
 
 # Testing
 Testing of the various pages has been an ongoing process. Ensuring that mobile comes first has the benefit that overall the pages are tailored for it and will indeed look most streamlined on mobile. It has however ensured that in some cases the page look different on larger screens.
@@ -125,6 +178,7 @@ There are no differences between my local and deployed site currently.
 | Source | Location | Notes |
 | --- | --- | --- |
 | [W3schools](https://www.w3schools.com/) | Example | Example |
+| [Medlineplus](https://medlineplus.gov/genetics/understanding/traits/handedness/) | Quizpage | % of righthanded vs. lefthanded users |
 
 
 Special shout out to my mentor [Sheryl Goldberg](https://github.com/sherylg343) for supporting me in several sessions leading up to the completion of my P1 Portfolio project. I have learned a lot.
