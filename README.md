@@ -81,35 +81,79 @@ There are evidently a few differences between my original wireframe and the end 
 ## NAV bar
 The navigation bar is adaptable for smaller and larger screens. Making use of the "hamburger" menu for mobile and adding the homepage/contact links written out at the top of the page for larger devices. It still allows space for more menu options. Currently the different quizzes are also added for easy navigation while working on the site. However with the 'hidden class' added, they are only visible when desired, not for the users.
 
-[screenshot for mobile and larger screen]
+[screenshot - for mobile and larger screen]
 
 ## Quizlist
+An easy to spot and use dropdown button that is used as the main quiz portal. This Quizlist is the main function that a user can use to browse through the available quizzes. In future iterations the list could be added in a menu and/or a side bar but to keep with the easy overview, this button is the only function that lists all quizzes. It shows as a button when scrolling, but only when hovered over or clicked on it will display the quizlist. This to improve general site use and access. The button is a distinct different color from the rest of the page to make sure that it stands out.
+
+[screenshot - quizlist button]
 
 ## 'Advertised' Quiz
+To allow for a 'one click' quiz access, the 'advertised quiz' section was added to the home page. This is currently the main quiz available but towards the future this could be used for adding new quizzes, sponsored quizzes or if preferences of users are known, suggested quizzes that match the users preferences thus far.
+
+Added over the image is the title of the quiz to clarify the quiz subject.
+
+[screenshot]
 
 ## Quiz suggestions
+Similar to the 'Advertised' quiz section, it allows a 'one click' access to some of the available quizzes. It can be added with a small image + a short description of the quizzes mentioned in this short overview. Especially when the amount of available quizzes increases, this section is interesting for the user if it shows quizzes that align with their preferences. Also for users that enjoy reading a short description of a quiz, this section can tailor to those (as not all users would be image/visual driven). 
+
+[screenshot]
 
 ## Contact and Feedback page
+If there is any feedback on the quizzes, users can reach out to the creators of Quickprep. In the longterm this page will also be the first (simple) foundation of the community through which users can give suggestions for quizzes to come. The page is kept simple again to highlight the use and to make it easily accessable via mobile devices.
 
 ## Visuals/Images adapted to the relevant quiz
+To help users 'get in the zone' each quiz has its own base page, so that imaging around the quiz can be formatted in line with the quiz subject. Helping users get a look and feel of the quiz subject (currently, one of the three shows) while playint the quiz. The images are also adapted to the screensizes for optimal use.
 
 ## (Re)Start button 
+The start button allows the quiz to be kicked off (it is also the trigger for Javascript to launch the correct questions and visuals). It is only visible at the start of the quiz and at the end of the quiz. Where however the Start button will be 'rebranded' to "Restart" as it will allow the user to redo the quiz if they are hoping to get a better score. 
+
+(Future iterations could also includde a cap on the amount of questions answered and restarting the quiz would then load a new set of questions/answers on the topic)
+
+[screenshot]
 
 ## Next button
+The Next button only shows when an answer is given. This tor trigger that the user always provides an answer and is unable to simply click through a quiz.
+
+[screenshot] - Next button shown and Next button hidden.
 
 ## Correct/Incorrect visualisation
+As part of the experience, the frame surrounding the question and answer area will light up green or red, depending on the answer that the users gives is correct (green) or wrong (red). As quizzes are all about giving a high when a correct answer is given this will help with hte quiz experience.
+
+[screenshot] - of a red and a green label of the screen
 
 ## Score tracking
+At the bottom of the quiz pages there is a score tracker showcasing how many questions have been answered correctly and how many have been answered wrong. This is triggered when the provided answer is clicked on one of the answer buttons. There is a counter for the amount of correct answers given and the amount of wrong anwers given.
+
+[screenshot]
 
 ## Home button
+The home button is generally hidden throughout the quiz, but is unhidden at the end of the quiz. Allowing the user a direct way back to the home page without the need of using the top navigation bar to navigate back. This of course is also a possibility but the home button provides a better flow for the use to go through the different quizzes made available to them on Quizprep.
+
+[screenshot]
 
 ## Simple consistent layout
+The layout is purposefully kept sipmle to tailor to users of mobile devices. Simple navigation and quick loading pages. The layout of the different quizpages is also the same to help users receive what they 'expect' when would go through multiple quizzes. For future iterations new quiz formats could be considered. But the aim for this iteration is simplicity and giving an easy user experience.
 
 ## Footer with links to socials
+Although Quizprep still has to create it's facebook, instagram, X (Twitter), Snapchat and Tiktok social media's, the footer has already been added with links to the various social accounts. This will be updated when social media pages are created. These social media pages can in turn be used to make followers aware of new quizzes and to provide shareable links to Quizprep to expand the user base.
 
 ## Future features
 
-### 
+### Quizprep Community
+### Personal account / Log im
+### High score tracking (per quiz and overall)
+### Rewards based on scoring
+### Variations of quiz pages (quiz subject dependant)
+### advertisements/sponsoring (reveune creating)
+- general products
+- sponsored quizzes
+### Improved presentation options
+- play Quizprep on the big screen!
+### Recurring socials
+### Adding categories
+### Fun vs. Educational
 
 # Testing
 Testing of the various pages has been an ongoing process. Ensuring that mobile comes first has the benefit that overall the pages are tailored for it and will indeed look most streamlined on mobile. It has however ensured that in some cases the page look different on larger screens.
@@ -123,15 +167,27 @@ Testing has been performed on actual laptops and phone screens (Macbook pro & Sa
 
 ## (Un)fixed bugs
 
+### Score counting (unfixed)
+Current set up of JS does not have a unique action/function to restart the quiz (it is a rebranded 'start button'). Unfortunately restarting the quiz will not reset the values of scores under "incrementScore" and "incrementWrongAnswer". Tried adjusting this but it would adjust when the game is still played. A unique function/action would need to be created to only restart when the 'Start Button is pressed when it has an inntertext of "Restart".'
+
+### Answer buttons and scoring moves due to "Next" button (unfixed)
+
+### Border radius of images (fixed)
+
+### CSS "not working" due to different levels on the page (fixed)
+
+### Floating Footer
+For long, the footer did not remain at the bottom of the page, but would float halfway through the page, depending on screen size. 
+
 ## Deployment
 
 The site was deployed to GitHub Pages. The steps to deploy are as follows:
 
-- In the [GitHub repository](https://github.com/MJRidder/Ridder-Muziek-Service), navigate to the Settings tab
+- In the [GitHub repository](https://github.com/MJRidder/QuizPrep), navigate to the Settings tab
 - From the source section drop-down menu, select the Main Branch, then click "Save".
 - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found [here](https://mjridder.github.io/Ridder-Muziek-Service/)
+The live link can be found [here](https://mjridder.github.io/QuizPrep/)
 
 ### Local Deployment
 This project can be cloned or forked in order to make a local copy on your own system.
@@ -139,13 +195,13 @@ This project can be cloned or forked in order to make a local copy on your own s
 ### Cloning
 You can clone the repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/MJRidder/Ridder-Muziek-Service)
+1. Go to the [GitHub repository](https://github.com/MJRidder/QuizPrep)
 2. Locate the Code button above the list of files and click it
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
 4. Open Git Bash or Terminal
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
-- git clone https://github.com/MJRidder/Ridder-Muziek-Service
+- git clone https://github.com/MJRidder/QuizPrep
 7. Press Enter to create your local clone.
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
@@ -156,7 +212,7 @@ Please note that in order to directly open the project in Gitpod, you need to ha
 ### Forking
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository. You can fork this repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub repository](https://github.com/MJRidder/Ridder-Muziek-Service)
+1. Log in to GitHub and locate the [GitHub repository](https://github.com/MJRidder/QuizPrep)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
