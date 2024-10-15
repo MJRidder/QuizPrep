@@ -259,7 +259,11 @@ https://www.iloveimg.com/ img from avif to webp
 | [Medlineplus](https://medlineplus.gov/genetics/understanding/traits/handedness/) | Quizpage | % of righthanded vs. lefthanded users |
 
 
-Special shout out to my mentor [Sheryl Goldberg](https://github.com/sherylg343) for supporting me in several sessions leading up to the completion of my P1 Portfolio project. I have learned a lot.
+Special shout outs 
+1. First to my mentor [Sheryl Goldberg](https://github.com/sherylg343) for supporting me in several sessions leading up to the completion of my P1 Portfolio project. I have learned a lot.
+2. Secondly to Laurette van der Walt who has been so amazing to help me resize the desired images to the required heights and widths to be applicable for different sizes of screens and pages
+
+
 
 ## Content/Media Used
 

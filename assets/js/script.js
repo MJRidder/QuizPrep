@@ -71,6 +71,7 @@ for (let quizlink of quizlinks) {
  * The Witcher start game loop. Hides the home and start button 
  * and starts the next question list. As an addition it also
  * logs to console which game is started.
+ * src: Web Dev Simplified Youtube tutorial
  */
 function startQuizWitcher() {
     let quizCategory = "Witcher"
