@@ -163,7 +163,7 @@ main>nav {
 .homepage-adv-quiz {
     height: 200px;
     width: 100%;
-    background: url("../Images/witcher-quiz/witcher-hero-image.jpg") no-repeat center center/cover;
+    background: url("../images/witcher-quiz/witcher-advertiser.png") no-repeat center center/cover;
     border-radius: 5px;
 }
 
@@ -194,21 +194,21 @@ main>nav {
 .homepage-rest-quiz-1 {
     height: 100px;
     width: 100px;
-    background: url("../Images/witcher-quiz/witcher-sad.webp") no-repeat center center/cover;
+    background: url("../images/witcher-quiz/witcher-hp-teaser.png") no-repeat center center/cover;
     border-radius: 5px;
 }
 
 .homepage-rest-quiz-2 {
     height: 100px;
     width: 100px;
-    background: url("../Images/witcher-quiz/witcher-front-image.jpg") no-repeat center center/cover;
+    background: url("../images/lotr-quiz/lotr-hp-teaser.png") no-repeat center center/cover;
     border-radius: 5px;
 }
 
 .homepage-rest-quiz-3 {
     height: 100px;
     width: 100px;
-    background: url("../Images/witcher-quiz/witcher-sad.webp") no-repeat center center/cover;
+    background: url("../images/got-quiz/got-hp-teaser.png") no-repeat center center/cover;
     border-radius: 5px;
 }
 
@@ -219,11 +219,38 @@ main>nav {
 
 /* Quiz page(s) layout */
 
-.quizprep-1 {
+.bg-witcher {
+    height: 100vh;
+    background-image: url(../images/witcher-quiz/witcher-bg-400x800.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.bg-lotr {
+    height: 100vh;
+    background-image: url(../images/lotr-quiz/lotr-bg-400x800.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.bg-got {
+    height: 100vh;
+    background-image: url(../images/got-quiz/got-bg-400x800.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+
+.quizprep-main {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: orange;
     border-radius: 5%;
     justify-content: center;
     align-items: center;
@@ -231,7 +258,7 @@ main>nav {
 
 #quiz-page {
     display: flex;
-    background-color: lightblue;
+    background-color: rgba(60, 60, 60, 0.6);
     margin-top: 30px;
     height: 840px;
     max-height: 96%;
@@ -249,7 +276,6 @@ main>nav {
 }
 
 #question-field {
-    background: green;
     height: 600px;
     max-height: 80%;
     width: 340px;
@@ -269,6 +295,7 @@ main>nav {
     border-radius: 5px;
     margin: auto;
     overflow: hidden;
+    border: 15px solid whitesmoke;
 }
 
 .quiz-image>img {
@@ -277,12 +304,14 @@ main>nav {
 
 #question {
     background-color: white;
+    border: 5px solid rgb(133, 95, 0);
     color: #3a3a3a;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     padding: 1rem;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .scores {
@@ -294,10 +323,14 @@ main>nav {
 }
 
 .score-area {
-    padding-top: 10px;
+    margin-top: 10px;
+    padding: 10px 0 10px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: whitesmoke;
+    border: 2px solid rgb(133, 95, 0);
+    border-radius: 5px;
 }
 
 .correct {
@@ -313,16 +346,17 @@ main>nav {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
-    margin: 20px 5px;
+    margin: 20px 5px 10px 5px;
 }
 
 .btn {
     border-radius: 5px;
-    padding: 5px 10px;
-    color: white;
-    background-color: black;
+    padding: 8px 15px;
+    background-image: url(../images/button-bg-pargment.png);
+    color: #3a3a3a;
     outline: none;
-    border: 1px solid, yellow;
+    font-size: medium;
+    border: 3px solid, rgb(133, 95, 0);
 }
 
 .btn:hover {
@@ -394,30 +428,27 @@ button {
 /* Media query: large and landscape phones (576px and up) */
 @media screen and (min-width: 576px) {
 
-    body {
+    main {
         max-width: 500px;
         margin: auto;
     }
-    header {
-        position: absolute;
-        max-width: 500px;
+
+    .bg-witcher{
+        background-image: url(../images/witcher-quiz/witcher-bg-800x1600.png);
     }
+    .bg-lotr{}
+    .bg-got {
+    }
+
 }
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
-    body, main {
+    main {
         max-width: 800px;
         margin: auto;
     }
-
-    header {
-        max-width: 800px;
-        margin: auto;
-        border-radius: 5px;
-    }
-
 
     /* Header */
     nav {
@@ -439,23 +470,31 @@ button {
         display: none;
     }
 
+    .bg-witcher{
+        background-image: url(../images/witcher-quiz/witcher-bg-huge.jpeg);
+    }
+    .bg-lotr{
+        background-image: url(../images/lotr-quiz/lotr-bg-1600x800.png);
+    }
+    .bg-got {
+        background-image: url(../images/got-quiz/got-bg-800x400.png);
+    }
+
 }
 
-footer {
-    bottom: 0;
-}
 
 /* Media query: tablets and larger (992px and up) */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+
+}
 
 /* Media query: laptops and screens (1200px and up) */
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
 
 
+}
 
-
-
-/* to be removed */
-.test-p {
-    margin-top: 30px;
+/* Media query: smaller devices (411px and down) */
+@media screen and (max-width: 411px) {
+    
 }

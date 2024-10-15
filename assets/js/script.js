@@ -250,7 +250,7 @@ function incrementWrongAnswer() {
 let questionsWitcher = [
     {
         question: 'What is the name of the author of the book series?',
-        img: './assets/Images/witcher-quiz/witcher-mobile-cropped.jpg',
+        img: './assets/images/witcher-quiz/witcher-question-1.png',
         answers: [
             {text: 'Charles Dickens', correct:false},
             {text: 'Shakespeare', correct:false},
@@ -261,7 +261,7 @@ let questionsWitcher = [
     },
     {
         question: 'Where was the series filmed?',
-        img: './assets/Images/witcher-quiz/witcher-mobile-cropped2.jpg',
+        img: './assets/images/witcher-quiz/witcher-question-2.png',
         answers: [
             {text: 'East Africa', correct:false},
             {text: 'Asia', correct:false},
@@ -272,7 +272,7 @@ let questionsWitcher = [
     },
     {
         question: 'What is the role of Jodhi May in "The Witcher"?',
-        img: './assets/Images/witcher-quiz/witcher-front-image.jpg',
+        img: './assets/images/witcher-quiz/witcher-question-3.png',
         answers: [
             {text: 'Queen Calanthe', correct:true},
             {text: 'Tissaia', correct:false},
@@ -283,7 +283,7 @@ let questionsWitcher = [
     },
     {
         question: 'Who is Gerald of Rivia?',
-        img: './assets/Images/witcher-quiz/witcher-mobile.webp',
+        img: './assets/images/witcher-quiz/witcher-question-4.png',
         answers: [
             {text: 'A witch', correct:false},
             {text: 'A monster Hunter', correct:true},
@@ -294,7 +294,7 @@ let questionsWitcher = [
     },
     {
         question: 'Who portrayed the role of Geralt of Rivia?',
-        img: './assets/Images/witcher-quiz/witcher-sad.webp',
+        img: './assets/images/witcher-quiz/witcher-question-5.png',
         answers: [
             {text: 'Brad Pitt', correct:false},
             {text: 'Henry Cavill', correct:true},
@@ -307,7 +307,7 @@ let questionsWitcher = [
 let questionsLotr = [
     {
         question: 'Who was the Ring bearer?',
-        img: './assets/Images/lotr-hero.jpg',
+        img: './assets/images/lotr-quiz/lotr-question-1.png',
         answers: [
             {text: 'Sam', correct:false},
             {text: 'Merry', correct:false},
@@ -318,7 +318,7 @@ let questionsLotr = [
     },
     {
         question: 'Who threw the ring into mount doom?',
-        img: './assets/Images/lotr-hero.jpg',
+        img: './assets/images/lotr-quiz/lotr-question-2.png',
         answers: [
             {text: 'Frodo', correct:false},
             {text: 'Sam', correct:false},
@@ -329,7 +329,7 @@ let questionsLotr = [
     },
     {
         question: 'What is the role of Jodhi May in "The Witcher"?',
-        img: './assets/Images/lotr-hero.jpg',
+        img: './assets/images/lotr-quiz/lotr-question-3.png',
         answers: [
             {text: 'Queen Calanthe', correct:true},
             {text: 'Tissaia', correct:false},
@@ -340,7 +340,7 @@ let questionsLotr = [
     },
     {
         question: 'Who is Gerald of Rivia?',
-        img: './assets/Images/lotr-hero.jpg',
+        img: './assets/images/lotr-quiz/lotr-question-4.png',
         answers: [
             {text: 'A witch', correct:false},
             {text: 'A monster Hunter', correct:true},
@@ -351,7 +351,7 @@ let questionsLotr = [
     },
     {
         question: 'Who portrayed the role of Geralt of Rivia?',
-        img: './assets/Images/lotr-hero.jpg',
+        img: './assets/images/lotr-quiz/lotr-question-5.png',
         answers: [
             {text: 'Brad Pitt', correct:false},
             {text: 'Henry Cavill', correct:true},
@@ -364,7 +364,7 @@ let questionsLotr = [
 let questionsGot = [
     {
         question: 'Who is the dragon queen?',
-        img: './assets/Images/got-hero.avif',
+        img: './assets/images/got-quiz/got-question-1.png',
         answers: [
             {text: 'Daenerys Targaryen', correct:true},
             {text: 'Yara Greyjoy', correct:false},
@@ -375,7 +375,7 @@ let questionsGot = [
     },
     {
         question: 'Where was the series filmed?',
-        img: './assets/Images/got-hero.avif',
+        img: './assets/images/got-quiz/got-question-2.png',
         answers: [
             {text: 'East Africa', correct:false},
             {text: 'Asia', correct:false},
@@ -386,7 +386,7 @@ let questionsGot = [
     },
     {
         question: 'What is the role of Jodhi May in "The Witcher"?',
-        img: './assets/Images/got-hero.avif',
+        img: './assets/images/got-quiz/got-question-3.png',
         answers: [
             {text: 'Queen Calanthe', correct:true},
             {text: 'Tissaia', correct:false},
@@ -397,7 +397,7 @@ let questionsGot = [
     },
     {
         question: 'Who is Gerald of Rivia?',
-        img: './assets/Images/got-hero.avif',
+        img: './assets/images/got-quiz/got-question-4.png',
         answers: [
             {text: 'A witch', correct:false},
             {text: 'A monster Hunter', correct:true},
@@ -408,7 +408,7 @@ let questionsGot = [
     },
     {
         question: 'Who portrayed the role of Geralt of Rivia?',
-        img: './assets/Images/got-hero.avif',
+        img: './assets/images/got-quiz/got-question-5.png',
         answers: [
             {text: 'Brad Pitt', correct:false},
             {text: 'Henry Cavill', correct:true},
