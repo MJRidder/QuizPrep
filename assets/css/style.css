@@ -498,6 +498,7 @@ button {
     }
     .bg-lotr{}
     .bg-got {
+        background-image: url(../images/got-quiz/got-bg-medium.png);
     }
 
 }
@@ -537,7 +538,7 @@ button {
         background-image: url(../images/lotr-quiz/lotr-bg-1600x800.png);
     }
     .bg-got {
-        background-image: url(../images/got-quiz/got-bg-800x400.png);
+        background-image: url(../images/got-quiz/GoT-bg-image-huge.jpg);
     }
 
 }
