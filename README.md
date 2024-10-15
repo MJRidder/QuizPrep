@@ -142,18 +142,38 @@ Although Quizprep still has to create it's facebook, instagram, X (Twitter), Sna
 ## Future features
 
 ### Quizprep Community
-### Personal account / Log im
+One of the biggest opportunities is creating a quiz community around Quizprep. Having people come back to the website, creating/suggestion quiz topics and rating them of others. The goal would be to create an interactive platform which users can use to find others with the same interests and excitement for quizzes. 
+
+### Personal account / Log in
+Saving data and performance in ones own personal account helps users be more involved with their scores. It can also be interesting to look back at ones own performance in different quizzes which can be tracked in the account.
+
 ### High score tracking (per quiz and overall)
+When quizzes get larger and more engaging, it will be interesting to know how one does compared to themselves before, but also to others. tracking high scores and play time could create a form of competition, sparking desire to be quicker, better and of course play more quizzes.
+
 ### Rewards based on scoring
+To help users get something in return for playing frequent quizzes (and to get them more engaged), rewards for high scores could be added. Especially when the range of quizzes increases, the gamification of it can spark additional joy for users but also for example accumulate points/credits to save up for products of the page's sponsors.
+
 ### Variations of quiz pages (quiz subject dependant)
+There is currently one single format for quizzes. Depending on topics however, having different formats for quizzes could make the experience more interesting, but will also allow different type of quizzes to be added to the list (e.g. select locations on a map to showcase which captital of a country is which).
+
 ### advertisements/sponsoring (reveune creating)
-- general products
-- sponsored quizzes
+- To make Quizprep financially viable, quizzes about specific products could be added as sponsored quizzes. Still fun, but also tailored to help users get more involved with specific products.
+- Existing quizzes could also be sponsored by companies. Showcasing their brands/log's besides specific quizzes, potentially at specific times etc.
+
 ### Improved presentation options
-- play Quizprep on the big screen!
+- play Quizprep on the big screen! Currently the imaging is only set up for smaller to larger devices. However if Quizprep will be played with larger groups, image definitions, fonts and button sizes could be increased to cater to this.
+
 ### Recurring socials
+Social media can play a large role in the 'selling' of Quizprep and keeping the user base up-to-date. For example adding new quizzes as teasers on instagram could bring frequent users back to Quizprep.
+
 ### Adding categories
+When more and more quizzes are added, it will become beneficial to sort them into categories for a better overview and to help users only see quizzes that of subjects that they are interested in.
+
 ### Fun vs. Educational
+Currently Fun is the 'aim of the game'. Quizzes can however be a very handy tool for educational purposes. Therefore adding educational quizzes can help users learn while still having fun.
+
+### Adding context to the (right) answers
+A large part of the fun when playing the quiz is to learn about the subject at hand. Whenever an answer is given, a short snippit can be added explaining the correct answer. This can be shown in both the cases whether an answer was correct or wrong.
 
 # Testing
 Testing of the various pages has been an ongoing process. Ensuring that mobile comes first has the benefit that overall the pages are tailored for it and will indeed look most streamlined on mobile. It has however ensured that in some cases the page look different on larger screens.
@@ -255,6 +275,7 @@ Special shout out to my mentor [Sheryl Goldberg](https://github.com/sherylg343) 
 SOURCES
 - https://teamtreehouse.com/community/is-it-a-good-practice-to-use-boxsizing-all-the-time
 - https://www.shecodes.io/
+- https://www.studytonight.com/ (resetting values through JS)
 
 
 IMAGES

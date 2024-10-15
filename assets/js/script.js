@@ -10,6 +10,8 @@ let quizPage = document.getElementById('quiz-page');
 let QWitchImage = document.getElementById('witcher-image')
 let QLotrImage = document.getElementById('lotr-image')
 let QGotImage = document.getElementById('got-image')
+let scoreValue = document.getElementById('score')
+let incorrectValue = document.getElementById('incorrect')
 
 let questionlist, currentQuestionIndex 
 
@@ -20,6 +22,8 @@ let questionlist, currentQuestionIndex
  */
 if (startButton) {
     startButton.addEventListener('click', startQuizWitcher);
+    startButton.addEventListener('click', setScoreToZero);
+
     nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
@@ -28,6 +32,8 @@ if (startButton) {
 
 if (startButton2) {
     startButton2.addEventListener('click', startQuizLotr);
+    startButton2.addEventListener('click', setScoreToZero);
+
     nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
@@ -36,6 +42,8 @@ if (startButton2) {
 
 if (startButton3) {
     startButton3.addEventListener('click', startQuizGot);
+    startButton3.addEventListener('click', setScoreToZero);
+    
     nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
@@ -44,7 +52,6 @@ if (startButton3) {
 
 document.addEventListener("DOMContentLoaded", function() {
 let quizlinks = document.querySelectorAll('.dropdown-link');
-console.log("those are quiz links",quizlinks)
 
 for (let quizlink of quizlinks) {
     quizlink.addEventListener('click', function() {
@@ -52,11 +59,7 @@ for (let quizlink of quizlinks) {
         let quizCategory = this.getAttribute('data-type');
         console.log("category",quizCategory);
         if (quizCategory === "witcher") {
-            alert("You clicked the Witcher Quiz");
             element.classList.add('correct');
-
-        } else {
-            alert(`You clicked ${quizCategory}`);
         }
     });
 }
@@ -88,7 +91,6 @@ function startQuizWitcher() {
 function startQuizLotr() {
     let quizCategory = "Lotr"
     console.log(`Starting the ${quizCategory} Quiz`);
-    console.log(QWitchImage)
     homeButton.classList.add('hide');
     startButton2.classList.add('hide');
     questionlist = questionsLotr.sort(() => .5);
@@ -128,8 +130,7 @@ function nextQuestion() {
  * buttons that are shown and populates these with the answer options.
  * When the correct answer is selected, a 'correct' class is added to 
  * the button which in turn is used for color coding in CSS.
- * Additionally tracks if the right answer is given and it shows the 
- * image added for a specific questions.
+ * Additionally it shows the image added for the next specific questions.
  */
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -142,12 +143,16 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button)
-        console.log (question)
     })
 
-    QWitchImage.src = question.img;
-    QLotrImage.src = question.img;
-    QGotImage.src = question.img;
+    if (startButton) {
+        QWitchImage.src = question.img;
+    } else if (startButton2) {
+        QLotrImage.src = question.img;
+    } else if (startButton3) {
+        QGotImage.src = question.img;
+    }
+
 }
 
 /**
@@ -246,6 +251,16 @@ function incrementWrongAnswer() {
     document.getElementById('incorrect').innerText = ++oldScore
 }
 
+/**
+ * resets the correct and wrong scores to zero at the start of the quiz and 
+ * when a quiz is restarted.
+ */
+function setScoreToZero() {
+    score = 0;
+    scoreValue.textContent = score;
+    incorrectValue.textContent = score;
+}
+
 
 let questionsWitcher = [
     {
@@ -328,92 +343,92 @@ let questionsLotr = [
 
     },
     {
-        question: 'What is the role of Jodhi May in "The Witcher"?',
+        question: 'What is the name of Saruman his tower in Isengard?',
         img: './assets/images/lotr-quiz/lotr-question-3.png',
         answers: [
-            {text: 'Queen Calanthe', correct:true},
-            {text: 'Tissaia', correct:false},
-            {text: 'Ciri', correct:false},
-            {text: 'Yennefer', correct:false}
+            {text: 'Strider', correct:true},
+            {text: 'Boromir', correct:false},
+            {text: 'Gandalf', correct:false},
+            {text: 'Legolas', correct:false}
         ]
 
     },
     {
-        question: 'Who is Gerald of Rivia?',
+        question: 'Who do the hobbits encounter at the Prancing Pony?',
         img: './assets/images/lotr-quiz/lotr-question-4.png',
         answers: [
-            {text: 'A witch', correct:false},
-            {text: 'A monster Hunter', correct:true},
-            {text: 'A Vampire', correct:false},
-            {text: 'A Monster', correct:false}
+            {text: 'Marel', correct:false},
+            {text: 'Mairon', correct:true},
+            {text: 'Marrin', correct:false},
+            {text: 'Savin', correct:false}
         ]
 
     },
     {
-        question: 'Who portrayed the role of Geralt of Rivia?',
+        question: 'Who or What are the Rohirrim?',
         img: './assets/images/lotr-quiz/lotr-question-5.png',
         answers: [
-            {text: 'Brad Pitt', correct:false},
-            {text: 'Henry Cavill', correct:true},
-            {text: 'Johnny Depp', correct:false},
-            {text: 'Chris Hemsworth', correct:false}
+            {text: 'Elven Raiders', correct:false},
+            {text: 'Riders of Rohan', correct:true},
+            {text: 'Gondorian Knights', correct:false},
+            {text: 'Dwarven miners', correct:false}
         ]
 
     },
 ]
 let questionsGot = [
     {
-        question: 'Who is the dragon queen?',
+        question: 'Who knew Nothing?',
         img: './assets/images/got-quiz/got-question-1.png',
         answers: [
-            {text: 'Daenerys Targaryen', correct:true},
+            {text: 'John Snow', correct:true},
+            {text: 'Ramsay Snow', correct:false},
+            {text: 'Ellaria Sand', correct:false},
+            {text: 'Missandei', correct:false}
+        ]
+
+    },
+    {
+        question: 'Khal Drogo belonged to which people?',
+        img: './assets/images/got-quiz/got-question-2.png',
+        answers: [
+            {text: 'Westerosi', correct:false},
+            {text: 'Wildlings', correct:false},
+            {text: 'Valyrian', correct:false},
+            {text: 'Dothraki', correct:true}
+        ]
+
+    },
+    {
+        question: 'What is said to order a dragon to breath fire',
+        img: './assets/images/got-quiz/got-question-3.png',
+        answers: [
+            {text: 'Dracarys', correct:true},
+            {text: 'Drogon', correct:false},
+            {text: 'Rhaegal', correct:false},
+            {text: 'Viserion', correct:false}
+        ]
+
+    },
+    {
+        question: 'Who is the dragon queen?',
+        img: './assets/images/got-quiz/got-question-4.png',
+        answers: [
             {text: 'Yara Greyjoy', correct:false},
+            {text: 'Daenerys Targaryen', correct:true},
             {text: 'Sansa Stark', correct:false},
             {text: 'Cersei Lannister', correct:false}
         ]
 
     },
     {
-        question: 'Where was the series filmed?',
-        img: './assets/images/got-quiz/got-question-2.png',
-        answers: [
-            {text: 'East Africa', correct:false},
-            {text: 'Asia', correct:false},
-            {text: 'Africa', correct:false},
-            {text: 'Eastern Europe', correct:true}
-        ]
-
-    },
-    {
-        question: 'What is the role of Jodhi May in "The Witcher"?',
-        img: './assets/images/got-quiz/got-question-3.png',
-        answers: [
-            {text: 'Queen Calanthe', correct:true},
-            {text: 'Tissaia', correct:false},
-            {text: 'Ciri', correct:false},
-            {text: 'Yennefer', correct:false}
-        ]
-
-    },
-    {
-        question: 'Who is Gerald of Rivia?',
-        img: './assets/images/got-quiz/got-question-4.png',
-        answers: [
-            {text: 'A witch', correct:false},
-            {text: 'A monster Hunter', correct:true},
-            {text: 'A Vampire', correct:false},
-            {text: 'A Monster', correct:false}
-        ]
-
-    },
-    {
-        question: 'Who portrayed the role of Geralt of Rivia?',
+        question: 'Who lost his hand on the chopping block?',
         img: './assets/images/got-quiz/got-question-5.png',
         answers: [
-            {text: 'Brad Pitt', correct:false},
-            {text: 'Henry Cavill', correct:true},
-            {text: 'Johnny Depp', correct:false},
-            {text: 'Chris Hemsworth', correct:false}
+            {text: 'Jorah Mormont', correct:false},
+            {text: 'Jaime Lannister', correct:true},
+            {text: 'Tyrion Lannister', correct:false},
+            {text: 'Oberyn Martell', correct:false}
         ]
 
     },
