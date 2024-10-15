@@ -115,7 +115,6 @@ main>nav {
 .quizlist {
     margin-bottom: 20px;
     position: relative;
-
 }
 
 .quiz-dropdown {
@@ -462,10 +461,11 @@ button {
 
 .thankyou-btn {
     background-color: #312a89;
+    text-decoration: none;
     border: whitesmoke;
     color: whitesmoke;
     padding: 10px 50px;
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
     font-size: large;
     font-weight: bold;
     width: 100%;
@@ -558,4 +558,8 @@ button {
 /* Media query: smaller devices (411px and down) */
 @media screen and (max-width: 411px) {
     
+    #question-field {
+        height: 400px;
+        max-height: 80%;
+    }
 }
