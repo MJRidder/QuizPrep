@@ -4,14 +4,6 @@ Start README file
 ==============================
 ==============================
 
-OPEN QUESTIONS
-- Quiz - how to avoid the counting to be unlimited? and/or only have one point per question.
-- Quiz - best way to optimise for mobile
-- Footer - footer remains a struggle, does not remain at the bottom
-
-To DO:
-- Keywords - add unique keywords for each page (relevant to the quiz)
-- Samsung 8 - update pages for smallest devices
 
 # Quizprep - about the page
 Welcome to Quizprep. A page that test your knowledge on three of the most sought after fantasy TV shows and movies. In the long term this could be a community let page where quizzes on all types of subjects can be shared and played, but to start the focus lies on the Witcher series, the Lord of the Rings movies (The early 2000 ones still win it for me!) and the Game of Thrones series (might skip the final episodes). The website allows you to play all three and tracks your score as you do it, hopefully helping you learn a few interesting facts on the shows. It also has a contact page through which feedback can be shared, bugs can be reported and new quiz ideas can be shared.
@@ -59,29 +51,41 @@ Reasoning is two fold:
 A - Mobile as a device is used in a much higher frequency then tablets or desktops/laptops
 B - Quizprep aimes for quick and often 'on the go' users. Expected therefor is as well that specifically the Quizprep userbase would mostly visit through their mobile device
 
-[screenshots]
+![Mobile first](./assets/images/readme-visuals/Mobile-first-1.png)
+![Mobile first](./assets/images/readme-visuals/Mobile-first-2.png)
 
 # Wireframes
 For my wireframes I used the Balsamiq app. First writing out the concept of Quizprep (what is it and what could it be in the future?). After which I wrote out the steps that needed to be taken to successfully create the website, followed by several page designs for the homepage and the quizpages (trying to find specifically the best/fun usage on a mobile device). As research shows that 85% (or some say more) of people is right handed, the current design was chosen to tailor to the masses (e.g. the 'Next' button is on the right of the page).
 
 The approach when designing the pages overall was to first implement the functionality of the quiz and tailor the quiz pages around that. The thought proces was to make sure that the quizzes themselves would be comfortable to play by the users, aiming for minimal 'oddities' that could spoil the users fun. Ones that was functional, the rest of Quizprep was build around it
 
-[screenshot]
+General wirefame overview
+![Wireframe overview](./assets/images/readme-visuals/Wireframes-overview.png)
+
+All Wireframes
+![Wireframe-1](./assets/images/readme-visuals/Wireframes-1.png)
+![Wireframe-2](./assets/images/readme-visuals/Wireframes-2.png)
+![Wireframe-3](./assets/images/readme-visuals/Wireframes-3.png)
+![Wireframe-4](./assets/images/readme-visuals/Wireframes-4.png)
 
 When the base was set, I wrote out which steps the quizzes would need to take in Javascript (before attempting to code). Trying to find the logic behind the tool and what it would need to do/track, before even showing the first question.
 
-[screenshot]
+![Wireframe-JS-steps](./assets/images/readme-visuals/Wireframes-JS-steps.png)
 
 There are evidently a few differences between my original wireframe and the end result (e.g. having a slider present on the screen, showcasing the users overall score). This in favour of my current Javascript knowledge. However this does allow for future adaptations to include some of these features
 
-[screenshot]
+System (HTML/CS/JS) logic
+![Wireframe HTML/CS/JS logic](./assets/images/readme-visuals/Wireframes-html-css-js-logic.png)
 
 # Features
 
 ## NAV bar
 The navigation bar is adaptable for smaller and larger screens. Making use of the "hamburger" menu for mobile and adding the homepage/contact links written out at the top of the page for larger devices. It still allows space for more menu options. Currently the different quizzes are also added for easy navigation while working on the site. However with the 'hidden class' added, they are only visible when desired, not for the users.
 
-[screenshot - for mobile and larger screen]
+![nav bar variant](./assets/images/readme-visuals/nav-bar-long.png)
+![nav bar variant](./assets/images/readme-visuals/nav-mobile-closed.png)
+![nav bar variant](./assets/images/readme-visuals/nav-mobile-open.png)
+![nav bar variant](./assets/images/readme-visuals/nav-hidden-items.png)
 
 ## Quizlist
 An easy to spot and use dropdown button that is used as the main quiz portal. This Quizlist is the main function that a user can use to browse through the available quizzes. In future iterations the list could be added in a menu and/or a side bar but to keep with the easy overview, this button is the only function that lists all quizzes. It shows as a button when scrolling, but only when hovered over or clicked on it will display the quizlist. This to improve general site use and access. The button is a distinct different color from the rest of the page to make sure that it stands out.
@@ -93,12 +97,12 @@ To allow for a 'one click' quiz access, the 'advertised quiz' section was added 
 
 Added over the image is the title of the quiz to clarify the quiz subject.
 
-[screenshot]
+![advertised quiz list](./assets/images/readme-visuals/advertised-quiz-list.png)
 
 ## Quiz suggestions
 Similar to the 'Advertised' quiz section, it allows a 'one click' access to some of the available quizzes. It can be added with a small image + a short description of the quizzes mentioned in this short overview. Especially when the amount of available quizzes increases, this section is interesting for the user if it shows quizzes that align with their preferences. Also for users that enjoy reading a short description of a quiz, this section can tailor to those (as not all users would be image/visual driven). 
 
-[screenshot]
+![suggested quiz list](./assets/images/readme-visuals/suggested-quiz-list.png)
 
 ## Contact and Feedback page
 If there is any feedback on the quizzes, users can reach out to the creators of Quickprep. In the longterm this page will also be the first (simple) foundation of the community through which users can give suggestions for quizzes to come. The page is kept simple again to highlight the use and to make it easily accessable via mobile devices.
@@ -106,32 +110,39 @@ If there is any feedback on the quizzes, users can reach out to the creators of 
 ## Visuals/Images adapted to the relevant quiz
 To help users 'get in the zone' each quiz has its own base page, so that imaging around the quiz can be formatted in line with the quiz subject. Helping users get a look and feel of the quiz subject (currently, one of the three shows) while playint the quiz. The images are also adapted to the screensizes for optimal use.
 
+![Am I responsive? view](./assets/images/readme-visuals/am-i-responsive-visual.png)
+
 ## (Re)Start button 
 The start button allows the quiz to be kicked off (it is also the trigger for Javascript to launch the correct questions and visuals). It is only visible at the start of the quiz and at the end of the quiz. Where however the Start button will be 'rebranded' to "Restart" as it will allow the user to redo the quiz if they are hoping to get a better score. 
 
 (Future iterations could also includde a cap on the amount of questions answered and restarting the quiz would then load a new set of questions/answers on the topic)
 
-[screenshot]
+![Start button variant](./assets/images/readme-visuals/homebutton-1.png)
+![Restart button variant](./assets/images/readme-visuals/homebutton-4.png)
 
 ## Next button
 The Next button only shows when an answer is given. This tor trigger that the user always provides an answer and is unable to simply click through a quiz.
 
-[screenshot] - Next button shown and Next button hidden.
+* See screenshots above for this as well *
 
 ## Correct/Incorrect visualisation
 As part of the experience, the frame surrounding the question and answer area will light up green or red, depending on the answer that the users gives is correct (green) or wrong (red). As quizzes are all about giving a high when a correct answer is given this will help with hte quiz experience.
 
-[screenshot] - of a red and a green label of the screen
+![Correct Answer](./assets/images/readme-visuals/Correct-answer.png)
+![Wrong Answer](./assets/images/readme-visuals/Wrong-answer.png)
 
 ## Score tracking
 At the bottom of the quiz pages there is a score tracker showcasing how many questions have been answered correctly and how many have been answered wrong. This is triggered when the provided answer is clicked on one of the answer buttons. There is a counter for the amount of correct answers given and the amount of wrong anwers given.
 
-[screenshot]
+![score tracking](./assets/images/readme-visuals/Score-tracking.png)
 
 ## Home button
 The home button is generally hidden throughout the quiz, but is unhidden at the end of the quiz. Allowing the user a direct way back to the home page without the need of using the top navigation bar to navigate back. This of course is also a possibility but the home button provides a better flow for the use to go through the different quizzes made available to them on Quizprep.
 
-[screenshot]
+![Home button variant](./assets/images/readme-visuals/homebutton-1.png)
+![Home button variant](./assets/images/readme-visuals/Homebutton-2.png)
+![Home button variant](./assets/images/readme-visuals/Homebutton-3.png)
+![Home button variant](./assets/images/readme-visuals/homebutton-4.png)
 
 ## Simple consistent layout
 The layout is purposefully kept sipmle to tailor to users of mobile devices. Simple navigation and quick loading pages. The layout of the different quizpages is also the same to help users receive what they 'expect' when would go through multiple quizzes. For future iterations new quiz formats could be considered. But the aim for this iteration is simplicity and giving an easy user experience.
@@ -176,28 +187,56 @@ Currently Fun is the 'aim of the game'. Quizzes can however be a very handy tool
 A large part of the fun when playing the quiz is to learn about the subject at hand. Whenever an answer is given, a short snippit can be added explaining the correct answer. This can be shown in both the cases whether an answer was correct or wrong.
 
 # Testing
-Testing of the various pages has been an ongoing process. Ensuring that mobile comes first has the benefit that overall the pages are tailored for it and will indeed look most streamlined on mobile. It has however ensured that in some cases the page look different on larger screens.
+Testing of the various pages has been an ongoing process. Ensuring that mobile comes first has the benefit that overall the pages are tailored for it and will indeed look most streamlined on mobile. Through media queries the pages have been adapted to different screen sizes.
 
-Testing has been performed on actual laptops and phone screens (Macbook pro & Samsung Galaxy S23).
+Testing has been performed on actual (Macbook 16 inch )laptops and phone screens (Samsung 8 & Samsung Galaxy S23).
+
+[Am I responsive? view](https://ui.dev/amiresponsive?url=https://mjridder.github.io/QuizPrep/index.html)
+![Am I responsive? view](./assets/images/readme-visuals/am-i-responsive-visual.png)
+
 
 ## HTML validator test
 
+Index page HTML validator pass
+![HTML validator test](./assets/images/readme-visuals/HTML-validator-index-page.png)
+
+contact page HTML validator pass
+![HTML validator test](./assets/images/readme-visuals/HTML-validator-contact-page.png)
+
+thank you page HTML validator pass
+![HTML validator test](./assets/images/readme-visuals/HTML-validator-thankyou-page.png)
+
+Witcher quiz page HTML validator pass
+![HTML validator test](./assets/images/readme-visuals/HTML-validator-Witcher-quiz.png)
+
+Lotr quiz page HTML validator pass
+![HTML validator test](./assets/images/readme-visuals/HTML-validator-Lotr-quiz.png)
+
+GoT quiz page HTML validator pass
+![HTML validator test](./assets/images/readme-visuals/HTML-validator-Got-quiz.png)
+
 ## CSS validator test
+
+CSS page validator pass
+![CSS page validator test](./assets/images/readme-visuals/CSS-validator-check-passed.png)
 
 
 ## (Un)fixed bugs
 
-### Score counting (unfixed)
-Current set up of JS does not have a unique action/function to restart the quiz (it is a rebranded 'start button'). Unfortunately restarting the quiz will not reset the values of scores under "incrementScore" and "incrementWrongAnswer". Tried adjusting this but it would adjust when the game is still played. A unique function/action would need to be created to only restart when the 'Start Button is pressed when it has an inntertext of "Restart".'
+### Score counting (fixed)
+For long the quiz did not have a unique action/function to restart the quiz. Restarting the quiz would not reset the values of scores under "incrementScore" and "incrementWrongAnswer". After trying different value adjusting objects (e.g. getting IDs and adjust via innerHTML or textContent) I managed to create a new function setScoreToZero that would be activated every time the 'Start' (or with that, the "Restart") button would be clicked. This as this is only used at the start or at the end of the quiz where the 0 score is desired in any case.
 
 ### Answer buttons and scoring moves due to "Next" button (unfixed)
+At the moment I have not been able to fix the moving positions of the different buttons in the grid. Because of that the scores (and somewhat the question and answers) move down everytime the 'Next' button appears. It is not a huge issue and some might actually think it to be fun or interesting. However for consistancy having thes buttons set in place would provide a calmer experience for the user.
 
 ### Border radius of images (fixed)
+For long I struggled with the images not being able to receive 'border-radius'. Or in many cases only partly. it was after a little digging I found out that this was due to image size. With that in mind I ensured to have different sizes of images so that they can be used properly on different screens and you would no longer see 'border-radius' only partly executed.
 
 ### CSS "not working" due to different levels on the page (fixed)
+With the desire to have several transparent levels on the page (so that different styles could be applied to them), it at times over complicated the CSS formatting. By capping the amount of levels and by maintaining a set format for each page, I was able to work out which "level" impacted which part of the page. It is HTML/CSS basics, but if not actively looked for can take a lot of time to fix.
 
 ### Floating Footer
-For long, the footer did not remain at the bottom of the page, but would float halfway through the page, depending on screen size. 
+For long, the footer did not remain at the bottom of the page, but would float halfway through the page, depending on screen size. I found that some of my CSS settings was working against each other. To fix this I applied the footer to the bottom of the page at all times.
 
 ## Deployment
 
@@ -255,13 +294,29 @@ https://www.iloveimg.com/ img from avif to webp
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [W3schools](https://www.w3schools.com/) | Example | Example |
+| [W3schools](https://www.youtube.com/watch?v=riDzcEQbX6k) | Quizprep | HTML/CSS coding |
+| [Web Dev Simplified](https://www.w3schools.com/) | JS | Quiz builder tutorial |
+| [Shecodes](https://www.shecodes.io/) | Quizprep | JS coding |
+| [Studytonight](https://www.studytonight.com/) | JS | Resetting values |
+| [Stack Overflow](https://stackoverflow.com/) | Quizprep | HTML & CSS funcionality info |
+| [Code Institute](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum) | Across website | HTML & CSS funcionality info |
+| [ChatGPT](https://openai.com/chatgpt/) | JS | JS funcionality info |
+| [Youtube](https://www.youtube.com/) | Across website | HTML, CSS and JS funcionality info |
+| [Love running](https://mjridder.github.io/love-running/signup.html) | Across website | website inspiration |
+| [Lovattpuzzles](https://lovattspuzzles.com/) | Quizprep | Inspriation |
+| [Kahoot](https://kahoot.com/) | Quizprep | Inspriation |
+| [W3schools](https://www.w3schools.com/) | Quizprep | Inspriation |
+| [MerriamWebster](https://www.merriam-webster.com/games/spell-it) | Quizprep | Inspriation |
+| [Personality Lab](https://test2.thepersonalitylab.org/mbv2) | Quizprep | Inspriation |
+| [NSPCC](https://www.nspcc.org.uk/keeping-children-safe/online-safety/quiz/) | Quizprep | HTML/CSS coding |
+| [Sporcle](https://www.sporcle.com/) | Quizprep | HTML/CSS coding |
+| [W3schools](https://www.w3schools.com/) | Quizprep | HTML/CSS coding |
 | [Medlineplus](https://medlineplus.gov/genetics/understanding/traits/handedness/) | Quizpage | % of righthanded vs. lefthanded users |
 
-
-Special shout outs 
+Special shout outs:
 1. First to my mentor [Sheryl Goldberg](https://github.com/sherylg343) for supporting me in several sessions leading up to the completion of my P1 Portfolio project. I have learned a lot.
 2. Secondly to Laurette van der Walt who has been so amazing to help me resize the desired images to the required heights and widths to be applicable for different sizes of screens and pages
+3. A special shout out goes to the youtube channel: Web Dev Simplified, supporting my learnings with simplified Youtub tutorials. I have taken much learning from one of his [older videos](https://www.youtube.com/watch?v=riDzcEQbX6k), providing guidance on how to create a basic quiz. From there I have been able to expand on it by adding multiple quizzes, imaging, score tracking and window dressing for the quizzes to appeal to a larger audience.
 
 
 
@@ -269,34 +324,19 @@ Special shout outs
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [Samen Voorwaarts](https://www.samenvoorwaarts.nl/) | Example | Example |
-
-
-
-
-
-
-
-
-SOURCES
-- https://teamtreehouse.com/community/is-it-a-good-practice-to-use-boxsizing-all-the-time
-- https://www.shecodes.io/
-- https://www.studytonight.com/ (resetting values through JS)
-
-
-IMAGES
-- https://variety.com/
-- https://cdn.mos.cms.futurecdn.net/
-- https://resizing.flixster.com/
-- https://pyxis.nymag.com/
-- https://imageio.forbes.com/
-- https://www.watchmojo.com/
-- https://statcdn.fandango.com/
-- https://static0.gamerantimages.com/
-- https://lirp.cdn-website.com/
-- https://www.thephantastic.com/
-- https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fgkd79981d2ad1.jpeg
-- https://oyster.ignimgs.com/
-- https://cdn.britannica.com/
-- https://static1.srcdn.com/
-- https://media.vanityfair.com/
+| [Variety](https://variety.com/) | Quizpage | Images |
+| [Future CDN](https://cdn.mos.cms.futurecdn.net/) | Quizpage | Images |
+| [Flixter](https://resizing.flixster.com/) | Quizpage | Images |
+| [Nymag](https://pyxis.nymag.com/) | Quizpage | Images |
+| [Forbes](https://imageio.forbes.com/) | Quizpage | Images |
+| [Watchmojo](https://www.watchmojo.com/) | Quizpage | Images |
+| [Fandango](https://statcdn.fandango.com/) | Quizpage | Images |
+| [Gamerant](https://static0.gamerantimages.com/) | Quizpage | Images |
+| [CDN](https://lirp.cdn-website.com/) | Quizpage | Images |
+| [Phantastic](https://www.thephantastic.com/) | Quizpage | Images |
+| [Reddit](https://www.reddit.com/) | Quizpage | Images |
+| [IGN](https://oyster.ignimgs.com/) | Quizpage | Images |
+| [Brittanica](https://cdn.britannica.com/) | Quizpage | Images |
+| [Vanity fair](https://media.vanityfair.com/) | Quizpage | Images |
+| [Variety](https://variety.com/) | Quizpage | Images |
+| [Variety](https://variety.com/) | Quizpage | Images |
