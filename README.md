@@ -10,9 +10,7 @@ OPEN QUESTIONS
 - Footer - footer remains a struggle, does not remain at the bottom
 
 To DO:
-- Quiz - clean up the score after pressing "Restart"
 - Keywords - add unique keywords for each page (relevant to the quiz)
-- Images - add the right images and sizes to the different screen sizes
 - Samsung 8 - update pages for smallest devices
 
 # Quizprep - about the page

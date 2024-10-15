@@ -313,7 +313,7 @@ main>nav {
 }
 
 .scores {
-    padding-right: 2rem;
+    padding-right: 1rem;
 }
 
 .answer-buttons {
@@ -322,7 +322,7 @@ main>nav {
 
 .score-area {
     margin-top: 10px;
-    padding: 10px 0 10px 10px;
+    padding: 10px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -354,7 +354,7 @@ main>nav {
     color: #3a3a3a;
     outline: none;
     font-size: medium;
-    border: 3px solid, rgb(133, 95, 0);
+    border: 3px solid rgb(133, 95, 0);
 }
 
 .btn:hover {
@@ -390,6 +390,8 @@ main>nav {
     font-size: 2rem;
     font-weight: bold;
     padding: 10px 20px;
+    text-decoration: none;
+
 }
 
 /* Footer layout */

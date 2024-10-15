@@ -400,7 +400,7 @@ let questionsGot = [
 
     },
     {
-        question: 'What is said to order a dragon to breath fire',
+        question: 'What is said to order a dragon to breath fire?',
         img: './assets/images/got-quiz/got-question-3.png',
         answers: [
             {text: 'Dracarys', correct:true},
