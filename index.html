@@ -23,16 +23,15 @@
         <input type="checkbox" id="nav-mobile-toggle" name="nav-mobile-toggle">
         <label for="nav-mobile-toggle" class="nav-mobile-toggle-label">
             <i class="fa-solid fa-bars"></i>
-        </label>
         <nav>
             <ul id="menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
 
                 <!-- links that by standard have the 'hide' class added (but remain for easy access where needed) -->
-                <li><a href="quizprep-1.html" value="The Witcher Quiz" class="hide">1</a></li>
-                <li><a href="quizprep-2.html" value="Lord of the Rings" class="hide">2</a></li>
-                <li><a href="quizprep-3.html" value="Game of Thrones" class="hide">3</a></li>
+                <li value="The Witcher Quiz"><a href="quizprep-1.html" class="hide">1</a></li>
+                <li value="Lord of the Rings"><a href="quizprep-2.html" class="hide">2</a></li>
+                <li value="Game of Thrones"><a href="quizprep-3.html" class="hide">3</a></li>
             </ul>
         </nav>
         <a href="index.html">
@@ -80,8 +79,7 @@
             <div id="Quiz-1">
                 <table class="rest-quiz-table">
                     <tr>
-                        <th>
-                            <section class="homepage-rest-quiz-1">
+                        <th class="homepage-rest-quiz-1">
                                 <a href="quizprep-1.html" title="Another quiz">
                                     <div class="homepage-rest-quiz-1">
                                         <h2 class="cover-text"></h2>
@@ -90,13 +88,12 @@
                         </th>
                         <th>
                             <p>
-                                Try this quiz!
+                                <a href="quizprep-1.html" class="hp-suggestions">Try this quiz!</a>
                             </p>
                         </th>
                     </tr>
                     <tr>
-                        <th>
-                            <section class="homepage-rest-quiz-2">
+                        <th class="homepage-rest-quiz-2">
                                 <a href="quizprep-2.html" title="Another quiz">
                                     <div class="homepage-rest-quiz-2">
                                         <h2 class="cover-text"></h2>
@@ -105,13 +102,12 @@
                         </th>
                         <th>
                             <p>
-                                Or try this other quiz!
+                                <a href="quizprep-2.html" class="hp-suggestions">Or try this other quiz!</a>
                             </p>
                         </th>
                     </tr>
                     <tr>
-                        <th>
-                            <section class="homepage-rest-quiz-3">
+                        <th class="homepage-rest-quiz-3">
                                 <a href="quizprep-3.html" title="Another quiz">
                                     <div class="homepage-rest-quiz-3">
                                         <h2 class="cover-text"></h2>
@@ -120,7 +116,7 @@
                         </th>
                         <th>
                             <p>
-                                Or better still; try yet another quiz to test your knowledge!
+                                <a href="quizprep-3.html" class="hp-suggestions">Or better still; try yet another quiz to test your knowledge!</a>
                             </p>
                         </th>
                     </tr>

@@ -216,6 +216,12 @@ main>nav {
     border-spacing: 1rem;
 }
 
+.hp-suggestions {
+    text-decoration: none;
+    color: #3a3a3a;
+    font-weight: bold;
+}
+
 
 /* Quiz page(s) layout */
 
@@ -271,10 +277,6 @@ main>nav {
     align-items: center;
 }
 
-#quiz-area {
-    
-}
-
 #question-field {
     height: 600px;
     max-height: 80%;
@@ -295,15 +297,12 @@ main>nav {
     border-radius: 5px;
     margin: auto;
     overflow: hidden;
-    border: 15px solid whitesmoke;
+    border: 15px solid #dfdfdf;
 }
 
-.quiz-image>img {
-    border-radius: 15px;
-}
 
 #question {
-    background-color: white;
+    background-color: #dfdfdf;
     border: 5px solid rgb(133, 95, 0);
     color: #3a3a3a;
     justify-content: center;
@@ -328,7 +327,7 @@ main>nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: #dfdfdf;
     border: 2px solid rgb(133, 95, 0);
     border-radius: 5px;
 }
@@ -352,7 +351,7 @@ main>nav {
 .btn {
     border-radius: 5px;
     padding: 8px 15px;
-    background-image: url(../images/button-bg-pargment.png);
+    background-color: #dfdfdf;
     color: #3a3a3a;
     outline: none;
     font-size: medium;
@@ -441,11 +440,42 @@ button {
     margin: auto;
     background-color: rgba(60, 60, 60, 0.6);
     padding: 30px;
+    border-radius: 5px;
     
 }
 
 .text-input {
-    margin-left: 50px;
+    margin-left: 3rem;
+}
+
+.get-in-touch-button {
+    background-color: #007663;
+    color: whitesmoke;
+    padding: 10px 50px;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: bold;
+
+}
+
+/* Thank you page */
+
+.thankyou-btn {
+    background-color: #312a89;
+    border: whitesmoke;
+    color: whitesmoke;
+    padding: 10px 50px;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: bold;
+    width: 100%;
+}
+
+#thankyou {
+    color: white;
+    margin: auto;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
 }
 
 /* Media query: large and landscape phones (576px and up) */
@@ -505,6 +535,14 @@ button {
 
 }
 
+#contact-form {
+    font-size: large;
+    
+}
+
+.get-in-touch-button {
+    font-size: x-large;
+}
 
 /* Media query: tablets and larger (992px and up) */
 @media screen and (min-width: 992px) {

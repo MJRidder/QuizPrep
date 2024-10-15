@@ -66,6 +66,8 @@ B - Quizprep aimes for quick and often 'on the go' users. Expected therefor is a
 # Wireframes
 For my wireframes I used the Balsamiq app. First writing out the concept of Quizprep (what is it and what could it be in the future?). After which I wrote out the steps that needed to be taken to successfully create the website, followed by several page designs for the homepage and the quizpages (trying to find specifically the best/fun usage on a mobile device). As research shows that 85% (or some say more) of people is right handed, the current design was chosen to tailor to the masses (e.g. the 'Next' button is on the right of the page).
 
+The approach when designing the pages overall was to first implement the functionality of the quiz and tailor the quiz pages around that. The thought proces was to make sure that the quizzes themselves would be comfortable to play by the users, aiming for minimal 'oddities' that could spoil the users fun. Ones that was functional, the rest of Quizprep was build around it
+
 [screenshot]
 
 When the base was set, I wrote out which steps the quizzes would need to take in Javascript (before attempting to code). Trying to find the logic behind the tool and what it would need to do/track, before even showing the first question.
@@ -246,6 +248,8 @@ There are no differences between my local and deployed site currently.
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Ezgif](https://ezgif.com/webp-to-jpg) | Example | Example |
+
+https://www.iloveimg.com/ img from avif to webp
 
 
 

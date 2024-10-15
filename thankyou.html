@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- meta tags for search engines-->
+    <meta name="description" content="Quiz description"> <!-- more to be added -->
+    <meta name="keywords" content="Quiz keywords"> <!-- more to be added -->
+
+    <!--Fontawesome link-->
+    <script src="https://kit.fontawesome.com/685977a0ed.js" crossorigin="anonymous"></script>
+
+    <!--Stylesheet CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Quiz Prep</title>
+</head>
+
+<body class="bg-contactpage">
+    <!-- Header -->
+    <header>
+        <input type="checkbox" id="nav-mobile-toggle" name="nav-mobile-toggle">
+        <label for="nav-mobile-toggle" class="nav-mobile-toggle-label">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+
+                <!-- links that by standard have the 'hide' class added (but remain for easy access where needed) -->
+                <li><a href="quizprep-1.html" value="The Witcher Quiz" class="hide">1</a></li>
+                <li><a href="quizprep-2.html" value="Lord of the Rings" class="hide">2</a></li>
+                <li><a href="quizprep-3.html" value="Game of Thrones" class="hide">3</a></li>
+            </ul>
+        </nav>
+        <a href="index.html">
+        <h1 id="logo">Quizprep</h1>
+        </a>
+    </header>
+    
+    <main class="none-quiz-main">
+        <section id="thankyou">
+            <a href="index.html"><button id="home-btn" class="home-btn btn thankyou-btn">Home</button></a>
+            <br>
+            <p class="none-quizpage-intros"> <span><b>THANK YOU</b></span> for reaching out to us. We value your feedback! We aim to ensure that we help as many people with their
+                quiz preparations and we can't do this without your help. We will return to you with an answer as soon as we can. Please feel free to reach out
+                to us whenever you'd like. Again either via email: quizprep@gmail.com, or via the form below.</p>
+        </section>
+
+        <section id="contact">
+            <form method="GET" action="thankyou.html" id="contact-form">
+                <h2>Get in Touch!</h2>
+                <br>
+                <br>
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" class="text-input" name="first-name" required>
+                <br>
+                <br>
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" class="text-input" name="last-name" required>
+                <br>
+                <br>
+                <label for="email-address">Email address</label>
+                <input type="text" id="email-address" class="text-input" name="email-address" required>
+                <br>
+                <br>
+                <label for="phone">Phone number</label>
+                <input type="text" id="phone" class="text-input" name="phone-number">
+                <br>
+                <br>
+                <p>What is your request about?</p>
+                <br>
+                <div class="radio-buttons">
+                    <div>
+                        <input type="radio" id="quiz-feedback" value="quiz-feedback" required>
+                        <label for="quiz-feedback">Quiz-feedback</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="quiz-questions-suggestions" value="quiz-questions-suggestions" required>
+                        <label for="quiz-questions-suggestions">Quiz question suggestions</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="general" value="general-contact" required>
+                        <label for="general">General contact</label>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <label for="free-text">Please add your request below</label>
+                    <br>
+                    <br>
+                    <textarea name="free-text" id="free-text" rows="4" cols="30"
+                        placeholder="Please provide context on your request." required></textarea>
+                </div>
+                <br>
+                <br>
+                <button type="submit" class="get-in-touch-button">Send request</button>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <ul id="social-networks">
+            <li><a href="https://facebook.com/" target="_blank" rel="noopener"
+                    aria-label="visit our facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li><a href="https://x.com/" target="_blank" rel="noopener"
+                    aria-label="visit our X Twitter page (opens in a new tab)"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                    aria-label="visit our youtube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener"
+                    aria-label="visit our instagram page (opens in a new tab)"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </li>
+        </ul>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
