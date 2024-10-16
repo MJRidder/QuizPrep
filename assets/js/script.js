@@ -7,13 +7,13 @@ let questionArea = document.getElementById('question-area');
 let questionElement = document.getElementById('question');
 let answerButtonsElement = document.getElementById('answer-buttons');
 let quizPage = document.getElementById('quiz-page');
-let QWitchImage = document.getElementById('witcher-image')
-let QLotrImage = document.getElementById('lotr-image')
-let QGotImage = document.getElementById('got-image')
-let scoreValue = document.getElementById('score')
-let incorrectValue = document.getElementById('incorrect')
+let QWitchImage = document.getElementById('witcher-image');
+let QLotrImage = document.getElementById('lotr-image');
+let QGotImage = document.getElementById('got-image');
+let scoreValue = document.getElementById('score');
+let incorrectValue = document.getElementById('incorrect');
 
-let questionlist, currentQuestionIndex 
+let questionlist, currentQuestionIndex;
 
 /**
  * Utilising the different start buttons based on the start 
@@ -25,9 +25,9 @@ if (startButton) {
     startButton.addEventListener('click', setScoreToZero);
 
     nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    nextQuestion()
-})
+    currentQuestionIndex++;
+    nextQuestion();
+});
 }
 
 if (startButton2) {
@@ -35,9 +35,9 @@ if (startButton2) {
     startButton2.addEventListener('click', setScoreToZero);
 
     nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    nextQuestion()
-})
+    currentQuestionIndex++;
+    nextQuestion();
+});
 }
 
 if (startButton3) {
@@ -45,9 +45,9 @@ if (startButton3) {
     startButton3.addEventListener('click', setScoreToZero);
     
     nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    nextQuestion()
-})
+    currentQuestionIndex++;
+    nextQuestion();
+});
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -63,7 +63,7 @@ for (let quizlink of quizlinks) {
         }
     });
 }
-})
+});
 
 
 
@@ -74,14 +74,14 @@ for (let quizlink of quizlinks) {
  * src: Web Dev Simplified Youtube tutorial
  */
 function startQuizWitcher() {
-    let quizCategory = "Witcher"
+    let quizCategory = "Witcher";
     console.log(`Starting the ${quizCategory} Quiz`);
     homeButton.classList.add('hide');
     startButton.classList.add('hide');
     questionlist = questionsWitcher.sort(() => .5);
     currentQuestionIndex = 0;
     questionArea.classList.remove('hide');
-    nextQuestion()
+    nextQuestion();
 }
 
 /**
@@ -90,14 +90,14 @@ function startQuizWitcher() {
  * an addition it also logs to console which game is started.
  */
 function startQuizLotr() {
-    let quizCategory = "Lotr"
+    let quizCategory = "Lotr";
     console.log(`Starting the ${quizCategory} Quiz`);
     homeButton.classList.add('hide');
     startButton2.classList.add('hide');
     questionlist = questionsLotr.sort(() => .5);
     currentQuestionIndex = 0;
     questionArea.classList.remove('hide');
-    nextQuestion()
+    nextQuestion();
 }
 
 /**
@@ -106,14 +106,14 @@ function startQuizLotr() {
  * an addition it also logs to console which game is started.
  */
 function startQuizGot() {
-    let quizCategory = "Got"
+    let quizCategory = "Got";
     console.log(`Starting the ${quizCategory} Quiz`);
     homeButton.classList.add('hide');
     startButton3.classList.add('hide');
     questionlist = questionsGot.sort(() => .5);
     currentQuestionIndex = 0;
     questionArea.classList.remove('hide');
-    nextQuestion()
+    nextQuestion();
 }
 
 /**
@@ -121,8 +121,8 @@ function startQuizGot() {
  * of the page to ensure previous answers are cleared.
  */
 function nextQuestion() {
-    resetState()
-    showQuestion(questionlist[currentQuestionIndex])
+    resetState();
+    showQuestion(questionlist[currentQuestionIndex]);
 }
 
 /**
@@ -140,11 +140,11 @@ function showQuestion(question) {
         button.innerText = answer.text;
         button.classList.add ('btn');
         if (answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
         button.addEventListener('click', selectAnswer);
-        answerButtonsElement.appendChild(button)
-    })
+        answerButtonsElement.appendChild(button);
+    });
 
     if (startButton) {
         QWitchImage.src = question.img;
@@ -162,8 +162,8 @@ function showQuestion(question) {
  * added.)
  */
 function resetState() {
-    clearStatusClass(quizPage)
-    nextButton.classList.add('hide')
+    clearStatusClass(quizPage);
+    nextButton.classList.add('hide');
     while(answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -181,9 +181,9 @@ function resetState() {
 function selectAnswer(event) {
     let selectedButton = event.target;
     let correct = selectedButton.dataset.correct;
-    setStatusClass(quizPage, correct)
+    setStatusClass(quizPage, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
+        setStatusClass(button, button.dataset.correct);
     })
 
     if (questionlist.length > currentQuestionIndex + 1) {
@@ -203,10 +203,10 @@ function selectAnswer(event) {
     }
 
     if (correct) {
-        console.log("Correct!")
+        console.log("Correct!");
         incrementScore();
     } else {
-        console.log("wrong")
+        console.log("wrong");
         incrementWrongAnswer();
     }
 
@@ -218,11 +218,11 @@ function selectAnswer(event) {
  * of correct or wrong.
  */
 function setStatusClass(element, correct) {
-    clearStatusClass(element)
+    clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
     } else {
-        element.classList.add('wrong')
+        element.classList.add('wrong');
     }
 }
 
@@ -230,8 +230,8 @@ function setStatusClass(element, correct) {
  * function that removes existing classes correct/wrong.
  */
 function clearStatusClass(element) {
-        element.classList.remove('correct')
-        element.classList.remove('wrong')
+        element.classList.remove('correct');
+        element.classList.remove('wrong');
 } 
 
 /**
@@ -240,7 +240,7 @@ function clearStatusClass(element) {
  */
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
-    document.getElementById('score').innerText = ++oldScore
+    document.getElementById('score').innerText = ++oldScore;
 }
 
 /**
@@ -249,7 +249,7 @@ function incrementScore() {
  */
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
-    document.getElementById('incorrect').innerText = ++oldScore
+    document.getElementById('incorrect').innerText = ++oldScore;
 }
 
 /**
@@ -257,7 +257,7 @@ function incrementWrongAnswer() {
  * when a quiz is restarted.
  */
 function setScoreToZero() {
-    score = 0;
+    let score = 0;
     scoreValue.textContent = score;
     incorrectValue.textContent = score;
 }
@@ -319,7 +319,7 @@ let questionsWitcher = [
         ]
 
     },
-]
+];
 let questionsLotr = [
     {
         question: 'Who was the Ring bearer?',
@@ -376,7 +376,7 @@ let questionsLotr = [
         ]
 
     },
-]
+];
 let questionsGot = [
     {
         question: 'Who knew Nothing?',
@@ -433,4 +433,4 @@ let questionsGot = [
         ]
 
     },
-]
+];
