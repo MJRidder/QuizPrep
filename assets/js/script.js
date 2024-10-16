@@ -119,6 +119,7 @@ function startQuizGot() {
 /**
  * Function to call the next question and reset the state
  * of the page to ensure previous answers are cleared.
+ * src: Web Dev Simplified Youtube tutorial
  */
 function nextQuestion() {
     resetState();
@@ -132,6 +133,7 @@ function nextQuestion() {
  * When the correct answer is selected, a 'correct' class is added to 
  * the button which in turn is used for color coding in CSS.
  * Additionally it shows the image added for the next specific questions.
+ * src: Web Dev Simplified Youtube tutorial
  */
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -160,6 +162,7 @@ function showQuestion(question) {
  * Clears elements back to a default state and removes the next button.
  * Deleting previous answers (clearing for new answers/question to be 
  * added.)
+ * src: Web Dev Simplified Youtube tutorial
  */
 function resetState() {
     clearStatusClass(quizPage);
@@ -177,6 +180,7 @@ function resetState() {
  * At the end of each quiz if no questions are available anymore, the 
  * Restart and Home buttons are made visible. In the console it also 
  * confirms if a question is answered correct or wrong.
+ * src: Web Dev Simplified Youtube tutorial
  */
 function selectAnswer(event) {
     let selectedButton = event.target;
@@ -216,6 +220,7 @@ function selectAnswer(event) {
  * clears the previous statuss (wrong/correct) where needed. Checks
  * what the new status of each answers is to define the new status 
  * of correct or wrong.
+ * src: Web Dev Simplified Youtube tutorial
  */
 function setStatusClass(element, correct) {
     clearStatusClass(element);
@@ -228,6 +233,7 @@ function setStatusClass(element, correct) {
 
 /**
  * function that removes existing classes correct/wrong.
+ * src: Web Dev Simplified Youtube tutorial
  */
 function clearStatusClass(element) {
         element.classList.remove('correct');
