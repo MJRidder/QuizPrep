@@ -311,6 +311,8 @@ https://www.iloveimg.com/ img from avif to webp
 | [NSPCC](https://www.nspcc.org.uk/keeping-children-safe/online-safety/quiz/) | Quizprep | HTML/CSS coding |
 | [Sporcle](https://www.sporcle.com/) | Quizprep | HTML/CSS coding |
 | [W3schools](https://www.w3schools.com/) | Quizprep | HTML/CSS coding |
+| [CI Love Running](https://mjridder.github.io/love-running/) | Quizprep | page formatting |
+| [CI Love Maths](https://mjridder.github.io/love-maths/) | Quizprep | JS coding |
 | [Medlineplus](https://medlineplus.gov/genetics/understanding/traits/handedness/) | Quizpage | % of righthanded vs. lefthanded users |
 
 Special shout outs:
@@ -338,5 +340,4 @@ Special shout outs:
 | [IGN](https://oyster.ignimgs.com/) | Quizpage | Images |
 | [Brittanica](https://cdn.britannica.com/) | Quizpage | Images |
 | [Vanity fair](https://media.vanityfair.com/) | Quizpage | Images |
-| [Variety](https://variety.com/) | Quizpage | Images |
-| [Variety](https://variety.com/) | Quizpage | Images |
+| [Pexels](https://www.pexels.com/) | Quizpage | Images |

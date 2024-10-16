@@ -9,7 +9,7 @@
     font-family: Lato;
 }
 
-/* Global styles */
+/* Global styles - Mobile first  */
 
 body {
     min-height: 100vh;
@@ -62,7 +62,7 @@ header>h1 {
     display: none;
 }
 
-/* Navigation & toggles */
+/* Navigation & toggles - Mobile first  */
 
 nav {
     position: absolute;
@@ -93,7 +93,7 @@ main {
     padding-right: 20px;
 }
 
-/* Homepage layout */
+/* Homepage layout - Mobile first */
 
 .none-quiz-main {
     top: 100%;
@@ -137,7 +137,6 @@ main>nav {
     z-index: 1;
 }
 
-
 .dropdown-link {
     display: flex;
     padding: 15px 10px;
@@ -152,12 +151,11 @@ main>nav {
     font-weight: bold;
 }
 
-
 .quizlist:hover .dropdown-list {
     display: block;
 }
 
-/* Advertised quiz */
+/* Homepage - Advertised quiz - Mobile first  */
 .homepage-adv-quiz {
     height: 200px;
     width: 100%;
@@ -180,14 +178,14 @@ main>nav {
     align-items: start
 }
 
-/* How to QUIZPREP - NEEDS UPDATING $$ */
+/* Homepage - How to QUIZPREP - Mobile first  */
 .homepage-how-to-quizprep {
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 
-/* Home page other quizes - NEEDS UPDATING = IMPROVED IMAGING AND TEXT $$ */
+/* Homepage - other quizes - Mobile first  */
 
 .homepage-rest-quiz-1 {
     height: 100px;
@@ -226,8 +224,9 @@ main>nav {
 }
 
 
-/* Quiz page(s) layout */
+/* Quiz page(s) layout - Mobile first */
 
+/* Quiz page(s) background and layers - Mobile first */
 .bg-witcher {
     height: 100vh;
     background-image: url(../images/witcher-quiz/witcher-bg-400x800.png);
@@ -255,7 +254,6 @@ main>nav {
     display: flex;
 }
 
-
 .quizprep-main {
     display: flex;
     width: 100vw;
@@ -280,6 +278,7 @@ main>nav {
     align-items: center;
 }
 
+/* Quiz page(s) Question and answer fields - Mobile first */
 #question-field {
     height: 600px;
     max-height: 80%;
@@ -303,7 +302,6 @@ main>nav {
     border: 15px solid #dfdfdf;
 }
 
-
 #question {
     background-color: #dfdfdf;
     border: 5px solid rgb(133, 95, 0);
@@ -314,14 +312,6 @@ main>nav {
     padding: 1rem;
     text-align: center;
     margin-bottom: 2rem;
-}
-
-.scores {
-    padding-right: 1rem;
-}
-
-.answer-buttons {
-    align-items: last baseline;
 }
 
 .score-area {
@@ -335,6 +325,10 @@ main>nav {
     border-radius: 5px;
 }
 
+.scores {
+    padding-right: 1rem;
+}
+
 .correct {
     color: green;
 }
@@ -343,6 +337,10 @@ main>nav {
     color: red;
 }
 
+/* Quiz page(s) Button formatting - Mobile first */
+.answer-buttons {
+    align-items: last baseline;
+}
 
 .btn-grid {
     display: grid;
@@ -398,7 +396,7 @@ main>nav {
 
 }
 
-/* Footer layout */
+/* Footer layout - Mobile first */
 footer {
     position: fixed;
     bottom: 0;
@@ -428,7 +426,7 @@ button {
     display: none;
 }
 
-/* Contact page */
+/* Contact page - Mobile first  */
 
 .bg-contactpage {
     background-color: rgba(60, 60, 60, 0.6);
@@ -446,11 +444,10 @@ button {
     background-color: rgba(60, 60, 60, 0.6);
     padding: 30px;
     border-radius: 5px;
-
 }
 
 .text-input {
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 
 .get-in-touch-button {
@@ -460,10 +457,9 @@ button {
     border-radius: 15px;
     font-size: large;
     font-weight: bold;
-
 }
 
-/* Thank you page */
+/* Thank you page - Mobile first */
 
 .thankyou-btn {
     display: flex;
@@ -512,6 +508,7 @@ button {
     main {
         max-width: 800px;
         margin: auto;
+        font-size: large;
     }
 
     /* Header */
@@ -534,27 +531,30 @@ button {
         display: none;
     }
 
+    .btn {
+        font-size: large;
+    }
+
     .bg-witcher {
         background-image: url(../images/witcher-quiz/witcher-bg-huge.jpeg);
     }
 
     .bg-lotr {
-        background-image: url(../images/lotr-quiz/lotr-bg-1600x800.png);
+        background-image: url(../images/lotr-quiz/LotR-bg-huge.webp);
     }
 
     .bg-got {
         background-image: url(../images/got-quiz/GoT-bg-image-huge.jpg);
     }
 
-}
-
-#contact-form {
-    font-size: large;
-
-}
-
-.get-in-touch-button {
-    font-size: x-large;
+    #contact-form {
+        font-size: x-large;
+    }
+    
+    .get-in-touch-button {
+        font-size: xx-large;
+    }
+    
 }
 
 /* kept below media queries for larger devices in for future reference */
