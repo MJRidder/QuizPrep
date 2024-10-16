@@ -9,7 +9,6 @@
     font-family: Lato;
 }
 
-
 /* Global styles */
 
 body {
@@ -433,7 +432,7 @@ button {
 
 .bg-contactpage {
     background-color: rgba(60, 60, 60, 0.6);
-    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(../images/contactpage-bg-medium-2.jpeg) no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(../images/contactpage-bg-medium-2.jpeg) no-repeat center center/cover;
     flex-grow: 1;
 }
 
@@ -447,7 +446,7 @@ button {
     background-color: rgba(60, 60, 60, 0.6);
     padding: 30px;
     border-radius: 5px;
-    
+
 }
 
 .text-input {
@@ -495,10 +494,12 @@ button {
         margin: auto;
     }
 
-    .bg-witcher{
+    .bg-witcher {
         background-image: url(../images/witcher-quiz/witcher-bg-800x1600.png);
     }
-    .bg-lotr{}
+
+    .bg-lotr {}
+
     .bg-got {
         background-image: url(../images/got-quiz/got-bg-medium.png);
     }
@@ -533,12 +534,14 @@ button {
         display: none;
     }
 
-    .bg-witcher{
+    .bg-witcher {
         background-image: url(../images/witcher-quiz/witcher-bg-huge.jpeg);
     }
-    .bg-lotr{
+
+    .bg-lotr {
         background-image: url(../images/lotr-quiz/lotr-bg-1600x800.png);
     }
+
     .bg-got {
         background-image: url(../images/got-quiz/GoT-bg-image-huge.jpg);
     }
@@ -547,27 +550,24 @@ button {
 
 #contact-form {
     font-size: large;
-    
+
 }
 
 .get-in-touch-button {
     font-size: x-large;
 }
 
+/* kept below media queries for larger devices in for future reference */
 /* Media query: tablets and larger (992px and up) */
-@media screen and (min-width: 992px) {
-
-}
+@media screen and (min-width: 992px) {}
 
 /* Media query: laptops and screens (1200px and up) */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {}
 
-
-}
 
 /* Media query: smaller devices (411px and down) */
 @media screen and (max-width: 411px) {
-    
+
     #question-field {
         height: 400px;
         max-height: 80%;
@@ -575,5 +575,10 @@ button {
 
     #question {
         margin-bottom: 10px;
+    }
+
+    .score-area {
+        margin-top: 5px;
+        font-size: small;
     }
 }
