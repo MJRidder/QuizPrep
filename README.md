@@ -1,51 +1,46 @@
-==============================
-==============================
-Start README file
-==============================
-==============================
-
-
 # Quizprep - about the page
-Welcome to Quizprep. A page that test your knowledge on three of the most sought after fantasy TV shows and movies. In the long term this could be a community let page where quizzes on all types of subjects can be shared and played, but to start the focus lies on the Witcher series, the Lord of the Rings movies (The early 2000 ones still win it for me!) and the Game of Thrones series (might skip the final episodes). The website allows you to play all three and tracks your score as you do it, hopefully helping you learn a few interesting facts on the shows. It also has a contact page through which feedback can be shared, bugs can be reported and new quiz ideas can be shared.
+Welcome to Quizprep. A page that tests your knowledge on three of the most sought after fantasy TV shows and movies. In the long term this could be a community lead page where quizzes on all types of subjects can be shared and played, but to start, the focus lies on the Witcher series, the Lord of the Rings movies (The early 2000 ones still win it for me!) and the Game of Thrones series (might skip the final episodes). The website allows you to play all three and tracks your score as you do it, hopefully helping you learn a few interesting facts on the shows. It also has a contact page through which feedback can be shared, bugs can be reported and new quiz ideas can be shared.
+
+The website has been written with the concept of "mobile first" in mind. Expecting users to mostly enjoy the quizzes 'on the go' or as a quick pass time during the day. The thought process has also been to first complete the functionality (JS) of Quickprep and build the website around that functionality.
 
 ## Business goals
 - get users excited about quizzes
-- become a collective of quizzes on a large number of topics
 - be easy to use and easy to come back to
 - mobile focused design for a quick and on the go quiz action
 - help users prepare for quiznight (etc.) or use Quizprep for this
-- (long term) create a community that is excited about sharing an playing quizzes
+- become a collective of quizzes on a large number of topics
+- (long term) create a community that is excited about sharing and playing quizzes
 - (optional) to make Quizprep profitable, the side bars on each side of the screen could contain advertisements (on mobile this could be added at the bottom of the page or in between quizzes)
 
 ## User goals
 - enjoy a fun quiz (or two)
 - quick, easy pass time activity
-- learn something new about your favourite shows (lon gterm: a variety of topics)
-- (long term) be an active member of this quiz community
+- learn something new about your favourite shows (long term: a variety of topics)
+- (long term) be an active member of a quiz community with similar interests
 - (long term) play new quizzes every week
 
 # UX experience
-As one of the main uses of Quizprep is aimed as quick and easy 'quizzing', the user experience of the pages is focused on the mobile device. Quizprep can absolutely be played on larger devices (and is adapted for it) but the clean layout, purposefully limited details and options, make that a user can get to their favourite quiz experience as soon as with a single click. The layout is adapted for each quiz to also 'set the right scene' when starting a quiz.
+As one of the main uses of Quizprep is aimed at quick and easy 'quizzing', the user experience of the pages is focused on the mobile device. Quizprep can absolutely be played on larger devices (and is adapted for it) but the clean layout, purposefully limited details and options, make that a user can get to their favourite quiz experience as soon as with a single click. The layout is adapted for each quiz, to also 'set the right scene' when starting ones quiz fun.
 
 The homepage consists of:
 - a brief introduction
-- a clear button that lists all available quizzes, an 'advertised' quiz (could be a new, updated or in the long term a sponsored quiz)
+- a clear button that lists all available quizzes, an 'advertised' quiz (could be a new, updated or in the long term, a sponsored quiz)
 - a short description of what Quizprep is
 - and a few suggested quizzes
 
-The quizpages themselves 'set the scene' through the use of images on the show in the background. Unique and relevant pictures are added for each question and a users knows instantly when their answer is correct or not through an added colorcoding on the border of the quiz area. Correct and incorrect answers are also counted which provides the user a final result at the end of the quiz, stating how many questions were answered correctly and how many were answered incorrectly.
+The quizpages themselves 'set the scene' through the use of images of the show in the background. Unique and relevant pictures are added for each question and users know instantly when their answer is correct or not through an added colorcoding on the border of the quiz area. Correct and wrong answers are also counted which provides the user a final result at the end of the quiz, stating how many questions were answered correctly and how many were answered incorrectly.
 
 A simple contact page is also available to provide feedback and/or to connect with the creators of Quizprep.
 
 # User stories
-In the short term the main user story would be someone looking to play a quiz on their favourite movie/series and finds this on one of the search engines. This could be through the home page or even directly on the quiz itself.
+In the short term the main user story would be someone looking to play a fun quiz on their favourite movie/series and finds this on one of the search engines. This could be through the home page or even directly on the quiz itself.
 
-Main use for Quizprep would be for quick quiz fun. It is not expected that users will spend more then 5-10 minutes on the page depending on if they have found already the quiz they want to play. Target group would be anyone with 5 minutes to spare, when and wherever they are. The enjoyment comes from the quick excitement around the quiz topic and eventually the knowledge that Quizprep would be able to provide these quick spells of entertainment in the future through the multitude of quizzes that would be added.
+Main use for Quizprep would be for quick quiz fun. It is not expected that users will spend more then 10 minutes on the page depending on if they have found already the quiz they want to play. Target group would be anyone with 5 minutes to spare, when and wherever they are. The enjoyment comes from the quick excitement around the quiz topic and eventually the knowledge that Quizprep would be able to provide these quick spells of entertainment in the future through the multitude of quizzes that would be added.
 
 In the long term, a quiz community could be created. Which would get the users coming back on a regular basis. To either play new quizzes or be a part of the quiz creator group. Creating/Suggesting quizzes that get the most users.
 
 # Mobile users
-Quizprep was created with a 'mobile first' mindset, before reviewing the websites funcitionality for tablets/desktops. Expecting the main userbase to arrive on the page through their mobile devices. The layout therefor is simple but efficient and pages were created mostly with the 'Samsung Galaxy S20 Ultra' as the main device. From there it has been adapted for larger screens and tested through a Macbook with a 16 inch screen.
+Quizprep was created with a 'mobile first' mindset, before reviewing the websites funcitionality for tablets/desktops. Expecting the main userbase to arrive on the page through their mobile devices. The layout therefor is simple but efficient and pages were created mostly with the 'Samsung Galaxy S20 Ultra' as the test device. From there it has been adapted for larger (and smaller) screens and tested through a Macbook with a 16 inch screen.
 
 Reasoning is two fold:
 A - Mobile as a device is used in a much higher frequency then tablets or desktops/laptops
@@ -55,7 +50,7 @@ B - Quizprep aimes for quick and often 'on the go' users. Expected therefor is a
 ![Mobile first](./assets/images/readme-visuals/Mobile-first-2.png)
 
 # Wireframes
-For my wireframes I used the Balsamiq app. First writing out the concept of Quizprep (what is it and what could it be in the future?). After which I wrote out the steps that needed to be taken to successfully create the website, followed by several page designs for the homepage and the quizpages (trying to find specifically the best/fun usage on a mobile device). As research shows that 85% (or some say more) of people is right handed, the current design was chosen to tailor to the masses (e.g. the 'Next' button is on the right of the page).
+For the wireframes I used the Balsamiq app. First writing out the concept of Quizprep (what is it and what could it be in the future?). After which I wrote out the steps that needed to be taken to successfully create the website, followed by several page designs for the homepage and the quizpages (trying to find specifically the best/fun usage on a mobile device). As research shows that 85% (or some say more) of people is right handed, the current design was chosen to initially tailor to the masses (e.g. the 'Next' button is on the right of the page).
 
 The approach when designing the pages overall was to first implement the functionality of the quiz and tailor the quiz pages around that. The thought proces was to make sure that the quizzes themselves would be comfortable to play by the users, aiming for minimal 'oddities' that could spoil the users fun. Ones that was functional, the rest of Quizprep was build around it
 
@@ -82,15 +77,20 @@ System (HTML/CS/JS) logic
 ## NAV bar
 The navigation bar is adaptable for smaller and larger screens. Making use of the "hamburger" menu for mobile and adding the homepage/contact links written out at the top of the page for larger devices. It still allows space for more menu options. Currently the different quizzes are also added for easy navigation while working on the site. However with the 'hidden class' added, they are only visible when desired, not for the users.
 
+NAV bar for larger devices<br>
 ![nav bar variant](./assets/images/readme-visuals/nav-bar-long.png)
+
+NAV bar closed and open for mobilie devices<br>
 ![nav bar variant](./assets/images/readme-visuals/nav-mobile-closed.png)
 ![nav bar variant](./assets/images/readme-visuals/nav-mobile-open.png)
+
+NAV bar Gitpod code with hidden menu
 ![nav bar variant](./assets/images/readme-visuals/nav-hidden-items.png)
 
 ## Quizlist
 An easy to spot and use dropdown button that is used as the main quiz portal. This Quizlist is the main function that a user can use to browse through the available quizzes. In future iterations the list could be added in a menu and/or a side bar but to keep with the easy overview, this button is the only function that lists all quizzes. It shows as a button when scrolling, but only when hovered over or clicked on it will display the quizlist. This to improve general site use and access. The button is a distinct different color from the rest of the page to make sure that it stands out.
 
-[screenshot - quizlist button]
+![Quizlist](./assets/images/readme-visuals/Quizlist-image.png)
 
 ## 'Advertised' Quiz
 To allow for a 'one click' quiz access, the 'advertised quiz' section was added to the home page. This is currently the main quiz available but towards the future this could be used for adding new quizzes, sponsored quizzes or if preferences of users are known, suggested quizzes that match the users preferences thus far.
@@ -100,7 +100,7 @@ Added over the image is the title of the quiz to clarify the quiz subject.
 ![advertised quiz list](./assets/images/readme-visuals/advertised-quiz-list.png)
 
 ## Quiz suggestions
-Similar to the 'Advertised' quiz section, it allows a 'one click' access to some of the available quizzes. It can be added with a small image + a short description of the quizzes mentioned in this short overview. Especially when the amount of available quizzes increases, this section is interesting for the user if it shows quizzes that align with their preferences. Also for users that enjoy reading a short description of a quiz, this section can tailor to those (as not all users would be image/visual driven). 
+Similar to the 'Advertised' quiz section, it allows a 'one click' access to some of the available quizzes. It can be added with a small image + a short description of the quizzes mentioned in this short overview. Especially when the amount of available quizzes increases, this section is interesting for the user if it shows quizzes that align with their preferences. Also for users that enjoy reading a short description of a quiz, this section can tailor to those (as not all users would only be image/visual driven). 
 
 ![suggested quiz list](./assets/images/readme-visuals/suggested-quiz-list.png)
 
@@ -108,31 +108,31 @@ Similar to the 'Advertised' quiz section, it allows a 'one click' access to some
 If there is any feedback on the quizzes, users can reach out to the creators of Quickprep. In the longterm this page will also be the first (simple) foundation of the community through which users can give suggestions for quizzes to come. The page is kept simple again to highlight the use and to make it easily accessable via mobile devices.
 
 ## Visuals/Images adapted to the relevant quiz
-To help users 'get in the zone' each quiz has its own base page, so that imaging around the quiz can be formatted in line with the quiz subject. Helping users get a look and feel of the quiz subject (currently, one of the three shows) while playint the quiz. The images are also adapted to the screensizes for optimal use.
+To help users 'get in the zone' each quiz has its own base page, so that imaging around the quiz can be formatted in line with the quiz subject. Helping users get a look and feel of the quiz subject (currently, one of the three shows) while playing the quiz. The images are also adapted to the screensizes for optimal use.
 
 ![Am I responsive? view](./assets/images/readme-visuals/am-i-responsive-visual.png)
 
 ## (Re)Start button 
 The start button allows the quiz to be kicked off (it is also the trigger for Javascript to launch the correct questions and visuals). It is only visible at the start of the quiz and at the end of the quiz. Where however the Start button will be 'rebranded' to "Restart" as it will allow the user to redo the quiz if they are hoping to get a better score. 
 
-(Future iterations could also includde a cap on the amount of questions answered and restarting the quiz would then load a new set of questions/answers on the topic)
+(Future iterations could also include a cap on the amount of questions answered and restarting the quiz would then load a new set of questions/answers on the topic)
 
 ![Start button variant](./assets/images/readme-visuals/homebutton-1.png)
-![Restart button variant](./assets/images/readme-visuals/homebutton-4.png)
+![Restart button variant](./assets/images/readme-visuals/Homebutton-4.png)
 
 ## Next button
-The Next button only shows when an answer is given. This tor trigger that the user always provides an answer and is unable to simply click through a quiz.
+The Next button only shows when an answer is given. This to trigger that the user always provides an answer and is unable to simply click through a quiz.
 
-* See screenshots above for this as well *
+(* See screenshots added above for reference *)
 
 ## Correct/Incorrect visualisation
-As part of the experience, the frame surrounding the question and answer area will light up green or red, depending on the answer that the users gives is correct (green) or wrong (red). As quizzes are all about giving a high when a correct answer is given this will help with hte quiz experience.
+As part of the experience, the frame surrounding the question and answer area will light up green or red, depending on the answer that the users gives is correct (green) or wrong (red). As quizzes are all about giving a 'high' when a correct answer is given this will help with the quiz experience.
 
 ![Correct Answer](./assets/images/readme-visuals/Correct-answer.png)
 ![Wrong Answer](./assets/images/readme-visuals/Wrong-answer.png)
 
 ## Score tracking
-At the bottom of the quiz pages there is a score tracker showcasing how many questions have been answered correctly and how many have been answered wrong. This is triggered when the provided answer is clicked on one of the answer buttons. There is a counter for the amount of correct answers given and the amount of wrong anwers given.
+At the bottom of the quiz pages there is a score tracker showcasing how many questions have been answered correctly and how many have been answered wrong. This is triggered when the provided answers are clicked on. There is a counter for the amount of correct answers given and the amount of wrong anwers given.
 
 ![score tracking](./assets/images/readme-visuals/Score-tracking.png)
 
@@ -142,37 +142,37 @@ The home button is generally hidden throughout the quiz, but is unhidden at the 
 ![Home button variant](./assets/images/readme-visuals/homebutton-1.png)
 ![Home button variant](./assets/images/readme-visuals/Homebutton-2.png)
 ![Home button variant](./assets/images/readme-visuals/Homebutton-3.png)
-![Home button variant](./assets/images/readme-visuals/homebutton-4.png)
+![Home button variant](./assets/images/readme-visuals/Homebutton-4.png)
 
 ## Simple consistent layout
-The layout is purposefully kept sipmle to tailor to users of mobile devices. Simple navigation and quick loading pages. The layout of the different quizpages is also the same to help users receive what they 'expect' when would go through multiple quizzes. For future iterations new quiz formats could be considered. But the aim for this iteration is simplicity and giving an easy user experience.
+The layout is purposefully kept simple to tailor to users of mobile devices. Simple navigation and quick loading pages. The layout of the different quizpages is also the same to help users receive what they 'expect' when they would go through multiple quizzes. For future iterations new quiz formats could be considered. But the aim for this iteration is simplicity and giving an easy user experience.
 
 ## Footer with links to socials
-Although Quizprep still has to create it's facebook, instagram, X (Twitter), Snapchat and Tiktok social media's, the footer has already been added with links to the various social accounts. This will be updated when social media pages are created. These social media pages can in turn be used to make followers aware of new quizzes and to provide shareable links to Quizprep to expand the user base.
+Although Quizprep still has to create it's facebook, instagram, X (Twitter), Snapchat and Tiktok social media's, the footer has already been added with links to various social accounts. This will be updated when social media pages are created. These social media pages can in turn be used to make followers aware of new quizzes and to provide shareable links to Quizprep to expand the user base.
 
 ## Future features
 
 ### Quizprep Community
-One of the biggest opportunities is creating a quiz community around Quizprep. Having people come back to the website, creating/suggestion quiz topics and rating them of others. The goal would be to create an interactive platform which users can use to find others with the same interests and excitement for quizzes. 
+One of the biggest opportunities is creating a quiz community around Quizprep. Having people come back to the website, creating/suggesting quiz topics and rating them of others. The goal would be to create an interactive platform which users can use to find others with the same interests and excitement for quizzes. 
 
 ### Personal account / Log in
 Saving data and performance in ones own personal account helps users be more involved with their scores. It can also be interesting to look back at ones own performance in different quizzes which can be tracked in the account.
 
 ### High score tracking (per quiz and overall)
-When quizzes get larger and more engaging, it will be interesting to know how one does compared to themselves before, but also to others. tracking high scores and play time could create a form of competition, sparking desire to be quicker, better and of course play more quizzes.
+When quizzes get larger and more engaging, it will be interesting to know how one does compare to themselves before, but also to others. tracking high scores and play time could create a form of competition, sparking desire to be quicker, better and of course play more quizzes.
 
 ### Rewards based on scoring
-To help users get something in return for playing frequent quizzes (and to get them more engaged), rewards for high scores could be added. Especially when the range of quizzes increases, the gamification of it can spark additional joy for users but also for example accumulate points/credits to save up for products of the page's sponsors.
+To help users get something in return for playing frequent quizzes (and to get them more engaged), rewards for high scores could be added. Especially when the range of quizzes increases, the gamification of it can spark additional joy for users but also for example accumulate points/credits to save up for products if Quizprep manages to receive page sponsors.
 
 ### Variations of quiz pages (quiz subject dependant)
 There is currently one single format for quizzes. Depending on topics however, having different formats for quizzes could make the experience more interesting, but will also allow different type of quizzes to be added to the list (e.g. select locations on a map to showcase which captital of a country is which).
 
-### advertisements/sponsoring (reveune creating)
+### advertisements/sponsoring (revenue creating)
 - To make Quizprep financially viable, quizzes about specific products could be added as sponsored quizzes. Still fun, but also tailored to help users get more involved with specific products.
 - Existing quizzes could also be sponsored by companies. Showcasing their brands/log's besides specific quizzes, potentially at specific times etc.
 
 ### Improved presentation options
-- play Quizprep on the big screen! Currently the imaging is only set up for smaller to larger devices. However if Quizprep will be played with larger groups, image definitions, fonts and button sizes could be increased to cater to this.
+Play Quizprep on the big screen! Currently the imaging is only set up for smaller to larger devices. However if Quizprep will be played with larger groups, image definitions, fonts and button sizes could be increased to cater to this.
 
 ### Recurring socials
 Social media can play a large role in the 'selling' of Quizprep and keeping the user base up-to-date. For example adding new quizzes as teasers on instagram could bring frequent users back to Quizprep.
@@ -197,46 +197,46 @@ Testing has been performed on actual (Macbook 16 inch )laptops and phone screens
 
 ## HTML validator test
 
-Index page HTML validator pass
+Index page HTML validator pass<br>
 ![HTML validator test](./assets/images/readme-visuals/HTML-validator-index-page.png)
 
-contact page HTML validator pass
+contact page HTML validator pass<br>
 ![HTML validator test](./assets/images/readme-visuals/HTML-validator-contact-page.png)
 
-thank you page HTML validator pass
+thank you page HTML validator pass<br>
 ![HTML validator test](./assets/images/readme-visuals/HTML-validator-thankyou-page.png)
 
-Witcher quiz page HTML validator pass
+Witcher quiz page HTML validator pass<br>
 ![HTML validator test](./assets/images/readme-visuals/HTML-validator-Witcher-quiz.png)
 
-Lotr quiz page HTML validator pass
+Lotr quiz page HTML validator pass<br>
 ![HTML validator test](./assets/images/readme-visuals/HTML-validator-Lotr-quiz.png)
 
-GoT quiz page HTML validator pass
+GoT quiz page HTML validator pass<br>
 ![HTML validator test](./assets/images/readme-visuals/HTML-validator-Got-quiz.png)
 
 ## CSS validator test
 
-CSS page validator pass
+CSS page validator pass<br>
 ![CSS page validator test](./assets/images/readme-visuals/CSS-validator-check-passed.png)
 
 
 ## (Un)fixed bugs
 
 ### Score counting (fixed)
-For long the quiz did not have a unique action/function to restart the quiz. Restarting the quiz would not reset the values of scores under "incrementScore" and "incrementWrongAnswer". After trying different value adjusting objects (e.g. getting IDs and adjust via innerHTML or textContent) I managed to create a new function setScoreToZero that would be activated every time the 'Start' (or with that, the "Restart") button would be clicked. This as this is only used at the start or at the end of the quiz where the 0 score is desired in any case.
+For long the quiz did not have a unique action/function to restart the quiz. Restarting the quiz would not reset the values of scores under "incrementScore" and "incrementWrongAnswer". After trying different value adjusting objects (e.g. getting IDs and adjust via innerHTML or textContent) I managed to create a new function setScoreToZero that would be activated every time the 'Start' (or with that, the "Restart") button would be clicked. This as this is only used at the start or at the end of the quiz where the 0 score is desired.
 
 ### Answer buttons and scoring moves due to "Next" button (unfixed)
-At the moment I have not been able to fix the moving positions of the different buttons in the grid. Because of that the scores (and somewhat the question and answers) move down everytime the 'Next' button appears. It is not a huge issue and some might actually think it to be fun or interesting. However for consistancy having thes buttons set in place would provide a calmer experience for the user.
+At the moment I have not been able to fix the moving positions of the different buttons in the grid. Because of that the scores (and somewhat the question and answers) move down everytime the 'Next' button appears. It is not a huge issue and some might actually think it to be fun or interesting. However for consistancy having these buttons set in place would provide a calmer experience for the user.
 
 ### Border radius of images (fixed)
-For long I struggled with the images not being able to receive 'border-radius'. Or in many cases only partly. it was after a little digging I found out that this was due to image size. With that in mind I ensured to have different sizes of images so that they can be used properly on different screens and you would no longer see 'border-radius' only partly executed.
+At times I struggled with the images not being able to receive 'border-radius'. Or in many cases only partly. it was after a little digging I found out that this was due to image size. With that in mind I ensured to have different sizes of images so that they can be used properly on different screens and you would no longer see 'border-radius' only partly executed.
 
 ### CSS "not working" due to different levels on the page (fixed)
 With the desire to have several transparent levels on the page (so that different styles could be applied to them), it at times over complicated the CSS formatting. By capping the amount of levels and by maintaining a set format for each page, I was able to work out which "level" impacted which part of the page. It is HTML/CSS basics, but if not actively looked for can take a lot of time to fix.
 
 ### Floating Footer
-For long, the footer did not remain at the bottom of the page, but would float halfway through the page, depending on screen size. I found that some of my CSS settings was working against each other. To fix this I applied the footer to the bottom of the page at all times.
+For a while, the footer did not remain at the bottom of the page, but would float halfway through the page, depending on screen size. I found that some of my CSS settings was working against each other. To fix this I applied the footer to the bottom of the page at all times.
 
 ## Deployment
 
@@ -284,9 +284,12 @@ There are no differences between my local and deployed site currently.
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [Ezgif](https://ezgif.com/webp-to-jpg) | Example | Example |
+| [ILoveimg](https://www.iloveimg.com/) | quizpages | avif to webp reset |
+| [Font Awesome](https://fontawesome.com/) | Across website | Inspiration for icons |
+| [Balsamiq](https://Balsamiq.com/) | Wireframing | Creating original site design |
+| [Github](https://github.com/j) | Site creation | Website building |
+| [ChatGPT](https://openai.com/index/chatgpt/) | JS/CSS/HTML | Code review/adjustments |
 
-https://www.iloveimg.com/ img from avif to webp
 
 
 
