@@ -102,7 +102,7 @@ function startQuizLotr() {
 
 /**
  * The Game of Thrones start game loop. Hides the home 
- * and start button and starts the next question list. As 
+ * and start button and starts the next question list. As
  * an addition it also logs to console which game is started.
  */
 function startQuizGot() {
@@ -219,7 +219,7 @@ function selectAnswer(event) {
 /**
  * clears the previous statuss (wrong/correct) where needed. Checks
  * what the new status of each answers is to define the new status 
- * of correct or wrong.
+ * of correct or wrong. It also adds starts the addDisabledClass function.
  * src: Web Dev Simplified Youtube tutorial
  */
 function setStatusClass(element, correct) {
@@ -229,15 +229,27 @@ function setStatusClass(element, correct) {
     } else {
         element.classList.add('wrong');
     }
+    addDisabledClass()
+}
+
+/**
+ * Adds the disabled class to the buttons after an answer is provided.
+ * This to ensure that no multiple answers can be given.
+ */
+function addDisabledClass() {
+    answerButtonsElement.classList.add('disabled');
 }
 
 /**
  * function that removes existing classes correct/wrong.
+ * It also removes the disabled class that deactivates buttons after
+ * an answer was provided.
  * src: Web Dev Simplified Youtube tutorial
  */
 function clearStatusClass(element) {
         element.classList.remove('correct');
         element.classList.remove('wrong');
+        answerButtonsElement.classList.remove('disabled');
 } 
 
 /**
