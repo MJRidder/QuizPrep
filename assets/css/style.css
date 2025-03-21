@@ -470,7 +470,7 @@ button {
 
 /* Thank you page - Mobile first */
 
-.thankyou-btn {
+.thank-you-btn {
     display: flex;
     background-color: #312a89;
     text-decoration: none;
@@ -484,7 +484,7 @@ button {
     width: 100%;
 }
 
-#thankyou {
+#thank-you {
     color: white;
     margin: auto;
     background-color: rgba(60, 60, 60, 0.6);

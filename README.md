@@ -291,8 +291,6 @@ There are no differences between my local and deployed site currently.
 | [ChatGPT](https://openai.com/index/chatgpt/) | JS/CSS/HTML | Code review/adjustments |
 
 
-
-
 ## Resources Used
 
 | Source | Location | Notes |
@@ -324,7 +322,6 @@ Special shout outs:
 3. A special shout out goes to the youtube channel: Web Dev Simplified, supporting my learnings with simplified Youtub tutorials. I have taken much learning from one of his [older videos](https://www.youtube.com/watch?v=riDzcEQbX6k), providing guidance on how to create a basic quiz. From there I have been able to expand on it by adding multiple quizzes, imaging, score tracking and window dressing for the quizzes to appeal to a larger audience.
 
 
-
 ## Content/Media Used
 
 | Source | Location | Notes |
@@ -344,3 +341,20 @@ Special shout outs:
 | [Brittanica](https://cdn.britannica.com/) | Quizpage | Images |
 | [Vanity fair](https://media.vanityfair.com/) | Quizpage | Images |
 | [Pexels](https://www.pexels.com/) | Quizpage | Images |
+
+
+# Updates
+
+| Feedback | Solution | Completed Y/N |
+| --- | --- | --- |
+| Use JS hint checker | Execute | Pending |
+| One answer possibility | disable buttons | Y |
+| Fix console log error when navigating between pages  | Unknown | N |
+| Refactor script to follow DRY principle | Execute | N |
+| Remove console log statements used for debugging | Execute | N |
+| Use `const` keyword for variables that won’t be reassigned | Execute | N |
+| compress images exceeding 1MB  | Execute | N |
+| Use hyphens for files with multiple words | Execute | N |
+| Improve responsiveness across devices | Execute | N |
+| Write commit messages in the imperative mood | Execute | N |
+| Address JavaScript validation errors | Execute | N |

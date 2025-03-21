@@ -1,120 +1,85 @@
-let startButton = document.getElementById('start-btn-witcher');
-let startButton2 = document.getElementById('start-btn-lotr');
-let startButton3 = document.getElementById('start-btn-got');
-let nextButton = document.getElementById('next-btn');
-let homeButton = document.getElementById('home-btn');
-let questionArea = document.getElementById('question-area');
+// const startButton = document.getElementById('start-btn-witcher');
+// const startButton2 = document.getElementById('start-btn-lotr');
+// const startButton3 = document.getElementById('start-btn-got');
+const startQuizButton = document.getElementById('start-quiz');
+let questionImage = document.getElementById('question-image');
+const nextButton = document.getElementById('next-btn');
+const homeButton = document.getElementById('home-btn');
+const questionArea = document.getElementById('question-area');
 let questionElement = document.getElementById('question');
 let answerButtonsElement = document.getElementById('answer-buttons');
-let quizPage = document.getElementById('quiz-page');
-let QWitchImage = document.getElementById('witcher-image');
-let QLotrImage = document.getElementById('lotr-image');
-let QGotImage = document.getElementById('got-image');
+const quizPage = document.getElementById('quiz-page');
+// const QWitchImage = document.getElementById('witcher-image');
+// let QLotrImage = document.getElementById('lotr-image');
+// let QGotImage = document.getElementById('got-image');
 let scoreValue = document.getElementById('score');
 let incorrectValue = document.getElementById('incorrect');
 
 let questionlist, currentQuestionIndex;
+
+
 
 /**
  * Utilising the different start buttons based on the start 
  * button ID's added in HTML. this triggers the start of
  * the correct quiz.
  */
-if (startButton) {
-    startButton.addEventListener('click', startQuizWitcher);
-    startButton.addEventListener('click', setScoreToZero);
+if (startQuizButton) {
+    startQuizButton.addEventListener('click', startQuiz)
+    }
 
+    startQuizButton.addEventListener('click', setScoreToZero);
     nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     nextQuestion();
 });
-}
 
-if (startButton2) {
-    startButton2.addEventListener('click', startQuizLotr);
-    startButton2.addEventListener('click', setScoreToZero);
 
-    nextButton.addEventListener('click', () => {
-    currentQuestionIndex++;
-    nextQuestion();
-});
-}
+// WHAT WAS THE BELOW CODE USED FOR???
+// document.addEventListener("DOMContentLoaded", function() {
+// let quizlinks = document.querySelectorAll('.dropdown-link');
 
-if (startButton3) {
-    startButton3.addEventListener('click', startQuizGot);
-    startButton3.addEventListener('click', setScoreToZero);
-    
-    nextButton.addEventListener('click', () => {
-    currentQuestionIndex++;
-    nextQuestion();
-});
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-let quizlinks = document.querySelectorAll('.dropdown-link');
-
-for (let quizlink of quizlinks) {
-    quizlink.addEventListener('click', function() {
-        console.log("Clicked link: ", this);
-        let quizCategory = this.getAttribute('data-type');
-        console.log("category",quizCategory);
-        if (quizCategory === "witcher") {
-            element.classList.add('correct');
-        }
-    });
-}
-});
+// for (let quizlink of quizlinks) {
+//     quizlink.addEventListener('click', function() {
+//         // console.log("Clicked link: ", this);
+//         let quizCategory = this.getAttribute('data-type');
+//         // console.log("category",quizCategory);
+//         if (quizCategory === "witcher") {
+//             element.classList.add('correct');
+//         }
+//     });
+// }
+// });
 
 
 
 /**
- * The Witcher start game loop. Hides the home and start button 
+ * The quiz start game loop. Hides the home and start button 
  * and starts the next question list. As an addition it also
  * logs to console which game is started.
  * src: Web Dev Simplified Youtube tutorial
  */
-function startQuizWitcher() {
-    let quizCategory = "Witcher";
+function startQuiz(event) {
+    startQuizButton.addEventListener('click', setScoreToZero);
+    const questionBanks = {
+        witcher: questionsWitcher,
+        lotr: questionsLotr,
+        got: questionsGot
+    };
+
+    const quizCategory = event.target.getAttribute('data-type');
     console.log(`Starting the ${quizCategory} Quiz`);
     homeButton.classList.add('hide');
-    startButton.classList.add('hide');
-    questionlist = questionsWitcher.sort(() => .5);
+    startQuizButton.classList.add('hide');
+
+    questionlist = questionBanks[quizCategory];
+    console.log("Print data set of quiz", questionlist)
     currentQuestionIndex = 0;
+    
     questionArea.classList.remove('hide');
     nextQuestion();
 }
 
-/**
- * The Lord of the Rings start game loop. Hides the home 
- * and start button and starts the next question list. As 
- * an addition it also logs to console which game is started.
- */
-function startQuizLotr() {
-    let quizCategory = "Lotr";
-    console.log(`Starting the ${quizCategory} Quiz`);
-    homeButton.classList.add('hide');
-    startButton2.classList.add('hide');
-    questionlist = questionsLotr.sort(() => .5);
-    currentQuestionIndex = 0;
-    questionArea.classList.remove('hide');
-    nextQuestion();
-}
-
-/**
- * The Game of Thrones start game loop. Hides the home 
- * and start button and starts the next question list. As
- * an addition it also logs to console which game is started.
- */
-function startQuizGot() {
-    let quizCategory = "Got";
-    console.log(`Starting the ${quizCategory} Quiz`);
-    homeButton.classList.add('hide');
-    startButton3.classList.add('hide');
-    questionlist = questionsGot.sort(() => .5);
-    currentQuestionIndex = 0;
-    questionArea.classList.remove('hide');
-    nextQuestion();
-}
 
 /**
  * Function to call the next question and reset the state
@@ -124,6 +89,7 @@ function startQuizGot() {
 function nextQuestion() {
     resetState();
     showQuestion(questionlist[currentQuestionIndex]);
+    console.log("print the showQuestion data", showQuestion)
 }
 
 /**
@@ -141,21 +107,13 @@ function showQuestion(question) {
         let button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add ('btn');
+        questionImage.src = question.img;
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     });
-
-    if (startButton) {
-        QWitchImage.src = question.img;
-    } else if (startButton2) {
-        QLotrImage.src = question.img;
-    } else if (startButton3) {
-        QGotImage.src = question.img;
-    }
-
 }
 
 /**
@@ -192,17 +150,9 @@ function selectAnswer(event) {
 
     if (questionlist.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
-    } else if (startButton) {
-        startButton.innerText = 'Restart';
-        startButton.classList.remove('hide');
-        homeButton.classList.remove('hide');
-    } else if (startButton2) {
-        startButton2.innerText = 'Restart';
-        startButton2.classList.remove('hide');
-        homeButton.classList.remove('hide');
-    } else if (startButton3) {
-        startButton3.innerText = 'Restart';
-        startButton3.classList.remove('hide');
+    } else {
+        startQuizButton.innerText = 'Restart';
+        startQuizButton.classList.remove('hide');
         homeButton.classList.remove('hide');
     }
 
@@ -213,7 +163,6 @@ function selectAnswer(event) {
         console.log("wrong");
         incrementWrongAnswer();
     }
-
 }
 
 /**
@@ -338,7 +287,7 @@ let questionsWitcher = [
 
     },
 ];
-let questionsLotr = [
+const questionsLotr = [
     {
         question: 'Who was the Ring bearer?',
         img: './assets/images/lotr-quiz/lotr-question-1.png',
@@ -395,7 +344,7 @@ let questionsLotr = [
 
     },
 ];
-let questionsGot = [
+const questionsGot = [
     {
         question: 'Who knew Nothing?',
         img: './assets/images/got-quiz/got-question-1.png',
