@@ -18,6 +18,25 @@ let incorrectValue = document.getElementById('incorrect');
 let questionlist, currentQuestionIndex;
 
 
+/**
+ * Wait for the DOM to finish loading before running the quiz
+ * 
+ */
+document.addEventListener("DOMContentLoaded", function() {
+    let quizlinks = document.querySelectorAll('.dropdown-link');
+    
+    for (let quizlink of quizlinks) {
+        quizlink.addEventListener('click', function() {
+            // console.log("Clicked link: ", this);
+            let quizCategory = this.getAttribute('data-type');
+            // console.log("category",quizCategory);
+            if (quizCategory === "witcher") {
+                element.classList.add('correct');
+            }
+        });
+    }
+    });
+    
 
 /**
  * Utilising the different start buttons based on the start 
@@ -33,24 +52,6 @@ if (startQuizButton) {
     currentQuestionIndex++;
     nextQuestion();
 });
-
-
-// WHAT WAS THE BELOW CODE USED FOR???
-// document.addEventListener("DOMContentLoaded", function() {
-// let quizlinks = document.querySelectorAll('.dropdown-link');
-
-// for (let quizlink of quizlinks) {
-//     quizlink.addEventListener('click', function() {
-//         // console.log("Clicked link: ", this);
-//         let quizCategory = this.getAttribute('data-type');
-//         // console.log("category",quizCategory);
-//         if (quizCategory === "witcher") {
-//             element.classList.add('correct');
-//         }
-//     });
-// }
-// });
-
 
 
 /**
