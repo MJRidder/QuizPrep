@@ -23,20 +23,21 @@ let questionlist, currentQuestionIndex;
  * 
  */
 document.addEventListener("DOMContentLoaded", function() {
-    let quizlinks = document.querySelectorAll('.dropdown-link');
-    
-    for (let quizlink of quizlinks) {
-        quizlink.addEventListener('click', function() {
-            // console.log("Clicked link: ", this);
-            let quizCategory = this.getAttribute('data-type');
-            // console.log("category",quizCategory);
-            if (quizCategory === "witcher") {
-                element.classList.add('correct');
+    let answerButton = document.getElementsByTagName("button")
+    // console.log("Printing the answerButtons", answerButton)
+
+    for (let button of answerButton) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("od") === "home-btn") {
+                // alert("You clicked to go back to home page");
+            } else {
+                let quizType = this.getAttribute("data-type");
+                // alert(`You clicked to start the ${quizType} quiz`);
             }
-        });
+        })
     }
-    });
-    
+});
+
 
 /**
  * Utilising the different start buttons based on the start 
@@ -69,12 +70,12 @@ function startQuiz(event) {
     };
 
     const quizCategory = event.target.getAttribute('data-type');
-    console.log(`Starting the ${quizCategory} Quiz`);
+    // console.log(`Starting the ${quizCategory} Quiz`);
     homeButton.classList.add('hide');
     startQuizButton.classList.add('hide');
 
     questionlist = questionBanks[quizCategory];
-    console.log("Print data set of quiz", questionlist)
+    // console.log("Print data set of quiz", questionlist)
     currentQuestionIndex = 0;
     
     questionArea.classList.remove('hide');
@@ -90,7 +91,7 @@ function startQuiz(event) {
 function nextQuestion() {
     resetState();
     showQuestion(questionlist[currentQuestionIndex]);
-    console.log("print the showQuestion data", showQuestion)
+    // console.log("print the showQuestion data", showQuestion)
 }
 
 /**
@@ -158,10 +159,10 @@ function selectAnswer(event) {
     }
 
     if (correct) {
-        console.log("Correct!");
+        // console.log("Correct!");
         incrementScore();
     } else {
-        console.log("wrong");
+        // console.log("wrong");
         incrementWrongAnswer();
     }
 }

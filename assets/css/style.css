@@ -65,9 +65,9 @@ header>h1 {
 /* Navigation & toggles - Mobile first  */
 
 nav {
-    position: absolute;
+    position: relative;
+    margin-bottom: 5px;
     background-color: beige;
-    top: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
     width: 100%;
     list-style-type: none;
@@ -256,8 +256,9 @@ main>nav {
 
 .quizprep-main {
     display: flex;
+    position: fixed;
+    margin-top: 40px;
     width: 100vw;
-    height: 100vh;
     border-radius: 5%;
     justify-content: center;
     align-items: center;
@@ -266,7 +267,6 @@ main>nav {
 #quiz-page {
     display: flex;
     background-color: rgba(60, 60, 60, 0.6);
-    margin-top: 30px;
     height: 840px;
     max-height: 96%;
     width: 500px;
@@ -565,6 +565,88 @@ button {
     }
     
 }
+
+/* Witcher TEST screen */
+
+/* overall and quiz areas */
+/* .quizprep-main{
+
+}
+
+#quiz-page {
+
+}
+#quiz-area {
+
+}
+#question-area {
+
+}
+#question-field{
+
+}
+#question {
+
+}
+.quiz-image {
+
+}
+#question-image {
+
+} */
+
+
+/* buttons */
+/* #answer-buttons {
+
+}
+.btn-grid {
+
+}
+
+.btn {
+
+}
+
+.nav-btn {
+
+}
+
+#start-quiz{
+    
+}
+
+.start-btn {
+
+}
+#next-btn {
+
+}
+
+.next-btn{ 
+
+}
+
+#home-btn {
+
+}
+
+.home-btn {
+
+}
+
+.score-area {
+
+}
+#correct-answer {
+
+}
+#wrong-answer {
+
+} */
+
+
+
 
 /* kept below media queries for larger devices in for future reference */
 /* Media query: tablets and larger (992px and up) */
