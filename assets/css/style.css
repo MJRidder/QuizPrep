@@ -255,47 +255,31 @@ main>nav {
 }
 
 .quizprep-main {
-    padding: 0;
-    margin: 0;
     display: flex;
-    width: 100vw;
-    height: 100vh;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 #quiz-page {
-    width: 800px;
-    max-width: 80%;
+    width: 100%;
+    max-width: 800px;
     background-color: rgba(60, 60, 60, 0.6);
-    border-radius: 5px;
-    padding: 1rem;
-    box-shadow: 0 0 10px 2px;
-
-    justify-content: center;
-    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Quiz page(s) Question and answer fields - Mobile first */
 #question-field {
-    height: 600px;
-    max-height: 80%;
-    width: 340px;
-    max-width: 94%;
-    align-items: start;
-    border-radius: 5px;
-    margin-left: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.quiz-image {
-    height: inherit;
-    max-height: 80%;
-    width: 340px;
-    max-width: 94%;
-    align-items: center;
-    align-content: center;
-    border-radius: 5px;
-    margin: auto;
+.quiz-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 0 auto;
     overflow: hidden;
     border: 15px solid #dfdfdf;
 }
@@ -313,11 +297,11 @@ main>nav {
 }
 
 .score-area {
-    margin-top: 10px;
-    padding: 10px 10px;
     display: flex;
+    text-align: center;
     justify-content: center;
-    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
     background-color: #dfdfdf;
     border: 2px solid rgb(133, 95, 0);
     border-radius: 5px;
@@ -342,7 +326,7 @@ main>nav {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
-    margin: 20px 5px 10px 5px;
+    /* margin: 20px 5px 10px 5px; */
 }
 
 .btn {
@@ -361,35 +345,21 @@ main>nav {
 
 
 .nav-btn {
-    top: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 20-px;
 
 }
 
 .start-btn,
-.next-btn .home-btn {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 10px 20px;
-}
-
-.next-btn {
-    display: block;
-    margin-left: auto;
-    margin-right: 5%;
+.next-btn, .home-btn {
     font-size: 2rem;
     font-weight: bold;
     padding: 10px 20px;
 }
 
 .home-btn {
-    margin-left: auto;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 10px 20px;
     text-decoration: none;
-
 }
 
 /* Footer layout - Mobile first */
@@ -487,8 +457,34 @@ button {
     padding: 30px;
 }
 
+/* Media query: smaller devices (411px and down) */
+@media screen and (max-width: 320px) {
+
+    #question-field {
+        height: 400px;
+        max-height: 80%;
+    }
+
+    #question {
+        margin-bottom: 10px;
+    }
+
+    .score-area {
+        margin-top: 5px;
+        font-size: small;
+    }
+
+    .btn-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .start-btn, .next-btn, .home-btn {
+        font-size: 1.6rem;
+    }
+}
+
 /* Media query: large and landscape phones (576px and up) */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 320px) {
 
     main {
         max-width: 500px;
@@ -510,11 +506,15 @@ button {
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
-    main {
-        max-width: 800px;
-        margin: auto;
-        font-size: large;
+    #quiz-page {
+        width: 800px;
+        max-width: 80vw;
     }
+
+    .btn-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 
     /* Header */
     nav {
@@ -540,6 +540,14 @@ button {
         font-size: large;
     }
 
+    .score-area {
+        font-size: large;
+    }
+
+    #question {
+        font-size: x-large;
+    }
+
     .bg-witcher {
         background-image: url(../images/witcher-quiz/witcher-bg-huge.jpeg);
     }
@@ -559,35 +567,19 @@ button {
     .get-in-touch-button {
         font-size: xx-large;
     }
-    
 }
 
-/* kept below media queries for larger devices in for future reference */
 /* Media query: tablets and larger (992px and up) */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+    .btn {
+        font-size: x-large;
+    }
 
+    .start-btn, .next-btn, .home-btn {
+        font-size: 2.4rem;
+    }
+}
+
+/* kept below media query for larger devices for future reference */
 /* Media query: laptops and screens (1200px and up) */
 @media screen and (min-width: 1200px) {}
-
-
-/* Media query: smaller devices (411px and down) */
-@media screen and (max-width: 411px) {
-
-    #question-field {
-        height: 400px;
-        max-height: 80%;
-    }
-
-    #question {
-        margin-bottom: 10px;
-    }
-
-    .score-area {
-        margin-top: 5px;
-        font-size: small;
-    }
-
-    .text-input {
-        margin-left: 1rem;
-    }
-}
