@@ -481,8 +481,16 @@ button {
     .hp-community {
         font-size: 0.75rem;
     }
+
+    .quizprep-main {
+        height: 100vh;
+        padding: 5px 0 0 0;
+
+    }
+    
     #question-field {
-        height: 350px;
+        margin-top: 5px;
+        height: 320px;
         max-height: 80%;
     }
 
@@ -497,18 +505,19 @@ button {
     .btn-grid {
         grid-template-columns: 1fr;
     }
-    #question, .btn, .scores {
+    #question, 
+    .btn, 
+    .scores {
         font-size: 0.85rem;
     }
-    .start-btn, .next-btn, .home-btn {
+    .start-btn, 
+    .next-btn, 
+    .home-btn {
         font-size: 1.4rem;
     }
-    #question-field {
-        margin-bottom: 5px;
-        height: 320px;
-    }
+
     .quiz-image img {
-        max-height: 230px;
+        max-height: 250px;
     }
 }
 
@@ -518,6 +527,31 @@ button {
     main {
         max-width: 500px;
         margin: auto;
+    }
+
+    .quizprep-main {
+        margin: 0 5px;
+        max-width: 900vw;
+    }
+
+    #quiz-page {
+        width: 100%;
+        max-width: 100vw;
+        height: auto;
+        max-height: 90vh;
+        margin-top: 20px;
+        padding: 5px 5px;
+
+    }
+
+    #question-field {
+        margin-top: 5px;
+        height: 400px;
+        max-height: 80%;
+    }
+
+    .quiz-image img {
+        max-height: 300px;
     }
 
     .bg-witcher {
@@ -530,7 +564,9 @@ button {
         background-image: url(../images/got-quiz/got-bg-medium.png);
     }
 
-    #question, .btn, .scores {
+    #question, 
+    .btn, 
+    .scores {
         font-size: small;
     }
 }
@@ -538,13 +574,34 @@ button {
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
-    #quiz-page {
+    .quizprep-main {
         width: 800px;
-        max-width: 80vw;
+        max-width: 100vw;
+        padding: 40px;
     }
 
     .btn-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #quiz-page {
+        width: 100%;
+        max-width: 80vw;
+        height: auto;
+        max-height: 90vh;
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    #question-field {
+        margin-top: 5px;
+        height: 520px;
+        max-height: 80%;
+    }
+
+    .quiz-image img {
+        max-height: 390px;
+        margin-bottom: 10px;
     }
 
 
@@ -616,11 +673,20 @@ button {
 
 /* Media query: tablets and larger (992px and up) */
 @media screen and (min-width: 992px) {
-    .btn {
+
+    .quizprep-main {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .btn, 
+    .scores {
         font-size: x-large;
     }
 
-    .start-btn, .next-btn, .home-btn {
+    .start-btn, 
+    .next-btn, 
+    .home-btn {
         font-size: 2.4rem;
     }
 }
