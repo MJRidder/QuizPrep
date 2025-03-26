@@ -312,6 +312,7 @@ main>nav {
     padding: 10px;
     background-color: #dfdfdf;
     border: 2px solid rgb(133, 95, 0);
+    color: #3a3a3a;
     border-radius: 5px;
 }
 
@@ -320,11 +321,17 @@ main>nav {
 }
 
 .correct {
+    border: solid, 3px;
+    border-color: green;
     color: green;
+    box-shadow: 0 2px 2px #3a3a3a;
 }
 
 .wrong {
+    border: solid, 3px;
+    border-color: red;
     color: red;
+    box-shadow: 0 2px 2px #3a3a3a;
 }
 
 /* Quiz page(s) Button formatting - Mobile first */
@@ -334,7 +341,6 @@ main>nav {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
-    /* margin: 20px 5px 10px 5px; */
 }
 
 .btn {
@@ -465,33 +471,48 @@ button {
     padding: 30px;
 }
 
-/* Media query: smaller devices (411px and down) */
+/* Media query: small devices (320px and down) */
 @media screen and (max-width: 320px) {
-
+    
+    .none-quizpage-intros,
+    .dropdown-link,
+    .homepage-how-to-quizprep,
+    .hp-suggestions,
+    .hp-community {
+        font-size: 0.75rem;
+    }
     #question-field {
-        height: 400px;
+        height: 350px;
         max-height: 80%;
     }
 
     #question {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     .score-area {
-        margin-top: 5px;
-        font-size: small;
+        margin-top: 10px;
     }
 
     .btn-grid {
         grid-template-columns: 1fr;
     }
-
+    #question, .btn, .scores {
+        font-size: 0.85rem;
+    }
     .start-btn, .next-btn, .home-btn {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+    }
+    #question-field {
+        margin-bottom: 5px;
+        height: 320px;
+    }
+    .quiz-image img {
+        max-height: 230px;
     }
 }
 
-/* Media query: large and landscape phones (576px and up) */
+/* Media query: larger and landscape phones (320px and up) */
 @media screen and (min-width: 320px) {
 
     main {
@@ -509,6 +530,9 @@ button {
         background-image: url(../images/got-quiz/got-bg-medium.png);
     }
 
+    #question, .btn, .scores {
+        font-size: small;
+    }
 }
 
 /* Media query: tablets and larger (768px and up) */
