@@ -223,6 +223,14 @@ main>nav {
     padding-top: 2rem;
 }
 
+.bg-index {
+    height: 100vh;
+    background-image: url(../images/bg-main-page.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
 
 /* Quiz page(s) layout - Mobile first */
 
@@ -564,8 +572,21 @@ button {
         font-size: x-large;
     }
     
+    .quiz-dropdown,
     .get-in-touch-button {
         font-size: xx-large;
+    }
+
+    .none-quizpage-intros,
+    .dropdown-link,
+    .homepage-how-to-quizprep,
+    .hp-suggestions,
+    .hp-community {
+        font-size: large;
+    }
+
+    .none-quiz-main {
+        width: 900px;
     }
 }
 
