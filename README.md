@@ -349,12 +349,12 @@ Special shout outs:
 | --- | --- | --- |
 | Use JS hint checker | Execute | Pending |
 | One answer possibility | disable buttons | Y |
-| Fix console log error when navigating between pages  | Unknown | N |
-| Refactor script to follow DRY principle | Execute | N |
-| Remove console log statements used for debugging | Execute | N |
-| Use `const` keyword for variables that won’t be reassigned | Execute | N |
+| Fix console log error when navigating between pages  | Unknown | Y |
+| Refactor script to follow DRY principle | Execute | Y |
+| Remove console log statements used for debugging | Execute | Y |
+| Use `const` keyword for variables that won’t be reassigned | Execute | Y |
 | compress images exceeding 1MB  | Execute | N |
-| Use hyphens for files with multiple words | Execute | N |
-| Improve responsiveness across devices | Execute | N |
-| Write commit messages in the imperative mood | Execute | N |
+| Use hyphens for files with multiple words | Execute | Y |
+| Improve responsiveness across devices | Execute | Y |
+| Write commit messages in the imperative mood | Execute | Y |
 | Address JavaScript validation errors | Execute | N |

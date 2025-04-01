@@ -1,6 +1,4 @@
-// const startButton = document.getElementById('start-btn-witcher');
-// const startButton2 = document.getElementById('start-btn-lotr');
-// const startButton3 = document.getElementById('start-btn-got');
+
 const startQuizButton = document.getElementById('start-quiz');
 let questionImage = document.getElementById('question-image');
 const nextButton = document.getElementById('next-btn');
@@ -9,9 +7,6 @@ const questionArea = document.getElementById('question-area');
 let questionElement = document.getElementById('question');
 let answerButtonsElement = document.getElementById('answer-buttons');
 const quizPage = document.getElementById('quiz-page');
-// const QWitchImage = document.getElementById('witcher-image');
-// let QLotrImage = document.getElementById('lotr-image');
-// let QGotImage = document.getElementById('got-image');
 let scoreValue = document.getElementById('score');
 let incorrectValue = document.getElementById('incorrect');
 
@@ -23,8 +18,7 @@ let questionlist, currentQuestionIndex;
  * 
  */
 document.addEventListener("DOMContentLoaded", function() {
-    let answerButton = document.getElementsByTagName("button")
-    // console.log("Printing the answerButtons", answerButton)
+    let answerButton = document.getElementsByTagName("button");
 
     for (let button of answerButton) {
         button.addEventListener("click", function() {
@@ -34,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 let quizType = this.getAttribute("data-type");
                 // alert(`You clicked to start the ${quizType} quiz`);
             }
-        })
-    }
+        });
+    };
 });
 
 
@@ -70,12 +64,10 @@ function startQuiz(event) {
     };
 
     const quizCategory = event.target.getAttribute('data-type');
-    // console.log(`Starting the ${quizCategory} Quiz`);
     homeButton.classList.add('hide');
     startQuizButton.classList.add('hide');
 
     questionlist = questionBanks[quizCategory];
-    // console.log("Print data set of quiz", questionlist)
     currentQuestionIndex = 0;
     
     questionArea.classList.remove('hide');
@@ -91,7 +83,6 @@ function startQuiz(event) {
 function nextQuestion() {
     resetState();
     showQuestion(questionlist[currentQuestionIndex]);
-    // console.log("print the showQuestion data", showQuestion)
 }
 
 /**
@@ -148,7 +139,7 @@ function selectAnswer(event) {
     setStatusClass(quizPage, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
-    })
+    });
 
     if (questionlist.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
@@ -159,10 +150,8 @@ function selectAnswer(event) {
     }
 
     if (correct) {
-        // console.log("Correct!");
         incrementScore();
     } else {
-        // console.log("wrong");
         incrementWrongAnswer();
     }
 }
@@ -180,7 +169,7 @@ function setStatusClass(element, correct) {
     } else {
         element.classList.add('wrong');
     }
-    addDisabledClass()
+    addDisabledClass();
 }
 
 /**
