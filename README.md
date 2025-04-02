@@ -1,3 +1,19 @@
+# Updates
+
+| Feedback | Solution | Completed Y/N |
+| --- | --- | --- |
+| Use JS hint checker | Execute | Y |
+| One answer possibility | disable buttons | Y |
+| Fix console log error when navigating between pages  | Remove unneccessary code | Y |
+| Refactor script to follow DRY principle | combine JS code | Y |
+| Remove console log statements used for debugging | Execute | Y |
+| Use `const` keyword for variables that won’t be reassigned | Execute | Y |
+| compress images exceeding 1MB  | bulkresizephotos | Y |
+| Use hyphens for files with multiple words | Execute | Y |
+| Improve responsiveness across devices | CSS improvement | Y |
+| Write commit messages in the imperative mood | Execute | Y |
+| Address JavaScript validation errors | Execute | Y |
+
 # Quizprep - about the page
 Welcome to Quizprep. A page that tests your knowledge on three of the most sought after fantasy TV shows and movies. In the long term this could be a community lead page where quizzes on all types of subjects can be shared and played, but to start, the focus lies on the Witcher series, the Lord of the Rings movies (The early 2000 ones still win it for me!) and the Game of Thrones series (might skip the final episodes). The website allows you to play all three and tracks your score as you do it, hopefully helping you learn a few interesting facts on the shows. It also has a contact page through which feedback can be shared, bugs can be reported and new quiz ideas can be shared.
 
@@ -289,6 +305,7 @@ There are no differences between my local and deployed site currently.
 | [Balsamiq](https://Balsamiq.com/) | Wireframing | Creating original site design |
 | [Github](https://github.com/j) | Site creation | Website building |
 | [ChatGPT](https://openai.com/index/chatgpt/) | JS/CSS/HTML | Code review/adjustments |
+| [bulkresizephotos](https://bulkresizephotos.com/en?type=filesize&filesize=200000&format=webp) | Images | resizing |
 
 
 ## Resources Used
@@ -341,20 +358,3 @@ Special shout outs:
 | [Brittanica](https://cdn.britannica.com/) | Quizpage | Images |
 | [Vanity fair](https://media.vanityfair.com/) | Quizpage | Images |
 | [Pexels](https://www.pexels.com/) | Quizpage | Images |
-
-
-# Updates
-
-| Feedback | Solution | Completed Y/N |
-| --- | --- | --- |
-| Use JS hint checker | Execute | Pending |
-| One answer possibility | disable buttons | Y |
-| Fix console log error when navigating between pages  | Unknown | Y |
-| Refactor script to follow DRY principle | Execute | Y |
-| Remove console log statements used for debugging | Execute | Y |
-| Use `const` keyword for variables that won’t be reassigned | Execute | Y |
-| compress images exceeding 1MB  | Execute | Y |
-| Use hyphens for files with multiple words | Execute | Y |
-| Improve responsiveness across devices | Execute | Y |
-| Write commit messages in the imperative mood | Execute | Y |
-| Address JavaScript validation errors | Execute | Y |
