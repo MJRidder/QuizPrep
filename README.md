@@ -357,4 +357,4 @@ Special shout outs:
 | Use hyphens for files with multiple words | Execute | Y |
 | Improve responsiveness across devices | Execute | Y |
 | Write commit messages in the imperative mood | Execute | Y |
-| Address JavaScript validation errors | Execute | N |
+| Address JavaScript validation errors | Execute | Y |

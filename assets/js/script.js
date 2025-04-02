@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 // alert(`You clicked to start the ${quizType} quiz`);
             }
         });
-    };
+    }
 });
 
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * the correct quiz.
  */
 if (startQuizButton) {
-    startQuizButton.addEventListener('click', startQuiz)
+    startQuizButton.addEventListener('click', startQuiz);
     }
 
     startQuizButton.addEventListener('click', setScoreToZero);

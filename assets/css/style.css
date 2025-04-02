@@ -585,13 +585,13 @@ input[type=text], select, textarea{
     }
 
     .bg-witcher {
-        background-image: url(../images/witcher-quiz/witcher-bg-800x1600.webp);
+        background-image: url(../images/witcher-quiz/witcher-bg-800x1600.webp) no-repeat center center/cover;
     }
 
     .bg-lotr {}
 
     .bg-got {
-        background-image: url(../images/got-quiz/got-bg-medium.png);
+        background-image: url(../images/got-quiz/got-bg-medium.png) no-repeat center center/cover;
     }
 
     #question, 
@@ -617,12 +617,6 @@ input[type=text], select, textarea{
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
-    }
-
-    .quizprep-main {
-        width: 800px;
-        max-width: 100vw;
-        padding: 40px;
     }
 
     .btn-grid {
@@ -671,15 +665,15 @@ input[type=text], select, textarea{
     }
 
     .bg-witcher {
-        background-image: url(../images/witcher-quiz/witcher-bg-huge.jpeg);
+        background-image: url(../images/witcher-quiz/witcher-bg-huge.jpeg) no-repeat center center/cover;
     }
 
     .bg-lotr {
-        background-image: url(../images/lotr-quiz/LotR-bg-huge.webp);
+        background-image: url(../images/lotr-quiz/LotR-bg-huge.webp) no-repeat center center/cover;
     }
 
     .bg-got {
-        background-image: url(../images/got-quiz/GoT-bg-image-huge.jpg);
+        background-image: url(../images/got-quiz/GoT-bg-image-huge.jpg) no-repeat center center/cover;
     }
 
     #question,
