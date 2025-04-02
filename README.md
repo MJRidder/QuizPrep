@@ -353,7 +353,7 @@ Special shout outs:
 | Refactor script to follow DRY principle | Execute | Y |
 | Remove console log statements used for debugging | Execute | Y |
 | Use `const` keyword for variables that won’t be reassigned | Execute | Y |
-| compress images exceeding 1MB  | Execute | N |
+| compress images exceeding 1MB  | Execute | Y |
 | Use hyphens for files with multiple words | Execute | Y |
 | Improve responsiveness across devices | Execute | Y |
 | Write commit messages in the imperative mood | Execute | Y |
